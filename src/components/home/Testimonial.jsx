@@ -1,9 +1,9 @@
 import goldenstar from "../../assets/goldenstar.png";
 import ashmita from "../../assets/testimonialph/ashmita.jfif";
 import priya from "../../assets/testimonialph/priya.jfif";
-import rahul from "../../assets/testimonialph/rahul.jfif";
+import Rahul from "../../assets/testimonialph/Rahul.jfif";
 
-function Tetimonial() {
+function Testimonial() {
   return (
     <section className="py-24 bg-[#edf2f9]">
       <div className="mx-auto px-14">
@@ -64,7 +64,7 @@ function Tetimonial() {
           <div className="bg-white group hover:scale-105 hover:bg-linear-to-r from-blueone/20 via-yellowone/20 to-blueone/20 transition-all duration-200 rounded-2xl shadow-xl  flex flex-col h-full p-5">
             <div className="flex">
             <img
-              src={rahul}
+              src={Rahul}
               alt="Rahul Mehta"
               className="w-16 h-16 rounded-full object-cover mb-4 border-2 border-gray-300 group-hover:border-blueone/40 transition-all duration-200"
             />
@@ -85,4 +85,4 @@ function Tetimonial() {
   );
 }
 
-export default Tetimonial;
+export default Testimonial;

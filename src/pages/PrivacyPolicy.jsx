@@ -3,6 +3,7 @@ import message from "../assets/footer/message.png";
 import phone from "../assets/footer/phone.png";
 import bluedot from "../assets/policies/bluedot.png";
 import pp from "../assets/policies/pp.png";
+
 function PrivacyPolicy() {
   return (
     <section className="bg-[#fffafc]">
