@@ -34,8 +34,7 @@ function Specialprog(){
            {["Identify academically talented students","Promote competitive excellence","Provide merit-based scholarships","Offer structured career direction",
            "Build confidence through national-level benchmarking"].map((item) => (
           <li className="flex items-start gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-blueone shrink-0 mt-1" data-lov-id="src/pages/Home.tsx:177:22" data-lov-name="CheckCircle2" data-component-path="src/pages/Home.tsx" data-component-line="177" data-component-file="Home.tsx" data-component-name="CheckCircle2" data-component-content="%7B%22className%22%3A%22w-4%20h-4%20text-primary%22%7D"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
-                <span>{item}</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-blueone shrink-0 mt-1"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>                <span>{item}</span>
                 </li>))}
            </ul>
          </div>
@@ -150,34 +149,34 @@ function Specialprog(){
        
         <div className='flex items-center gap-4 rounded-xl bg-white border border-[#e0e5eb] shadow-sm p-4'>
         <div className="w-6 h-6 rounded-full bg-blueone/20 flex items-center justify-center">    
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-circle-check w-4 h-4 text-blueone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>        </div>      
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-blueone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>        </div>      
         <span>Detailed Psychometric & Aptitude Analysis</span>
         </div>
 
         <div className='flex items-center gap-4 rounded-xl bg-white border border-[#e0e5eb] shadow-sm p-4'>
         <div className="w-6 h-6 rounded-full bg-blueone/20 flex items-center justify-center">    
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-circle-check w-4 h-4 text-blueone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>    
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-blueone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>    
         </div>
         <span>Skill Identification Report</span>
         </div>
 
         <div className='flex items-center gap-4 rounded-xl bg-white border border-[#e0e5eb] shadow-sm p-4'>
         <div className="w-6 h-6 rounded-full bg-blueone/20 flex items-center justify-center">    
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-circle-check w-4 h-4 text-blueone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>    
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-blueone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>    
         </div>   
         <span>Career Stream Evaluation</span>
         </div>
  
         <div className='flex items-center gap-4 rounded-xl bg-white border border-[#e0e5eb] shadow-sm p-4'>
         <div className="w-6 h-6 rounded-full bg-blueone/20 flex items-center justify-center">    
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-circle-check w-4 h-4 text-blueone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>    
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-blueone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>    
         </div> 
         <span>Personalized One-on-One Counseling Session</span>
         </div>
 
         <div className='flex items-center gap-4 rounded-xl bg-white border border-[#e0e5eb] shadow-sm p-4'>
         <div className="w-6 h-6 rounded-full bg-blueone/20 flex items-center justify-center">    
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-circle-check w-4 h-4 text-blueone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>    
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-blueone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>    
         </div> 
         <span>Structured Career Action Roadmap</span>
         </div>

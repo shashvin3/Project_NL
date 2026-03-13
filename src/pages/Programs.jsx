@@ -1,5 +1,5 @@
 import ProgHeroSection from "../components/program/ProgHeroSection";
-import Specialprog from "../components/program/specialprog";
+import Specialprog from "../components/program/Specialprog";
 import Banner from "../components/common/Banner"
 import SkillDev from "../components/program/SkillDev";
 import PlacementCell from "../components/program/PlacementCell";
