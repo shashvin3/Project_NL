@@ -1,0 +1,55 @@
+@font-face{
+   font-family: 'Plus Jakarta Sans';
+   src: url("../src/assets/fonts/PlusJakartaSans-Regular.ttf")
+}
+@import "tailwindcss";
+
+@theme{ 
+--color-yellowone: #fcd176;
+--color-blueone: #005bb5 ; 
+--color-grayone: #4a5666;
+--font-jakarta: 'Plus Jakarta Sans', sans-serif;
+}
+
+@keyframes chevronBounce {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+}
+
+.animate-chevron {
+  animation: chevronBounce 2s ease-in-out infinite;
+}
+
+ /*animation */
+.reveal_left{
+  opacity:0;
+  transform:translateX(-100px);
+  transition: all 0.4s ease-out;
+}
+
+.reveal_right{
+  opacity:0;
+  transform:translateX(100px);
+  transition: all 0.4s ease-out;
+}
+
+.reveal_up{
+  opacity:0;
+  transform:translateY(100px);
+  transition: all 0.4s ease-out;
+}
+
+.reveal_down{
+  opacity:0;
+  transform:translateY(-100px);
+  transition: all 0.4s ease-out;
+}
+
+.reveal_show{
+  opacity:1;
+  transform: translateX(0);
+}
