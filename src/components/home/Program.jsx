@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Program() {
   return (
-    <section className="bg-[#F2F4F7] py-24">
+    <section className="bg-[#F2F4F7] py-15 md:py-24">
       <div className="container mx-auto px-4">
         <h1 className="font-jakarta font-bold text-3xl md:text-5xl text-[#0c121a] text-center mb-6">
           🎯Our Programs

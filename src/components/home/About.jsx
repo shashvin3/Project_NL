@@ -4,7 +4,7 @@ import Reveal from '../common/Reveal';
 
 function About() {
     return (
-    <section className="relative py-24 bg-[#edf2f9]/30 ">
+    <section className="relative py-15 md:py-24 bg-[#edf2f9]/30 ">
      <div className="container mx-auto px-4 lg:px-8">
      <div className="grid lg:grid-cols-2 gap-16 items-center">
         {/* left part about */}
@@ -56,7 +56,7 @@ function About() {
         {/* right part cards */}
         <Reveal direction="right">
         <div>
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 gap-3">
           {/* Card 1 */}
           <div className="flex flex-col space-y-1.5 p-6 px-0 hover:scale-105 group transition-all duration-400">
           <div className="w-14 h-14 rounded-3xl bg-blueone/10 flex items-center justify-center group-hover:bg-linear-to-r from-blueone to-yellowone transition-all duration-400 ">

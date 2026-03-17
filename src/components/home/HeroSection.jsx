@@ -6,7 +6,7 @@ import prog1 from '../../assets/programimage/prog1.jfif';
 
 function HeroSection() {
   return (
-    <section className="relative pb-5 px-6 text-center overflow-hidden min-h-screen">
+    <section className="relative pb-10  px-6 text-center overflow-hidden min-h-screen">
        <span className="relative inline-flex items-center gap-2 px-6 py-2 text-blueone border border-blueone/20 rounded-full bg-blueone/10 mb-8 font-jakarta font-bold text-sm z-10">
           <img 
             src={starblue}
