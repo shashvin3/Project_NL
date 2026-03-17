@@ -10,10 +10,10 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
-    <section className="pb-15 bg-[#d3e0fd]/10 mx-auto py-1 px-4 lg:px-8">
-        <hr className="border-gray-300" />
-        <div className="px-15 pt-15">
-          <div className="grid gap-12 lg:grid-cols-4 mb-14">
+    <section className="pb-15 bg-[#d3e0fd]/10 lg:px-8">
+    <hr className="border-gray-300" />
+      <div className="container mx-auto px-4 pt-15">
+       <div className="grid gap-12 lg:grid-cols-4 mb-14">
         {/* NavLakshya Info */}
         <div className="space-y-6">
           <img src={logo} alt="" className="h-20 w-38 object-contain" />
@@ -80,7 +80,7 @@ function Footer() {
      <hr className="text-gray-300" />
 
       {/* Copyright */}
-      <div className="flex flex-col items-center justify-between gap-4 md:flex-row mt-16">
+      <div className="flex flex-col items-center justify-between gap-4 md:flex-row mt-10">
         <span className="text-xs text-grayone font-jakarta">
           © 2026 NavLakshya. Education & Career Empowerment Initiative of
           Streamcore Web Pvt Ltd. All rights reserved.

@@ -5,7 +5,7 @@ function Vision() {
     <section className="bg-[#fffafc] my-20 mx-auto px-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {/* Card 1 */}
-        <div className="bg-blueone text-white rounded-3xl shadow-xl p-10 h-80 w-auto">
+        <div className="bg-blueone text-white rounded-3xl shadow-xl p-10">
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +30,7 @@ function Vision() {
           </p>
         </div>
         {/* Card 2 */}
-        <div className="bg-white rounded-3xl shadow-xl p-7 h-80 w-auto">
+        <div className="bg-white rounded-3xl shadow-xl p-10 border border-[#e0e5eb]">
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"

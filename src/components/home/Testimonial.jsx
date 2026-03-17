@@ -6,10 +6,10 @@ import Rahul from "../../assets/testimonialph/Rahul.jfif";
 function Testimonial() {
   return (
     <section className="py-24 bg-[#edf2f9]">
-      <div className="mx-auto px-14">
-        <h1 className="font-jakarta font-bold text-3xl md:text-4xl text-[#0c121a] text-center mb-6">
+      <div className="container mx-auto px-4">
+        <h2 className="font-jakarta font-bold text-3xl md:text-4xl text-[#0c121a] text-center mb-4">
           What Our Students Say
-        </h1>
+        </h2>
         <div className="flex items-center justify-center gap-1 mb-10">
           <img src={goldenstar} alt="Golden Star" className="w-6 h-6" />
           <img src={goldenstar} alt="Golden Star" className="w-6 h-6" />

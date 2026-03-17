@@ -7,11 +7,12 @@ import Reveal from "../common/Reveal";
 
 function ContactInfo() {
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-2 gap-12 p-10">
-      {/* left part */}
+    <section className="py-10">
+      <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 ">
+         {/* left part */}
       <Reveal direction = "left">
       <div className="space-y-6">
-        <h1 className="text-3xl font-bold font-jakarta">Contact Information</h1>
+        <h2 className="text-3xl font-bold font-jakarta">Contact Information</h2>
         <p className="font-jakarta text-grayone">
           NavLakshya is an initiative of Streamcore Web Pvt Ltd, dedicated to
           empowering India’s future through structured career ecosystems.
@@ -125,7 +126,7 @@ function ContactInfo() {
             <input
               type="text"
               placeholder="Enter your full name"
-              className="border border-gray-300 rounded-lg bg-[#FFFAFC] px-4 py-2 h-10 focus:outline-none focus:ring-2 focus:ring-blueone"
+              className="border border-gray-300 rounded-lg bg-blueone/3 px-4 py-2 h-10 focus:outline-none focus:ring-2 focus:ring-blueone"
             />
           </div>
 
@@ -134,7 +135,7 @@ function ContactInfo() {
             <input
               type="email"
               placeholder="name@example.com"
-              className="border border-gray-300 h-10 bg-[#FFFAFC] rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blueone"
+              className="border border-gray-300 h-10 bg-blueone/3 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blueone"
             />
           </div>
         </div>
@@ -144,7 +145,7 @@ function ContactInfo() {
           <input
             type="text"
             placeholder="What is this regarding?"
-            className="border border-gray-300 h-10 bg-[#FFFAFC] rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blueone"
+            className="border border-gray-300 h-10 bg-blueone/3 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blueone"
           />
         </div>
 
@@ -153,7 +154,7 @@ function ContactInfo() {
           <textarea
             rows="5"
             placeholder="How can we help you today?"
-            className="border border-gray-300 rounded-lg bg-[#FFFAFC] min-h-20 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blueone"
+            className="border border-gray-300 rounded-lg bg-blueone/3 min-h-20 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blueone"
           />
         </div>
 
@@ -192,6 +193,7 @@ function ContactInfo() {
         </div>
       </div>
       </Reveal>
+      </div>
     </section>
   );
 }

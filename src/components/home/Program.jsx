@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function Program() {
   return (
     <section className="bg-[#F2F4F7] py-24">
-      <div className="mx-auto px-14">
+      <div className="container mx-auto px-4">
         <h1 className="font-jakarta font-bold text-3xl md:text-5xl text-[#0c121a] text-center mb-6">
           🎯Our Programs
         </h1>
@@ -69,26 +69,13 @@ function Program() {
                 </li>
               </ul>
             </div>
-            <div className="flex items-center group">
-              <a
-                href="#"
+            <div className="flex items-center p-6 px-0 group">
+              <Link to="/"
                 className="font-jakarta text-[14px] font-bold text-blueone group-hover:text-[#2d1f01] transition-all duration-200"
               >
                 Learn Details
-              </a>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={2}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="w-4 h-4 text-blue-600 transition-colors duration-300 group-hover:text-[#2d1f01] animate-chevron"
-              >
-                <path d="M5 12h14" />
-                <path d="M13 6l6 6-6 6" />
-              </svg>
+              </Link>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-blue-600 transition-colors duration-300 group-hover:text-[#2d1f01] animate-chevron"><path d="M5 12h14" /><path d="M13 6l6 6-6 6" /></svg>
             </div>
           </div>
 
@@ -96,30 +83,7 @@ function Program() {
           <div className="bg-white group/card hover:scale-105 transition-all duration-400 border border-gray-100 rounded-2xl shadow-xl  p-5 flex flex-col h-full">
             <div className="grow space-y-3">
               <div className="w-14 h-14 flex items-center justify-center rounded-2xl bg-linear-to-br from-[#E8F1FB] to-[#DCEBFA] transition-all duration-300 hover:scale-110 hover:rotate-6">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="w-8 h-8 text-blue-700 group-hover/card:text-blueone relative z-10 transition-all duration-300"
-                >
-                  <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" />
-                  <path d="M9 13a4.5 4.5 0 0 0 3-4" />
-                  <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5" />
-                  <path d="M3.477 10.896a4 4 0 0 1 .585-.396" />
-                  <path d="M6 18a4 4 0 0 1-1.967-.516" />
-                  <path d="M12 13h4" />
-                  <path d="M12 18h6a2 2 0 0 1 2 2v1" />
-                  <path d="M12 8h8" />
-                  <path d="M16 8V5a2 2 0 0 1 2-2" />
-                  <circle cx="16" cy="13" r=".5" />
-                  <circle cx="18" cy="3" r=".5" />
-                  <circle cx="20" cy="21" r=".5" />
-                  <circle cx="20" cy="8" r=".5" />
-                </svg>
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 text-blue-700 group-hover/card:text-blueone relative z-10 transition-all duration-300"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" /><path d="M9 13a4.5 4.5 0 0 0 3-4" /><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5" /><path d="M3.477 10.896a4 4 0 0 1 .585-.396" /><path d="M6 18a4 4 0 0 1-1.967-.516" /><path d="M12 13h4" /><path d="M12 18h6a2 2 0 0 1 2 2v1" /><path d="M12 8h8" /><path d="M16 8V5a2 2 0 0 1 2-2" /><circle cx="16" cy="13" r=".5" /><circle cx="18" cy="3" r=".5" /><circle cx="20" cy="21" r=".5" /><circle cx="20" cy="8" r=".5" /></svg>
               </div>
               <h2 className="text-2xl font-bold font-jakarta text-[#0c121a] tracking-tight group-hover/card:text-blueone transition-colors duration-300">
                 Career Counseling
@@ -147,13 +111,10 @@ function Program() {
                 </li>
               </ul>
             </div>
-            <div className="flex items-center group">
-              <a
-                href="#"
-                className="font-jakarta text-[14px] font-bold text-blueone group-hover:text-[#2d1f01] transition-all duration-200"
-              >
+            <div className="flex items-center p-6 px-0 group">
+              <Link to = "/"  className="font-jakarta text-[14px] font-bold text-blueone group-hover:text-[#2d1f01] transition-all duration-200" >
                 Learn Details
-              </a>
+              </Link>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -216,13 +177,10 @@ function Program() {
                 </li>
               </ul>
             </div>
-            <div className="flex items-center group">
-              <a
-                href="#"
-                className="font-jakarta text-[14px] font-bold text-blueone group-hover:text-[#2d1f01] transition-all duration-200"
-              >
-                Learn Details
-              </a>
+            <div className="flex items-center p-6 px-0 group">
+              <Link to="/" className="font-jakarta text-[14px] font-bold text-blueone group-hover:text-[#2d1f01] transition-all duration-200">
+              Learn Details
+              </Link>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -282,13 +240,10 @@ function Program() {
                 </li>
               </ul>
             </div>
-            <div className="flex items-center group">
-              <a
-                href="#"
-                className="font-jakarta text-[14px] font-bold text-blueone group-hover:text-[#2d1f01] transition-all duration-200"
-              >
+            <div className="flex p-6 px-0 items-center group">
+              <Link to="/"className="font-jakarta text-[14px] font-bold text-blueone group-hover:text-[#2d1f01] transition-all duration-200">
                 Learn Details
-              </a>
+              </Link>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"

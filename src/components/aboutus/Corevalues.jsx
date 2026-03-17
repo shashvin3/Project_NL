@@ -2,7 +2,8 @@ import Reveal from "../common/Reveal";
 
 function Corevalues() {
   return (
-    <section className="bg-[#0c121a] py-24 px-15 mb-25">
+    <section className="bg-[#0c121a] py-24">
+      <div className="container mx-auto px-4">
       <h1 className="text-white text-center text-4xl font-bold mb-4">
         Core Values
       </h1>
@@ -118,6 +119,7 @@ function Corevalues() {
         </div>
        </Reveal>
 
+      </div>
       </div>
     </section>
   );

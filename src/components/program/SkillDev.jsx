@@ -3,9 +3,10 @@ import Reveal from '../common/Reveal';
 
 function SkillDev() {
   return (
-    <section className="text-center transparent mx-auto px-10">
-      {/* Upper heading part */}
-      <div className="inline-flex items-center justify-center gap-2 px-4 py-1.5 mb-6 bg-blue-100 rounded-2xl">
+    <section className="text-center transparent">
+      <div className='container mx-auto px-4'>
+         {/* Upper heading part */}
+        <div className="inline-flex items-center justify-center gap-2 px-4 py-1.5 mb-6 bg-blue-100 rounded-2xl">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -43,16 +44,7 @@ function SkillDev() {
             <div className="flex items-center gap-3">
             <div className="w-14 h-14 flex items-center justify-center rounded-2xl bg-linear-to-br from-[#E8F1FB] to-[#DCEBFA] transition-all duration-300 hover:scale-110 hover:rotate-6">
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={2}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="w-6 h-6 text-grayone group-hover:text-blueone transition-all duration-300"
-              >
-                <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-grayone group-hover:text-blueone transition-all duration-300"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
                 <circle cx="12" cy="12" r="3" />
               </svg>
             </div>
@@ -150,19 +142,19 @@ function SkillDev() {
               <span>Supply Chain Management</span>
               </li>
               </Reveal>
-              <Reveal direction="left" delay={0.1}>
+              <Reveal direction="left" delay={0.2}>
               <li className="flex items-center space-x-2 text-sm font-jakarta text-grayone">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-yellowone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>                
                 <span>Production Planning</span>
               </li>
               </Reveal>
-              <Reveal direction="left" delay={0.1}>
+              <Reveal direction="left" delay={0.3}>
               <li className="flex items-center space-x-2 text-sm font-jakarta text-grayone">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-yellowone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>                
                 <span>Quality Control</span>
               </li>
               </Reveal>
-              <Reveal direction="left" delay={0.1}>
+              <Reveal direction="left" delay={0.4}>
               <li className="flex items-center space-x-2 text-sm font-jakarta text-grayone">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-yellowone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>               
               <span>Industrial Operations</span>
@@ -191,19 +183,19 @@ function SkillDev() {
               <span>Talent Acquisition</span>
               </li>
               </Reveal>
-              <Reveal direction="left" delay={0.1}>
+              <Reveal direction="left" delay={0.2}>
               <li className="flex items-center space-x-2 text-sm font-jakarta text-grayone">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-yellowone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>                
               <span>HR Analytics</span>
               </li>
               </Reveal>
-              <Reveal direction="left" delay={0.1}>
+              <Reveal direction="left" delay={0.3}>
               <li className="flex items-center space-x-2 text-sm font-jakarta text-grayone">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-yellowone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>                
                 <span>Corporate Communication</span>
               </li>
               </Reveal>
-              <Reveal direction="left" delay={0.1}>
+              <Reveal direction="left" delay={0.4}>
               <li className="flex items-center space-x-2 text-sm font-jakarta text-grayone">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-yellowone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>               
               <span>Employee Engagement Practices</span>
@@ -232,19 +224,19 @@ function SkillDev() {
               <span>Digital Marketing</span>
               </li>
               </Reveal>
-              <Reveal direction="left" delay={0.1}>
+              <Reveal direction="left" delay={0.2}>
               <li className="flex items-center space-x-2 text-sm font-jakarta text-grayone">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-yellowone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>                
                 <span>Brand Strategy</span>
               </li>
               </Reveal>
-              <Reveal direction="left" delay={0.1}>
+              <Reveal direction="left" delay={0.3}>
               <li className="flex items-center space-x-2 text-sm font-jakarta text-grayone">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-yellowone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>                
                 <span>Market Research</span>
               </li>
               </Reveal>
-              <Reveal direction="left" delay={0.1}>
+              <Reveal direction="left" delay={0.4}>
               <li className="flex items-center space-x-2 text-sm font-jakarta text-grayone">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-yellowone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>               
               <span>Performance Marketing Basics</span>
@@ -267,25 +259,25 @@ function SkillDev() {
             </div>
             <p className="uppercase text-sm font-semibold tracking-tighter text-left font-jakarta">Core Module</p>
             <ul className="grid grid-cols-1 gap-2">
-               <Reveal direction="left" delay={0.1}>
+              <Reveal direction="left" delay={0.1}>
               <li className="flex items-center space-x-2 text-sm font-jakarta text-grayone">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-yellowone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>                
               <span>Sales Techniques</span>
               </li>
               </Reveal>
-              <Reveal direction="left" delay={0.1}>
-              <li className="flex items-center space-x-2 text-sm font-jakarta text-grayone">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-yellowone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>                
+              <Reveal direction="left" delay={0.2}>
+              <li className="flex items-start space-x-2 text-sm font-jakarta text-left text-grayone">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-yellowone shrink-0 mt-1"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>                
               <span>Customer Relationship Management (CRM)</span>
               </li>
               </Reveal>
-               <Reveal direction="left" delay={0.1}>
+               <Reveal direction="left" delay={0.3}>
               <li className="flex items-center space-x-2 text-sm font-jakarta text-grayone">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-yellowone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>                
               <span>Business Development</span>
               </li>
               </Reveal>
-              <Reveal direction="left" delay={0.1}>
+              <Reveal direction="left" delay={0.4}>
               <li className="flex items-center space-x-2 text-sm font-jakarta text-grayone">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-yellowone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>               
               <span>Negotiation Skills</span>
@@ -314,19 +306,19 @@ function SkillDev() {
               <span>Industry-Specific Training</span>
               </li>
               </Reveal>
-              <Reveal direction="left" delay={0.1}>
+              <Reveal direction="left" delay={0.2}>
               <li className="flex items-center space-x-2 text-sm font-jakarta text-grayone">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-yellowone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>                
                 <span>Internship Preparation Modules</span>
               </li>
               </Reveal>
-              <Reveal direction="left" delay={0.1}>
+              <Reveal direction="left" delay={0.3}>
               <li className="flex items-center space-x-2 text-sm font-jakarta text-grayone">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-yellowone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>                
                <span>Corporate Readiness Bootcamps</span>
               </li>
               </Reveal>
-              <Reveal direction="left" delay={0.1}>
+              <Reveal direction="left" delay={0.4}>
               <li className="flex items-center space-x-2 text-sm font-jakarta text-grayone">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-yellowone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>               
               <span>Live Project Exposure</span>
@@ -341,29 +333,15 @@ function SkillDev() {
     {/* Banner Card */}
     <section className="bg-blueone rounded-3xl p-8  mb-10 mt-5 grid md:grid-cols-2 gap-8 items-center">
     {/* Left Part */}
-     <div className='md:p-10 flex flex-col items-start space-y-7'>
+     <div className=' flex flex-col items-start space-y-7'>
         <h3 className='text-2xl font-bold font-jakarta text-white'>What You Get with NavLakshya Skill Division</h3>
-        <ul>
-           <li className='flex items-center gap-3'>
-           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fcd176" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5"><path d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z" /> <path d="M9 12l2 2 4-4" /></svg>
-           <span className='text-white text-lg font-jakarta'>Industry Mentorship</span>
+        <ul className='space-y-3'>
+          {['Industry Mentorship','Internship Recommendations','Placement Support','Real-World Project Experience','Skill Certification'].map((item) => (
+          <li className='flex text-left items-start gap-3'>
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fcd176" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 shrink-0 mt-1"><path d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z" /> <path d="M9 12l2 2 4-4" /></svg>
+           <span className='text-white text-lg font-jakarta'>{item}</span>
           </li>
-           <li className='flex items-center gap-3'>
-           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fcd176" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5"><path d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z" /> <path d="M9 12l2 2 4-4" /></svg>
-           <span className='text-white text-lg font-jakarta'>Internship Recommendations</span>
-          </li>
-           <li className='flex items-center gap-3'>
-           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fcd176" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5"><path d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z" /> <path d="M9 12l2 2 4-4" /></svg>
-           <span className='text-white text-lg font-jakarta'>Placement Support</span>
-          </li>
-           <li className='flex items-center gap-3'>
-           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fcd176" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5"><path d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z" /> <path d="M9 12l2 2 4-4" /></svg>
-           <span className='text-white text-lg font-jakarta'>Real-World Project Experience</span>
-          </li>
-           <li className='flex items-center gap-3'>
-           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fcd176" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5"><path d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z" /> <path d="M9 12l2 2 4-4" /></svg>
-           <span className='text-white text-lg font-jakarta'>Skill Certification</span>
-          </li>
+          ))}
         </ul>
         <a href="#">
         <button className="bg-white px-5 py-2 rounded-full inline-flex items-center justify-center gap-2 transition-all">
@@ -376,7 +354,8 @@ function SkillDev() {
     <div>
     <img src={prog3} className='rounded-2xl shadow-2xl'/>
     </div>
-    </section>
+    </section> 
+      </div>     
     </section>
   );
 }

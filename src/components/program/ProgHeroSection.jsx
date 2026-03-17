@@ -10,7 +10,7 @@ return(
 
     <div className='absolute inset-0 bg-linear-to-b from-[#fffafc]/50 via-[#fffafc] to-[#fffafc]'></div>
     
-    <div className="relative z-10 mt-12 mb-10 ">
+    <div className="relative z-10 mt-12 mb-10 mx-4 ">
           <Reveal direction="up">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-center font-jakarta">Our Specialized <span className="text-blueone">Programs</span></h1>
           </Reveal>

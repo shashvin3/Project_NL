@@ -4,9 +4,10 @@ import Reveal from "../components/common/Reveal";
 
 function Contact() {
   return (
-    <div className="bg-[#fffafc] min-h-screen">
-      <section className="text-center bg-blue-50 transparent p-22">
-        <Reveal direction="up">
+    <div className="bg-blueone/3 min-h-screen">
+      <section className="text-center bg-blueone/5 py-22">
+        <div className="container mx-auto px-4 ">
+         <Reveal direction="up">
         <div>
           <span className="inline-block px-4 py-1.5 mb-6 text-sm font-bold tracking-wider font-jakarta text-blueone bg-blue-100 rounded-2xl uppercase">
             Get In Touch
@@ -23,6 +24,7 @@ function Contact() {
           ready to assist you.
         </p>
         </Reveal>
+        </div>
       </section>
       <ContactInfo />
       <div className="px-4 pt-10">

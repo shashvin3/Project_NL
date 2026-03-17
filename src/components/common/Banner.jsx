@@ -2,14 +2,15 @@ import React from "react";
 
 function Banner({title, des, firstBtnText, secondBtnText, bgColor, titleTextColor, desTextColor,firBtnTextColor, secBtnTextColor, firBtnBg, secBtnBg, secBtnBorder, firstIcon, secondIcon}) {
   return (
-    <div className=" bg-blue-50/10 py-24 px-14">
-     <section className={`${bgColor} w-11/12 mx-auto p-8 md:p-16 text-center relative z-10 overflow-hidden rounded-3xl`}>
+    <div className=" bg-blue-50/10 py-24">
+      <div className="container mx-auto px-4">
+      <section className={`${bgColor} w-11/12 mx-auto p-8 md:p-16 text-center relative z-10 overflow-hidden rounded-3xl`}>
       <div>
         <div>
           <h1 className={`text-3xl md:text-5xl font-bold ${titleTextColor} mb-6 font-jakarta text-center`}>
           {title}
           </h1>
-          <p className={`text-lg md:text-xl opacity-90 mb-10 ${desTextColor} text-center`}>
+          <p className={`text-lg md:text-xl max-w-2xl mx-auto opacity-90 mb-10 ${desTextColor} text-center`}>
            {des}
           </p>
         </div>
@@ -28,7 +29,8 @@ function Banner({title, des, firstBtnText, secondBtnText, bgColor, titleTextColo
           </button>
         </div>
       </div>
-    </section>
+      </section>
+      </div>
     </div>
   );
 }

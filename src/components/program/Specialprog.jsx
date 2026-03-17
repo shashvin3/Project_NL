@@ -5,9 +5,9 @@ import Reveal from '../common/Reveal';
 
 function Specialprog(){
     return(
-   <section className="flex flex-col gap-32 px-14 ">
-    
-    {/* Program 1 */}
+   <section className="flex flex-col gap-32 py-24">
+    <div className='container mx-auto px-4'>
+     {/* Program 1 */}
     <div>
     <div className="flex justify-start py-10">
     <Reveal direction="left">
@@ -24,8 +24,7 @@ function Specialprog(){
         <p className="text-lg text-grayone font-jakarta">A national-level scholarship examination designed to identify and reward bright students across India while preparing them for academic and professional excellence.</p>
        
         {/* Objectives and Eligibility */}
-        <div className="grid grid-cols-2">
-         
+        <div className="grid sm:grid-cols-2 gap-6">  
          <div>
             <h4 className='font-bold font-jakarta text-blueone flex items-center gap-2 mb-3'>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 text-blueone"> <circle cx="12" cy="12" r="10" /> <circle cx="12" cy="12" r="6" /> <circle cx="12" cy="12" r="2" /></svg>
@@ -45,8 +44,10 @@ function Specialprog(){
               Eligibility</h4>
             <ul  className="space-y-2">
               {["Students from Class 8 to Graduation","Identify academically talented students","Open to all streams (Science, Commerce, Arts)",
-                "Students from schools, colleges, and institutions across India"].map((item) => (<li className="flex items-start gap-2">
-               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-blueone shrink-0 mt-1"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>                <span>{item}</span>
+                "Students from schools, colleges, and institutions across India"].map((item) => 
+              (<li className="flex items-start gap-2">
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-blueone shrink-0 mt-1"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>               
+               <span>{item}</span>
              </li>
               ))}
             </ul>
@@ -54,11 +55,11 @@ function Specialprog(){
          
         </div>
         {/* Exam Structure */}
-        <div className="bg-[#f4f9ff] rounded-2xl h-42 border border-[#e0e5eb] p-5 mr-5">
+        <div className="bg-[#f4f9ff] rounded-2xl border border-[#e0e5eb] p-6">
             <h3 className="font-bold font-jakarta mb-4">Exam Structure</h3>
             <ul className="flex flex-wrap gap-3">
               {["Online/Computer-Based Examination","Aptitude & Logical Reasoning","Subject Knowledge Assessment","National-Level Ranking & Merit List"].map((items) => (
-            <li className="border border-[#e0e5eb] bg-white rounded-xl p-1 text-sm tracking-wide">{items}</li>
+            <li className="border border-[#e0e5eb] bg-white rounded-xl p-1 text-sm font-medium tracking-wide">{items}</li>
            ))}
         </ul>        
         </div>
@@ -68,12 +69,14 @@ function Specialprog(){
      </div > 
      </Reveal>
       <Reveal direction="right">
-       <div className='relative h-full'>
-        <div className='absolute -bottom-6 -left-6 p-8 bg-white rounded-2xl border border-[#e0e5eb] max-w-70 shadow-lg'>
+       <div className='relative'>
+        <div className='absolute -bottom-6 -left-6 p-8 bg-white rounded-2xl border border-[#e0e5eb] max-w-70 shadow-xl'>
           <p className='text-sm font-semibold mb-2 text-blueone font-jakarta'>Benefit Highlight</p>
           <p className='font-medium font-jakarta '>Merit Certificate & National Level Recognition for all qualified candidates.</p>
         </div>
-        <img src={prog1} alt="" className='h-full w-full object-cover border-8 border-white rounded-3xl shadow-2xl'/>  
+        <div className='aspect-square border-8 border-white rounded-3xl overflow-hidden shadow-2xl'>
+        <img src={prog1} alt="" className='h-full w-full object-cover'/>  
+        </div>
       </div>
       </Reveal>
      </div>
@@ -83,7 +86,7 @@ function Specialprog(){
     <div className="grid lg:grid-cols-2 gap-12 items-center">
         {/* Image part on left side */}
       <Reveal direction="left" className="order-2 lg:order-1">
-      <div className='relative h-full'>
+      <div className='relative'>
          <div className='absolute -top-6 -right-6 p-6 bg-blueone rounded-2xl '>
             <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -110,12 +113,14 @@ function Specialprog(){
                   <circle cx="20" cy="8" r=".5" />
                 </svg> 
          </div>
-        <img src={prog2} alt="" className='h-full w-full object-cover border-8 border-white rounded-3xl shadow-2xl'/>
+        <div className='aspect-4/5 border-8 border-white rounded-3xl shadow-2xl overflow-hidden'>
+         <img src={prog2} alt="Prog2 image" className='h-full w-full object-cover'/>         
+        </div> 
       </div>
       </Reveal>
          {/* Right Side */}
          <Reveal direction="right" className="order-1 lg:order-2">
-        <div className='space-y-8 py-30 '>
+        <div className='space-y-8 '>
         <div className='inline-flex items-center justify-center gap-2 bg-yellowone/20 px-3 py-1 rounded-full'>
              <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -143,46 +148,24 @@ function Specialprog(){
                 </svg>
             <span className='text-[#2d1f01]'>Career Advisory</span>
         </div>
-        <h2 className='text-4xl font-bold font-jakarta'>Career Counseling</h2>
-        <p className='text-lg font-jakarta txt-grayone'>Scientific career assessment and expert guidance to eliminate confusion and build clarity.
+        <h2 className='text-3xl md:text-4xl font-bold font-jakarta'>Career Counseling</h2>
+        <p className='text-lg font-jakarta text-grayone'>Scientific career assessment and expert guidance to eliminate confusion and build clarity.
          Our counseling program helps students understand their strengths, interests, and career alignment through structured evaluation tools.</p>
-       
+      
+      
+        {['Detailed Psychometric & Aptitude Analysis','Skill Identification Report','Career Stream Evaluation','Personalized One-on-One Counseling Session','Structured Career Action Roadmap'].map((item) =>(
         <div className='flex items-center gap-4 rounded-xl bg-white border border-[#e0e5eb] shadow-sm p-4'>
         <div className="w-6 h-6 rounded-full bg-blueone/20 flex items-center justify-center">    
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-blueone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>        </div>      
-        <span>Detailed Psychometric & Aptitude Analysis</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-blueone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg> 
+        </div>      
+        <span>{item}</span>  
         </div>
+        ))}
 
-        <div className='flex items-center gap-4 rounded-xl bg-white border border-[#e0e5eb] shadow-sm p-4'>
-        <div className="w-6 h-6 rounded-full bg-blueone/20 flex items-center justify-center">    
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-blueone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>    
-        </div>
-        <span>Skill Identification Report</span>
-        </div>
-
-        <div className='flex items-center gap-4 rounded-xl bg-white border border-[#e0e5eb] shadow-sm p-4'>
-        <div className="w-6 h-6 rounded-full bg-blueone/20 flex items-center justify-center">    
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-blueone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>    
-        </div>   
-        <span>Career Stream Evaluation</span>
-        </div>
- 
-        <div className='flex items-center gap-4 rounded-xl bg-white border border-[#e0e5eb] shadow-sm p-4'>
-        <div className="w-6 h-6 rounded-full bg-blueone/20 flex items-center justify-center">    
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-blueone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>    
-        </div> 
-        <span>Personalized One-on-One Counseling Session</span>
-        </div>
-
-        <div className='flex items-center gap-4 rounded-xl bg-white border border-[#e0e5eb] shadow-sm p-4'>
-        <div className="w-6 h-6 rounded-full bg-blueone/20 flex items-center justify-center">    
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-blueone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>    
-        </div> 
-        <span>Structured Career Action Roadmap</span>
-        </div>
         <a href="#" className='inline-flex items-center justify-center border border-gray-200 rounded-3xl text-sm font-medium p-3'>Book Counseling Session</a>
         </div>
         </Reveal>
+    </div>
     </div>
 </section>
     )
