@@ -5,13 +5,13 @@ function ScholarshipPolicy() {
   return (
     <section className="bg-[#fffafc]">
       <img src={scholarbanner} alt="Privacy Policy" />
-      <div className="py-10 px-25">
-        <h1 className="text-3xl font-jakarta font-bold mb-3">Scholarship Policy</h1>
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-2xl md:text-3xl font-jakarta font-bold mb-3">Scholarship Policy</h1>
         
         {/*  Purpose */}
         <div>
-          <h2 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-3">
-             Purpose
+          <h2 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-3">
+          Purpose
           </h2>
           <p className=" text-grayone leading-relaxed mb-3">
           The All India Bright Minds Scholarship Program (AIBMSP) is designed to identify and reward academically talented students across India through a structured, merit-based evaluation process.
@@ -20,22 +20,22 @@ function ScholarshipPolicy() {
 
         {/* Eligibility Criteria */}
         <div>
-          <h2 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-3">Eligibility Criteria</h2>
+          <h2 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-3">Eligibility Criteria</h2>
           <ul className="mb-3"> 
-           <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
+           <li className="flex items-start gap-2">
+              <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
               <span className="text-sm">Open to students from Class 8 to Graduation</span>
             </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
+            <li className="flex items-start gap-2">
+              <img src={bluedot} alt="" className="w-2 h-2 mt-1.5"/>
               <span className="text-sm">Applicable to all streams (Science, Commerce, Arts)</span>
             </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
+            <li className="flex items-start gap-2">
+              <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
               <span className="text-sm">Applicants must provide valid academic information</span>
             </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
+            <li className="flex items-start gap-2">
+              <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
               <span className="text-sm">False or misleading information will lead to disqualification</span>
             </li>
         </ul>
@@ -43,7 +43,7 @@ function ScholarshipPolicy() {
 
         {/* Selection Process */}
         <div>
-          <h3 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-1">Selection Process</h3>
+          <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-1">Selection Process</h3>
           <p className=" text-grayone leading-relaxed mb-3"> Scholarship selection is based on:</p>
           <ul className="mb-3">
             <li className="flex items-center gap-2">
@@ -70,7 +70,7 @@ function ScholarshipPolicy() {
 
         {/* Scholarship Benefits */}
         <div>
-          <h3 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-1"> Scholarship Benefits</h3>
+          <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-1"> Scholarship Benefits</h3>
           <p className=" text-grayone leading-relaxed mb-3">
            Scholarship awards may include:
           </p>
@@ -97,7 +97,7 @@ function ScholarshipPolicy() {
 
         {/* Disqualification Policy */}
         <div>
-          <h3 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-1">Disqualification Policy</h3>
+          <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-1">Disqualification Policy</h3>
           <p className=" text-grayone leading-relaxed mb-3">Candidates may be disqualified for:</p>
           <ul className="mb-3">
             <li className="flex items-center gap-2">
@@ -121,7 +121,7 @@ function ScholarshipPolicy() {
 
         {/* Policy Modification */}
         <div>
-          <h3 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-1">Policy Modification</h3>
+          <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-1">Policy Modification</h3>
           <p className=" text-grayone leading-relaxed mb-3">NavLakshya reserves the right to modify scholarship structure, eligibility, or benefits without prior notice.</p>
         </div>
       </div>

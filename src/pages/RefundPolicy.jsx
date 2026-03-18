@@ -9,8 +9,8 @@ function RefundPolicy() {
   return (
     <section className="bg-[#fffafc]">
       <img src={refundbanner} alt="Refund Policy" />
-      <div className="py-10 px-25">
-        <h1 className="text-3xl font-jakarta font-bold mb-3">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-2xl md:text-3xl font-jakarta font-bold mb-3">
           Refund & Cancellation Policy
         </h1>
         <p className="font-medium text-sm font-jakarta text-grayone leading-relaxed mb-4">
@@ -22,27 +22,27 @@ function RefundPolicy() {
         </p>
 
         <div>
-          <h2 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-3">
+          <h2 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-3">
             General Policy
           </h2>
           <ul className="mb-4">
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
+            <li className="flex items-start gap-2">
+              <img src={bluedot} alt="" className="w-2 j-2 mt-1.5" />
               <span className="text-sm">
                 All fees paid towards scholarship registration, examination
                 fees, skill development programs, or counseling sessions are
                 subject to this Refund Policy.
               </span>
             </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
+            <li className="flex items-start gap-2">
+              <img src={bluedot} alt="" className="w-2 j-2 mt-1.5" />
               <span className="text-sm">
                 Refund eligibility depends on the type of service and timing of
                 cancellation.
               </span>
             </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
+            <li className="flex items-start gap-2">
+              <img src={bluedot} alt="" className="w-2 j-2 mt-1.5" />
               <span className="text-sm">
                 Processing time for eligible refunds is 7–15 working days.
               </span>
@@ -52,19 +52,19 @@ function RefundPolicy() {
 
         {/*  Scholarship Registration & Examination Fees */}
         <div>
-          <h2 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-3">
+          <h2 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-3">
             Scholarship Registration & Examination Fees
           </h2>
           <ul className="mb-1">
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
+            <li className="flex items-start gap-2">
+              <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
               <span className="text-sm">
                 Scholarship registration and examination fees are non-refundable
                 once payment is successfully processed.
               </span>
             </li>
-            <li className="flex items-center gap-2">
-                <img src={bluedot} alt="" className="w-2 h-2" />
+            <li className="flex items-start gap-2">
+                <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
                 <span className="text-sm">No refund will be provided for:</span>
             </li>
           </ul>
@@ -124,15 +124,15 @@ function RefundPolicy() {
 
         {/* Skill Development Program Fees */}
         <div>
-          <h3 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-3">
+          <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-3">
            Skill Development Program Fees
           </h3>
          <h3 className="font-xl font-jakarta font-bold mb-1">
          Cancellation Before Program Start:
          </h3>
           <ul className="mb-4">
-          <li className="flex items-center gap-2">
-          <img src={bluedot} alt="" className="w-2 h-2" />
+          <li className="flex items-start gap-2">
+          <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
           <span className="text-sm">If cancellation request is made 48 hours before program commencement, partial refund may be considered after deducting administrative charges.</span>
           </li>
           </ul>
@@ -177,24 +177,24 @@ function RefundPolicy() {
 
         {/* Career Counseling Sessions */}
         <div>
-          <h3 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-3">
+          <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-3">
            Career Counseling Sessions
           </h3>
           <ul className="mb-3">
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
+            <li className="flex items-start gap-2">
+              <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
               <span className="text-sm">
                 Counseling session fees are refundable only if cancellation is made 24 hours prior to scheduled appointment.
               </span>
             </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
+            <li className="flex items-start gap-2">
+              <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
               <span className="text-sm">
                No refund for missed appointments without prior notice.
               </span>
             </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
+            <li className="flex items-start gap-2">
+              <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
               <span className="text-sm">
                Rescheduling may be allowed once, subject to availability.
               </span>
@@ -204,18 +204,18 @@ function RefundPolicy() {
 
         {/*  Placement & Internship Services */}
         <div>
-          <h3 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-3">
+          <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-3">
              Placement & Internship Services
           </h3>
           <ul className="mb-3">
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
+            <li className="flex items-start gap-2">
+              <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
               <span className="text-sm">
                 Registration or service charges (if applicable) for placement assistance are non-refundable.
               </span>
             </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
+            <li className="flex items-start gap-2">
+              <img src={bluedot} alt="" className="w-2 h-2 mt-1.5"/>
               <span className="text-sm">
                 NavLakshya does not guarantee job placement; therefore, refunds will not be issued based on employment outcomes.
               </span>
@@ -225,21 +225,21 @@ function RefundPolicy() {
 
         {/* Duplicate Payments*/}
         <div>
-          <h3 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-3">
+          <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-3">
             Duplicate Payments
           </h3>
           <p className=" text-grayone leading-relaxed mb-1">
            In case of accidental duplicate payment:
           </p>
           <ul className="mb-3">
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
+            <li className="flex items-start gap-2">
+              <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
               <span className="text-sm">
                 The excess amount will be refunded after verification.
               </span>
             </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
+            <li className="flex items-start gap-2">
+              <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
               <span className="text-sm">
                 Refund processing may take 7–10 working days.
               </span>
@@ -249,7 +249,7 @@ function RefundPolicy() {
 
         {/*Refund Process*/}
         <div>
-          <h3 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-1">
+          <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-1">
             Refund Process
           </h3>
           <p className=" text-grayone leading-relaxed mb-1">
@@ -318,7 +318,7 @@ function RefundPolicy() {
 
         {/*Non-Refundable Situations */}
         <div>
-          <h3 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-3">
+          <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-3">
             Non-Refundable Situations
           </h3>
           <p className=" text-grayone leading-relaxed mb-1">Refunds will not be provided in cases of:</p>
@@ -341,8 +341,8 @@ function RefundPolicy() {
                 Violation of Terms & Conditions
               </span>
             </li>
-             <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
+             <li className="flex items-start gap-2">
+              <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
               <span className="text-sm">
                 Technical issues from user side (internet/device problems)
               </span>
@@ -352,7 +352,7 @@ function RefundPolicy() {
 
         {/* Modification of Policy */}
         <div>
-          <h3 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-3">
+          <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-3">
            Modification of Policy
           </h3>
           <p className=" text-grayone leading-relaxed mb-1">
@@ -362,7 +362,7 @@ function RefundPolicy() {
 
         {/* Contact Us */}
         <div>
-          <h3 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-3">
+          <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-3">
             Contact Information
           </h3>
           <p className=" text-grayone leading-relaxed mb-2">

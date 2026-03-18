@@ -5,14 +5,14 @@ import bluedot from "../assets/policies/bluedot.png";
 function Disclaimer() {
   return (
     <section className="bg-[#fffafc]">
-      <div className="pt-10 px-25">
-        <h1 className="text-3xl font-jakarta font-bold mb-5">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-2xl md:text-3xl font-jakarta font-bold mb-5">
           Disclaimer
         </h1>
 
         {/* Use of Information */}
         <div>
-          <h3 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-3">
+          <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-3">
             Use of Information
           </h3>
           <p className=" text-grayone leading-relaxed mb-1">
@@ -28,7 +28,7 @@ function Disclaimer() {
 
         {/* Validity of Information */}
         <div>
-          <h3 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-3">
+          <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-3">
            Validity of Information
           </h3>
           <p className=" text-grayone leading-relaxed mb-1">
@@ -55,7 +55,7 @@ function Disclaimer() {
 
         {/*  Accuracy of Information */}
         <div>
-          <h3 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-3">
+          <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-3">
              Accuracy of Information
           </h3>
           <p className=" text-grayone leading-relaxed mb-3">
@@ -67,8 +67,8 @@ function Disclaimer() {
           <ul className="mb-3">
             {[ "Spread awareness about scholarships and career opportunities","Provide general guidance to students",
                "Compile publicly available information"].map((item) => (
-              <li className="flex items-center gap-2 pl-5">
-                <img src={bluedot} alt="" className="w-2 h-2" />
+              <li className="flex items-start gap-2 pl-5">
+                <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
                 <span className="text-sm">{item}</span>
               </li>
             ))}
@@ -81,7 +81,7 @@ function Disclaimer() {
 
         {/*  Source of Information */}
         <div>
-          <h3 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-3">
+          <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-3">
            Source of Information
           </h3>
           <p className=" text-grayone leading-relaxed mb-1">
@@ -103,7 +103,7 @@ function Disclaimer() {
 
            {/* Non-Affiliation */}
         <div>
-          <h3 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-3">
+          <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-3">
              Non-Affiliation
           </h3>
            <p className=" text-grayone leading-relaxed mb-1">
@@ -119,7 +119,7 @@ function Disclaimer() {
 
           {/* Partnership with Scholarship Providers*/}
         <div>
-          <h3 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-3">
+          <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-3">
            Partnership with Scholarship Providers
           </h3>
           <p className=" text-grayone leading-relaxed mb-1">
@@ -136,7 +136,7 @@ function Disclaimer() {
 
         {/*Limitation of Liability*/}
         <div>
-          <h3 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-3">
+          <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-3">
            Limitation of Liability
           </h3>
           <p className=" text-grayone leading-relaxed mb-3">
@@ -176,7 +176,7 @@ function Disclaimer() {
 
          {/* Consent */}
         <div>
-          <h3 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-1">
+          <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-1">
             Consent
           </h3>
           <p className=" text-grayone leading-relaxed mb-3">

@@ -7,14 +7,14 @@ function ChildProtectPolicy() {
   return (
     <section className="bg-[#fffafc]">
       <img src={cpbanner} alt="Privacy Policy" />
-      <div className="pt-10 px-25">
-        <h1 className="text-3xl font-jakarta font-bold mb-3">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-2xl md:text-3xl font-jakarta font-bold mb-3">
           Child Protection Policy
         </h1>
 
         {/* Applicability */}
         <div>
-          <h2 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-3">
+          <h2 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-3">
             Applicability
           </h2>
           <p className=" text-grayone leading-relaxed mb-3">
@@ -24,8 +24,8 @@ function ChildProtectPolicy() {
             {[
               "Employees", "Management Members", "Freelancers", "Consultants", "Operational Partners", "Business Associates", "Volunteers",  "Institutional Partners",  "Vendors", "Any individual or entity associated with NavLakshya",
                ].map((item) => (
-              <li className="flex items-center gap-2">
-                <img src={bluedot} alt="" className="w-2 h-2" />
+              <li className="flex items-start gap-2">
+                <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
                 <span className="text-sm">{item}</span>
               </li>
             ))}
@@ -35,7 +35,7 @@ function ChildProtectPolicy() {
 
         {/*  Introduction */}
         <div>
-          <h3 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-1">
+          <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-1">
             Introduction
           </h3>
           <p className=" text-grayone leading-relaxed mb-3">
@@ -71,7 +71,7 @@ function ChildProtectPolicy() {
 
         {/* Objectives of the Child Protection Policy */}
         <div>
-          <h3 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-1">
+          <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-1">
             Objectives of the Child Protection Policy
           </h3>
           <p className=" text-grayone leading-relaxed mb-3">
@@ -81,8 +81,8 @@ function ChildProtectPolicy() {
             {[ "Promote awareness of child rights and child protection principles", "Prevent all forms of child abuse (physical, emotional, sexual, digital, or neglect)", "Create structured mechanisms for reporting child protection concerns", "Ensure legal and ethical compliance with child protection laws",
             "Safeguard the dignity, privacy, and free will of all participating students"
              ].map((item) => (
-              <li className="flex items-center gap-2">
-                <img src={bluedot} alt="" className="w-2 h-2" />
+              <li className="flex items-start gap-2">
+                <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
                 <span className="text-sm">{item}</span>
               </li>
             ))}
@@ -91,7 +91,7 @@ function ChildProtectPolicy() {
 
         {/*  Vision for Child Protection */}
         <div>
-          <h3 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-1">
+          <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-1">
              Vision for Child Protection
           </h3>
           <p className=" text-grayone leading-relaxed mb-3">
@@ -113,7 +113,7 @@ function ChildProtectPolicy() {
 
         {/*Code of Conduct */}
         <div>
-          <h3 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-1">
+          <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-1">
            Code of Conduct
           </h3>
           <p className=" text-grayone leading-relaxed mb-3">
@@ -124,8 +124,8 @@ function ChildProtectPolicy() {
               "Immediately report any suspicious or inappropriate behavior.", "Maintain confidentiality of student data and personal information.", "Ensure safe supervision during physical events, workshops, travel, or training programs.", "Follow transparent communication practices with minors.","Use technology responsibly and never create, access, or distribute inappropriate content.",
              "Document any incident involving student safety concerns."
              ].map((item) => (
-              <li className="flex items-center gap-2 pl-5">
-                <img src={bluedot} alt="" className="w-2 h-2" />
+              <li className="flex items-start gap-2 pl-5">
+                <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
                 <span className="text-sm">{item}</span>
               </li>
             ))}
@@ -137,8 +137,8 @@ function ChildProtectPolicy() {
             {["Engage in inappropriate physical contact.", "Sleep alone in the same room with any child.","Use corporal punishment or tolerate its use.","Use abusive, humiliating, or degrading language.","Discriminate based on race, gender, religion, disability, or any other status.",
               "Develop any form of sexual or inappropriate relationship with a child.", "Give direct cash or personal gifts to children.", "Ask children to meet privately outside authorized spaces.", "Take photographs that compromise a child’s dignity or privacy.","Engage children in personal tasks unrelated to programs.",
                "Work under the influence of alcohol or intoxicating substances while on duty."].map((item) => (
-              <li className="flex items-center gap-2 pl-5">
-                <img src={bluedot} alt="" className="w-2 h-2" />
+              <li className="flex items-start gap-2 pl-5">
+                <img src={bluedot} alt="" className="w-2 h-2 mt-1.5 " />
                 <span className="text-sm">{item}</span>
               </li>
             ))}
@@ -147,7 +147,7 @@ function ChildProtectPolicy() {
 
          {/* Behaviour Protocols for Volunteers & Visitors */}
         <div>
-          <h3 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-1">
+          <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-1">
              Behaviour Protocols for Volunteers & Visitors
           </h3>
           <p className=" text-grayone leading-relaxed mb-3">
@@ -156,8 +156,8 @@ function ChildProtectPolicy() {
            <ul className="mb-3">
             {["Do not collect personal information of children without authorization.","Do not upload photos/videos of children without prior consent from NavLakshya authorities and guardians (where applicable).",
                "Do not initiate personal communication outside official channels.","Do not encourage emotional dependency or inappropriate familiarity." ].map((item) => (
-              <li className="flex items-center gap-2">
-                <img src={bluedot} alt="" className="w-2 h-2" />
+              <li className="flex items-start gap-2">
+                <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
                 <span className="text-sm">{item}</span>
               </li>
             ))}
@@ -166,7 +166,7 @@ function ChildProtectPolicy() {
 
          {/* Digital Safety & Online Protection */}
         <div>
-          <h3 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-1">
+          <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-1">
            Digital Safety & Online Protection
           </h3>
           <p className=" text-grayone leading-relaxed mb-3">
@@ -176,8 +176,8 @@ function ChildProtectPolicy() {
             {["All digital communication must occur via official platforms.","Staff must not connect with students through personal social media accounts.","Student data must be protected under privacy and cybersecurity standards.",
                "Recording of sessions requires prior consent."
              ].map((item) => (
-              <li className="flex items-center gap-2">
-                <img src={bluedot} alt="" className="w-2 h-2" />
+              <li className="flex items-start gap-2">
+                <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
                 <span className="text-sm">{item}</span>
               </li>
             ))}
@@ -186,7 +186,7 @@ function ChildProtectPolicy() {
 
          {/* Parental Consent */}
         <div>
-          <h3 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-1">
+          <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-1">
              Parental Consent
           </h3>
           <p className=" text-grayone leading-relaxed mb-3">
@@ -196,8 +196,8 @@ function ChildProtectPolicy() {
             {["Parental/guardian consent may be required for registration and participation.",
               "Parents may request relevant information regarding their child’s engagement."
              ].map((item) => (
-              <li className="flex items-center gap-2">
-                <img src={bluedot} alt="" className="w-2 h-2" />
+              <li className="flex items-start gap-2">
+                <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
                 <span className="text-sm">{item}</span>
               </li>
             ))}
@@ -207,7 +207,7 @@ function ChildProtectPolicy() {
 
           {/* Reporting & Accountability */}
           <div>
-          <h3 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-3"> Reporting & Accountability</h3>
+          <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-3"> Reporting & Accountability</h3>
           <p className=" text-grayone leading-relaxed mb-3">All staff, partners, and stakeholders are obligated to report any suspected or confirmed violation of this policy immediately.</p>
           <p className=" text-grayone leading-relaxed mb-2">Reports may be made to:</p>
           <p className="font-semibold leading-relaxed mb-2">Child Protection Officer – NavLakshya</p>
@@ -226,7 +226,7 @@ function ChildProtectPolicy() {
 
           {/* Non-Compliance & Disciplinary Action */}
         <div>
-          <h3 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-1">
+          <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-1">
             Violation of this policy may lead to:
           </h3>
           <p className=" text-grayone leading-relaxed mb-3">
@@ -248,7 +248,7 @@ function ChildProtectPolicy() {
 
             {/* Policy Review */}
         <div>
-          <h3 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-1">
+          <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-1">
             Policy Review
           </h3>
           <p className=" text-grayone leading-relaxed mb-3">
@@ -267,7 +267,7 @@ function ChildProtectPolicy() {
           
           {/* Commitment Statement */}
           <div>
-          <h3 className="font-jakarta font-bold text-2xl text-[#0c121a] mb-5">
+          <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-5">
            Commitment Statement
           </h3>
           <p className=" text-grayone leading-relaxed mb-3">
