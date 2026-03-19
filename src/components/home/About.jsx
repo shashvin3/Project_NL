@@ -44,10 +44,14 @@ function About() {
           </div>
 
           <div className="bg-blueone text-white hover:scale-105 transition-all duration-500 relative overflow-hidden rounded-3xl p-8 mt-10">
-            <img src={medal} alt="" className="h-12 w-14 text-white" />
-            <span className="text-xl italic font-semibold relative z-10 ">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 mb-4 text-yellowone"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" /><circle cx="12" cy="8" r="6" /></svg>           
+           <span className="text-xl italic font-semibold leading-relaxed block relative z-10 ">
+              <span className="block">
               "Our mission is simple — Identify Talent. Build Skills.
-              Create Careers."
+              </span>
+              <span className="md:pl-2">
+             Create Careers."
+              </span>
             </span>
           </div>
         </div>

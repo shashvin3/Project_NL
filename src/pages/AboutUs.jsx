@@ -38,20 +38,19 @@ function AboutUs() {
       <Vision/>
       <Corevalues/>
       <Banner title="Ready to Start Your Success Story?"
-        titleTextColor="text-[#2d1f01]"
+        titleTextColor="text-white"
         des="Join thousands of students who are transforming their academic journey into structured professional success through NavLakshya."
-        desTextColor="text-[#2d1f01]"
+        desTextColor="text-white"
         firstBtnText="Explore Programs"
         secondBtnText="Contact Us"
-        bgColor="bg-[#fcd176]"
-        firBtnTextColor="text-white"
-        secBtnTextColor="text-[#2d1f01]"
-        firBtnBg="bg-blueone"
-        secBtnBg="bg-[#fcd176]"
-        secBtnBorder="border-[#2d1f01]"
+        bgColor="bg-blueone"
+        firBtnTextColor="text-[#182230]"
+        secBtnTextColor="text-white"
+        firBtnBg="bg-white"
+        secBtnBg="bg-blueone"
+        secBtnBorder="border-blue-400"
       />
-      <div className="text-center px-4 text-sm text-grayone py-10 border-t border-grayone/40">© 2026 NavLakshya. All rights reserved. A brand of Streamcore Web Pvt Ltd.</div>
-   </div>
+      </div>
 );
 }
 export default AboutUs;

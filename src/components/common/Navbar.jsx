@@ -4,7 +4,7 @@ import logo from "../../assets/logo/logo.png";
 import star from "../../assets/star.png";
 
 function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);  
   const location = useLocation();
   const isActive = (path) => location.pathname === path;
 

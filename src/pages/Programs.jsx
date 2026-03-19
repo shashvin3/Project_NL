@@ -12,7 +12,7 @@ function Program(){
         <Specialprog/>
         <SkillDev/>
         <PlacementCell/>
-         <Banner title="Ready to Transform Your Career?" titleTextColor="text-white" des=" Join NavLakshya today and take the first step toward structured academic growth and professional success." desTextColor="text-[#99a1af]" firstBtnText="Get Started Today" secondBtnText="Apply Now" bgColor="bg-[#0c121a]" firBtnTextColor="text-white" secBtnTextColor="text-white" firBtnBg = "bg-blueone" secBtnBg = "bg-[#182230]" secBtnBorder="border-white"/>
+         <Banner title="Ready to Transform Your Career?" titleTextColor="text-[#2d1f01]" des=" Join NavLakshya today and take the first step toward structured academic growth and professional success." desTextColor="text-[#2d1f01]" firstBtnText="Get Started Today" secondBtnText="Apply Now" bgColor="bg-yellowone" firBtnTextColor="text-white" secBtnTextColor="text-[#2d1f01]" firBtnBg = "bg-blueone" secBtnBg = "bg-[yellowone]" secBtnBorder="border-[#2d1f01]"/>
         </div>
         )
 }

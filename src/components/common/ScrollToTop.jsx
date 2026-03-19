@@ -21,7 +21,7 @@
     }, []);
    
     return(
-        <div className="fixed bottom-8 right-8 z-40">
+        <div className="fixed bottom-25 md:bottom-13 right-4 md:right-8 z-40">
          {isVisible && (
          <button onClick={goToTopBtn} className="bg-linear-to-b viayellowone from-blueone to-yellowone h-14 w-14 rounded-full flex items-center justify-center" >
          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6 text-white animate-bounce [animation-duration:2s]"><path d="m5 12 7-7 7 7" /><path d="M12 19V5" /></svg>
