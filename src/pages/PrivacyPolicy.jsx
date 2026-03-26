@@ -247,7 +247,7 @@ function PrivacyPolicy() {
               <span className="text-sm">Withdraw consent for marketing communications</span>
             </li>
           </ul>
-          <p className=" text-grayone leading-relaxed mb-3">For such requests, please contact us at: 📧 info@navlakshya.in</p>
+          <p className=" text-grayone leading-relaxed mb-3">For such requests, please contact us at: info@navlakshya.com</p>
         </div>
 
         <div>

@@ -255,7 +255,7 @@ function RefundPolicy() {
           <ul className="mb-1">
             <li className="flex items-center gap-2">
               <img src={bluedot} alt="" className="w-2 h-2" />
-              <span className="text-sm">Send a written request to: info@navlakshya.in</span>
+              <span className="text-sm">Send a written request to: info@navlakshya.com</span>
             </li>
             <li className="flex items-center gap-2">
               <img src={bluedot} alt="" className="w-2 h-2" />
