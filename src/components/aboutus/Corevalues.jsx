@@ -14,7 +14,7 @@ function Corevalues() {
         {/* Card 1 */}
         <Reveal direction="up">
         <div className="bg-white/5 h-full rounded-2xl p-8 border border-white/10 hover:bg-white/10 flex flex-col gap-3">      
-           <div className="w-12 h-12 rounded-full bg-yellowone/15 flex items-center justify-center"> 
+           <div className="w-12 h-12 rounded-full bg-yellowone/95 flex items-center justify-center"> 
             <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -42,7 +42,7 @@ function Corevalues() {
         {/* Card 2 */}
         <Reveal direction="up" delay={0.1}>
         <div className="bg-white/5 h-full rounded-2xl p-8 border border-white/10 hover:bg-white/10 flex flex-col gap-3">
-        <div className="w-12 h-12 rounded-full bg-yellowone/20 flex items-center justify-center">
+        <div className="w-12 h-12 rounded-full bg-yellowone/95 flex items-center justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -69,7 +69,7 @@ function Corevalues() {
         <Reveal direction="up" delay={0.2}>
         <div className="bg-white/5 h-full rounded-2xl p-8 border border-white/10 hover:bg-white/10 flex flex-col gap-3">
         
-        <div className="w-12 h-12 rounded-full bg-yellowone/20 flex items-center justify-center"> 
+        <div className="w-12 h-12 rounded-full bg-yellowone/95 flex items-center justify-center"> 
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -95,7 +95,7 @@ function Corevalues() {
         {/* Card 4 */}
         <Reveal direction="up" delay={0.3}>
         <div className="bg-white/5 h-full rounded-2xl p-8 border border-white/10 hover:bg-white/10 flex flex-col gap-3">
-        <div className="w-12 h-12 rounded-full bg-yellowone/20 flex items-center justify-center"> 
+        <div className="w-12 h-12 rounded-full bg-yellowone/95 flex items-center justify-center"> 
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"

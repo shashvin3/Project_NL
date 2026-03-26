@@ -17,32 +17,32 @@ function Navbar() {
           <img
             src={logo}
             alt="NavLakshya Logo"
-            className="h-20 w-38 object-contain"
+            className="h-20 w-40 object-contain py-1"
           />
         </Link>
          
          {/* Desktop buttons */}
         <div className="hidden md:flex items-center gap-8">
           <ul className="flex items-center gap-8 ">
-            <li className={`relative group text-grayone font-semibold text-sm font-jakarta py-7 transition-colors duration-200 hover:text-blueone ${isActive('/') ? 'text-blueone' : ''}`}>
+            <li className={`relative group text-grayone font-semibold text-lg font-jakarta py-7 transition-colors duration-200 hover:text-blueone ${isActive('/') ? 'text-blueone' : ''}`}>
               <Link to="/">Home</Link>
               <div className={`absolute bottom-0 w-full h-0.5 bg-blueone transition-all duration-200 ${isActive('/') ? 'block' : 'hidden'}`}></div>
             </li>
-           <li className={`relative group text-grayone font-semibold text-sm font-jakarta py-7 transition-colors duration-200 hover:text-blueone ${isActive('/programs') ? 'text-blueone' : ''}`}>
+           <li className={`relative group text-grayone font-semibold text-lg font-jakarta py-7 transition-colors duration-200 hover:text-blueone ${isActive('/programs') ? 'text-blueone' : ''}`}>
               <Link to="/programs" className="">Programs</Link>
               <div className={`absolute bottom-0 w-full h-0.5 bg-blueone transition-all duration-200 ${isActive('/programs') ? 'block' : 'hidden'}`}></div>
             </li>
-           <li className={`relative group text-grayone font-semibold text-sm font-jakarta py-7 transition-colors duration-200 hover:text-blueone ${isActive('/about') ? 'text-blueone' : ''}`}>
+           <li className={`relative group text-grayone font-semibold text-lg font-jakarta py-7 transition-colors duration-200 hover:text-blueone ${isActive('/about') ? 'text-blueone' : ''}`}>
               <Link to="/about">About Us</Link>
               <div className={`absolute bottom-0 w-full h-0.5 bg-blueone transition-all duration-200 ${isActive('/about') ? 'block' : 'hidden'}`}></div>
             </li>
-           <li className={`relative group text-grayone font-semibold text-sm font-jakarta py-7 transition-colors duration-200 hover:text-blueone ${isActive('/contact') ? 'text-blueone' : ''}`}>
+           <li className={`relative group text-grayone font-semibold text-lg font-jakarta py-7 transition-colors duration-200 hover:text-blueone ${isActive('/contact') ? 'text-blueone' : ''}`}>
               <Link to="/contact">Contact</Link>
               <div className={`absolute bottom-0 w-full h-0.5 bg-blueone transition-all duration-200 ${isActive('/contact') ? 'block' : 'hidden'}`}></div>
             </li>
           </ul>
 
-          <Link to="/programs ">
+          <Link to="/apply-now">
           <button className="flex items-center font-jakarta tracking-wide space-x-2 bg-linear-to-r from-blueone to-yellowone text-white px-5 py-2 rounded-full font-bold text-sm shadow-lg shadow-blue-200 hover:scale-105 transition-transform active:scale-95">
             <img
               src={star}
@@ -88,7 +88,7 @@ function Navbar() {
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-grayone"><path d="m9 18 6-6-6-6" /></svg>
               </li>
               </Link>
-              <Link to="/programs" onClick={closeMenu}>
+              <Link to="/apply-now" onClick={closeMenu}>
               <li className="mt-8 h-14 flex items-center justify-center rounded-2xl bg-blueone text-lg font-bold text-white shadow-lg">
                 Explore Scholarship Program        
               </li>

@@ -5,12 +5,12 @@ function ProgHeroSection(){
 return(
     <section className='relative overflow-hidden py-12 mb-10'>
          <div className='absolute inset-0'>
-          <img src={bgimg} alt="Program hero img" className='w-full h-full object-cover opacity-20' />
+          <img src={bgimg} alt="Program hero img" className='w-full h-full object-cover opacity-40' />
          </div>
 
     <div className='absolute inset-0 bg-linear-to-b from-[#fffafc]/50 via-[#fffafc] to-[#fffafc]'></div>
     
-    <div className="relative z-10 mt-12 mb-10 mx-4 ">
+    <div className="relative z-10 mt-12 mb-5 mx-4 ">
           <Reveal direction="up">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-center font-jakarta">Our Specialized <span className="text-blueone">Programs</span></h1>
           </Reveal>

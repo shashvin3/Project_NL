@@ -70,7 +70,7 @@ function Program() {
               </ul>
             </div>
             <div className="flex items-center p-6 px-0 group">
-              <Link to="/"
+              <Link to="/AIBMSP"
                 className="font-jakarta text-[14px] font-bold text-blueone group-hover:text-[#2d1f01] transition-all duration-200"
               >
                 Learn Details
@@ -112,7 +112,7 @@ function Program() {
               </ul>
             </div>
             <div className="flex items-center p-6 px-0 group">
-              <Link to = "/"  className="font-jakarta text-[14px] font-bold text-blueone group-hover:text-[#2d1f01] transition-all duration-200" >
+              <Link to = "/coming-soon"  className="font-jakarta text-[14px] font-bold text-blueone group-hover:text-[#2d1f01] transition-all duration-200" >
                 Learn Details
               </Link>
               <svg
@@ -178,7 +178,7 @@ function Program() {
               </ul>
             </div>
             <div className="flex items-center p-6 px-0 group">
-              <Link to="/" className="font-jakarta text-[14px] font-bold text-blueone group-hover:text-[#2d1f01] transition-all duration-200">
+              <Link to="/coming-soon"  className="font-jakarta text-[14px] font-bold text-blueone group-hover:text-[#2d1f01] transition-all duration-200">
               Learn Details
               </Link>
               <svg
@@ -241,7 +241,7 @@ function Program() {
               </ul>
             </div>
             <div className="flex p-6 px-0 items-center group">
-              <Link to="/"className="font-jakarta text-[14px] font-bold text-blueone group-hover:text-[#2d1f01] transition-all duration-200">
+              <Link to="/coming-soon" className="font-jakarta text-[14px] font-bold text-blueone group-hover:text-[#2d1f01] transition-all duration-200">
                 Learn Details
               </Link>
               <svg

@@ -5,7 +5,7 @@ import Reveal from '../common/Reveal';
 
 function Specialprog(){
     return(
-   <section className="flex flex-col gap-32 py-24">
+   <section className="flex flex-col gap-32 pb-24">
     <div className='container mx-auto px-4'>
      {/* Program 1 */}
     <div>
@@ -43,7 +43,7 @@ function Specialprog(){
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 text-blueone"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" /><path d="M22 10v6" /><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" /></svg>
               Eligibility</h4>
             <ul  className="space-y-2">
-              {["Students from Class 8 to Graduation","Identify academically talented students","Open to all streams (Science, Commerce, Arts)",
+              {["Students from Class 6 to Graduation","Identify academically talented students","Open to all streams (Science, Commerce, Arts)",
                 "Students from schools, colleges, and institutions across India"].map((item) => 
               (<li className="flex items-start gap-2">
                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-blueone shrink-0 mt-1"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>               
@@ -52,7 +52,6 @@ function Specialprog(){
               ))}
             </ul>
          </div>
-         
         </div>
         {/* Exam Structure */}
         <div className="bg-[#f4f9ff] rounded-2xl border border-[#e0e5eb] p-6">

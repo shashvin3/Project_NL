@@ -70,6 +70,8 @@ function Contact() {
         secBtnTextColor="text-[#2d1f01]"
         firBtnBg="bg-blueone"
         secBtnBg="bg-[yellowone]"
+        firstBtnLink="/programs"
+        secondBtnLink="/apply-now"
         secBtnBorder="border-[#2d1f01]"
       />
     </div>

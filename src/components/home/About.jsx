@@ -4,7 +4,7 @@ import Reveal from '../common/Reveal';
 
 function About() {
     return (
-    <section className="relative py-15 md:py-24 bg-[#edf2f9]/30 ">
+    <section className="relative py-10 md:py-10 bg-[#edf2f9]/30 ">
      <div className="container mx-auto px-4 lg:px-8">
      <div className="grid lg:grid-cols-2 gap-16 items-center">
         {/* left part about */}

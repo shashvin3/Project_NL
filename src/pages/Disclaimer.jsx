@@ -1,5 +1,3 @@
-import message from "../assets/footer/message.png";
-import phone from "../assets/footer/phone.png";
 import bluedot from "../assets/policies/bluedot.png";
 
 function Disclaimer() {
