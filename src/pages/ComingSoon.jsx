@@ -14,7 +14,7 @@ function ComingSoon(){
       </p>
 
       <Link to = "/">
-      <button className="bg-blueone text-white px-8 py-3 rounded-xl font-bold hover:bg-blue-800 transition-all shadow-md">
+      <button className="bg-blueone text-white px-8 py-3 rounded-xl font-bold hover:bg-blueone/90 transition-all shadow-md">
        Back to Home
       </button>
       </Link>

@@ -7,6 +7,7 @@ import { supabase } from "../../supabaseClient";
 
 function ApplyDetails() {
   const navigate = useNavigate();
+  const [errors, setErrors] = useState({}); 
   const [isAgreed, setIsAgreed] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
@@ -53,7 +54,6 @@ function ApplyDetails() {
       console.log("fetched or handeled");
     }
   };
-
   useEffect(() => {
     if (formData.pincode.length === 6) {
       fetchLocation(formData.pincode);
@@ -63,6 +63,26 @@ function ApplyDetails() {
   const handlePinChange = (e) => {
     setFormData({ ...formData, pincode: e.target.value });
   };
+
+  //validation for mandatory fields
+  const validateForm = () => {
+   let newErrors = {};
+    if (!formData.firstName) newErrors.firstName = "First Name is mandatory";
+    if (!formData.lastName) newErrors.lastName = "Last Name is mandatory";
+    if (!formData.email) newErrors.email = "Email is mandatory";
+    if (!formData.phone) newErrors.phone = "Phone Number is mandatory"
+    if(!formData.dob) newErrors.dob = "Date of Birth is mandatory"
+    if(!formData.classGrade) newErrors.classGrade = "Class is mandatory"
+    if(!formData.schoolName) newErrors.schoolName = "School/College name is mandatory"
+    if(!formData.state) newErrors.state = "State is mandatory"
+    if(!formData.city) newErrors.city = "City is mandatory"
+    if(!formData.pincode) newErrors.pincode = "Pincode is mandatory"
+    
+    setErrors(newErrors);
+
+    return Object.keys(newErrors).length === 0;
+  };
+
   // Phone verification & Email Verification
   const [phoneStep, setPhoneStep] = useState("idle");
   const [otpValue, setOtpValue] = useState(""); 
@@ -121,13 +141,20 @@ function ApplyDetails() {
   //for submitting form
   const handleRegister = async (e) => {
   e.preventDefault();
+
+  //Validation for mandatory fields
+  if(!validateForm()){
+    alert("Please fill all mandatory fields");
+    return; 
+  }
   
+  //Validation for T&C
   if (!isAgreed) {
     alert("Please agree to the Terms and Conditions before registering.");
     return;
   }
 
-  // Verification for Mobile and Email
+  // Validation for Mobile and Email
   if (phoneStep !== "verified" || emailStep !== "verified") {
     alert("Please verify your Mobile and Email first!");
     return;
@@ -191,8 +218,6 @@ function ApplyDetails() {
     alert("Submission failed: " + error.message);
   }
 };
-
-
 
   return (
     <section>
@@ -287,9 +312,9 @@ function ApplyDetails() {
           <div className="bg-yellowone h-1 md:block hidden mt-5"></div>
         </div>
         <div className="grid md:grid-cols-2 gap-4">
-          <Input label="First Name *" value={formData.firstName} onChange={(e) => setFormData({...formData, firstName: e.target.value})}/>
-          <Input label="Last Name *" value={formData.lastName} onChange={(e) => setFormData({...formData, lastName: e.target.value})}/>
-          <Input label="Date of Birth *" type="date" value={formData.dob} max={new Date().toISOString().split("T")[0]} onChange={(e) => setFormData({...formData, dob: e.target.value})}/>
+          <Input label="First Name *" value={formData.firstName} onChange={(e) => setFormData({...formData, firstName: e.target.value})} error={errors.firstName}/>
+          <Input label="Last Name *" value={formData.lastName} onChange={(e) => setFormData({...formData, lastName: e.target.value})} error={errors.lastName}/>
+          <Input label="Date of Birth *" type="date" value={formData.dob} max={new Date().toISOString().split("T")[0]} onChange={(e) => setFormData({...formData, dob: e.target.value})} error={errors.dob}/>
           <div>
             <label className="block mb-1 text-sm font-medium">Gender</label>
             <div className="flex gap-4">
@@ -298,14 +323,15 @@ function ApplyDetails() {
               <Radio label="Other" name="gender" value="other" checked={formData.gender === "other"} onChange={(e) => setFormData({ ...formData, gender: e.target.value })}/>
             </div>
           </div>
-          <Input label="Class / Grade *" value={formData.classGrade} onChange={(e) => setFormData({...formData, classGrade: e.target.value})} />
-          <Input label="School / College Name *" value={formData.schoolName} onChange={(e) => setFormData({...formData, schoolName: e.target.value})}/>
-          <Input label="State *" value={formData.state} onChange={(e) => setFormData({...formData, state: e.target.value})}/>
-          <Input label="City *" value={formData.city} onChange={(e) => setFormData({...formData, city: e.target.value})} />
+          <Input label="Class / Grade *" value={formData.classGrade} onChange={(e) => setFormData({...formData, classGrade: e.target.value})} error={errors.classGrade}/>
+          <Input label="School / College Name *" value={formData.schoolName} onChange={(e) => setFormData({...formData, schoolName: e.target.value})} error={errors.schoolName}/>
+          <Input label="State *" value={formData.state} onChange={(e) => setFormData({...formData, state: e.target.value})} error={errors.state}/>
+          <Input label="City *" value={formData.city} onChange={(e) => setFormData({...formData, city: e.target.value})} error={errors.city}/>
           <Input
             label="Pincode *"
             value={formData.pincode}
             onChange={handlePinChange}
+            error={errors.pincode}
           />
         </div>
 
@@ -327,6 +353,7 @@ function ApplyDetails() {
                   setFormData({ ...formData, phone: e.target.value })
                 }
                 disabled={phoneStep === "verified"}
+                error={errors.phone}
               />
               {formData.phone?.length === 10 && phoneStep === "idle" && (
                 <button
@@ -365,13 +392,14 @@ function ApplyDetails() {
             </div>
               {/* Email Verification Part */}
             <div className="relative">
-             <Input label="Email ID"
+             <Input label="Email ID *"
              placeholder="Enter your email"
              value = {formData.email}
              onChange={(e)=>
              setFormData({...formData , email:e.target.value})
              } 
              disabled={emailStep==="verified"}
+             error={errors.email}
              />
              {formData.email?.length > 10 && emailStep === 'idle' && (
              <button type="button" onClick={handleEmailSendOtp} className="absolute right-4 top-10 font-bold text-sm text-red-500 hover:underline" >
@@ -404,7 +432,7 @@ function ApplyDetails() {
               Document Upload
             </h2>
             <Input
-              label="Select File"
+              label="Choose File *"
               type="file"
               onChange={(e)=>setDocFile(e.target.files[0])}
               className="w-full border rounded-lg px-3 py-2 file:bg-blue-600 file:text-white file:px-4 file:py-1 file:rounded-md file:border-0 file:mr-4"
