@@ -4,6 +4,12 @@ import logo from "../../assets/logo/logo.png";
 import star from "../../assets/star.png";
 
 function Navbar() {
+  const navLinks =[
+    {title:"Home", path:'/'},
+    {title:"Programs", path:'/programs'},
+    {title:"About Us", path:"/about"},
+    {title:"Contact", path:"/contact"}
+  ]
   const [isOpen, setIsOpen] = useState(false);  
   const location = useLocation();
   const isActive = (path) => location.pathname === path;
@@ -11,35 +17,21 @@ function Navbar() {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <nav className="sticky top-0 z-100">
-      <div className="relative w-full bg-white px-15 flex items-center justify-between shadow-lg">
+    <nav className="sticky top-0 z-50">
+      <div className="relative w-full bg-white px-4 md:px-15 flex items-center justify-between shadow-lg">
         <Link to="/">
-          <img
-            src={logo}
-            alt="NavLakshya Logo"
-            className="h-20 w-40 object-contain py-1"
-          />
+          <img src={logo} alt="NavLakshya Logo" className="h-20 w-40 object-contain py-1"/>
         </Link>
          
          {/* Desktop buttons */}
         <div className="hidden md:flex items-center gap-8">
           <ul className="flex items-center gap-8 ">
-            <li className={`relative group text-grayone font-semibold text-lg font-jakarta py-7 transition-colors duration-200 hover:text-blueone ${isActive('/') ? 'text-blueone' : ''}`}>
-              <Link to="/">Home</Link>
-              <div className={`absolute bottom-0 w-full h-0.5 bg-blueone transition-all duration-200 ${isActive('/') ? 'block' : 'hidden'}`}></div>
+           { navLinks.map((links) => (
+            <li key={links.path} className={`relative group text-grayone font-semibold text-lg font-jakarta py-7 transition-colors duration-200 hover:text-blueone ${isActive(links.path) ? 'text-blueone' : ''}`}>
+              <Link to={links.path}>{links.title}</Link>
+              <div className={`absolute bottom-0 w-full h-0.5 bg-blueone transition-all duration-200 ${isActive(links.path) ? 'block' : 'hidden'}`}></div>
             </li>
-           <li className={`relative group text-grayone font-semibold text-lg font-jakarta py-7 transition-colors duration-200 hover:text-blueone ${isActive('/programs') ? 'text-blueone' : ''}`}>
-              <Link to="/programs" className="">Programs</Link>
-              <div className={`absolute bottom-0 w-full h-0.5 bg-blueone transition-all duration-200 ${isActive('/programs') ? 'block' : 'hidden'}`}></div>
-            </li>
-           <li className={`relative group text-grayone font-semibold text-lg font-jakarta py-7 transition-colors duration-200 hover:text-blueone ${isActive('/about') ? 'text-blueone' : ''}`}>
-              <Link to="/about">About Us</Link>
-              <div className={`absolute bottom-0 w-full h-0.5 bg-blueone transition-all duration-200 ${isActive('/about') ? 'block' : 'hidden'}`}></div>
-            </li>
-           <li className={`relative group text-grayone font-semibold text-lg font-jakarta py-7 transition-colors duration-200 hover:text-blueone ${isActive('/contact') ? 'text-blueone' : ''}`}>
-              <Link to="/contact">Contact</Link>
-              <div className={`absolute bottom-0 w-full h-0.5 bg-blueone transition-all duration-200 ${isActive('/contact') ? 'block' : 'hidden'}`}></div>
-            </li>
+            ))}
           </ul>
 
           <Link to="/apply-now">
@@ -53,6 +45,8 @@ function Navbar() {
           </button>
           </Link>
         </div>
+
+        
         <button onClick={() => setIsOpen(!isOpen)} className="md:hidden flex h-11 w-11 items-center justify-center rounded-xl bg-[#edf2f9]/80 border border-[#e0e5eb]/50">
         {isOpen? 
         (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-x h-5 w-5"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>)
@@ -64,33 +58,17 @@ function Navbar() {
           {/* Mobile Buttons*/}
             <div className = {`md:hidden ${isOpen? "flex" : "hidden"} flex-col gap-4 p-8 bg-white`}>
             <ul className="flex flex-col gap-2">
-              <Link to="/" onClick={closeMenu}>
-              <li className={`font-bold text-xl font-jakarta flex justify-between border-b border-grayone/40 py-4 transition-colors duration-200 ${isActive('/') ? 'text-blueone' : 'text-[#0c121a]'}`}>
-                Home
+               { navLinks.map((links) => (
+              <Link key={links.path} to={links.path}  onClick={closeMenu}>
+              <li className={`font-bold text-xl font-jakarta flex justify-between border-b border-grayone/40 py-4 transition-colors duration-200 ${isActive(links.path) ? 'text-blueone' : 'text-[#0c121a]'}`}>
+                {links.title}
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-grayone"><path d="m9 18 6-6-6-6" /></svg>
               </li>
               </Link>
-              <Link to="/programs">
-              <li onClick={closeMenu} className={`font-bold text-xl font-jakarta flex justify-between border-b border-grayone/40 py-4 transition-colors duration-200 ${isActive('/programs') ? 'text-blueone' : 'text-[#0c121a]'}`}>
-              Programs
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-grayone"><path d="m9 18 6-6-6-6" /></svg>
-              </li>
-              </Link>
-              <Link to="/about">
-              <li onClick={closeMenu} className={`font-bold text-xl font-jakarta flex justify-between border-b border-grayone/40 py-4 transition-colors duration-200 ${isActive('/about') ? 'text-blueone' : 'text-[#0c121a]'}`}>
-                About Us
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-grayone"><path d="m9 18 6-6-6-6" /></svg>
-              </li>
-              </Link>
-              <Link to="/contact">
-              <li onClick={closeMenu} className={`font-bold text-xl font-jakarta flex justify-between border-b border-grayone/40 py-4 transition-colors duration-200 ${isActive('/contact') ? 'text-blueone' : 'text-[#0c121a]'}`}>
-                Contact
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-grayone"><path d="m9 18 6-6-6-6" /></svg>
-              </li>
-              </Link>
+               ))}
               <Link to="/apply-now" onClick={closeMenu}>
               <li className="mt-8 h-14 flex items-center justify-center rounded-2xl bg-blueone text-lg font-bold text-white shadow-lg">
-                Explore Scholarship Program        
+                Apply For Scholarship         
               </li>
               </Link>
             </ul>

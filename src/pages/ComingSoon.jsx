@@ -1,12 +1,26 @@
+import logo from "../assets/logo/logo.png";
+import { Link } from "react-router-dom";
+
 function ComingSoon(){
-    return(
-   <div className="min-h-screen bg-blueone/10 flex flex-col items-center justify-center px-24 py-34">
-    
-    <div className="bg-white w-full max-w-md rounded-3xl shadow-xl p-8 pt-12 text-center border border-gray-100">
-    <h1 className="text-5xl text-blue-500">Coming Soon!</h1>
+
+  return (
+    <div className="min-h-screen bg-blue-50 flex flex-col items-center justify-center px-4 pb-10 text-center">
+      <img src={logo} alt="NavLakshya" className="w-38 mb-6" />
+      <h1 className="text-4xl md:text-5xl font-bold text-blueone mb-4 font-jakarta">
+        Coming Soon!
+      </h1>
+      <p className="max-w-md mb-8 leading-relaxed">
+       This service will be live very soon!
+      </p>
+
+      <Link to = "/">
+      <button className="bg-blueone text-white px-8 py-3 rounded-xl font-bold hover:bg-blue-800 transition-all shadow-md">
+       Back to Home
+      </button>
+      </Link>
+      
     </div>
-   </div>
-    )
-}
+  );
+};
 
 export default ComingSoon;

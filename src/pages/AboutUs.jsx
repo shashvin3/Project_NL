@@ -47,7 +47,7 @@ function AboutUs() {
         firBtnTextColor="text-[#182230]"
         secBtnTextColor="text-white"
         firstBtnLink="/programs"
-        secondBtnLink="/payment-detail"
+        secondBtnLink="/contact"
         firBtnBg="bg-yellow-500"
         secBtnBg="bg-blueone"
         secBtnBorder="border-blue-400"

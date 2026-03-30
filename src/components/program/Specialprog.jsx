@@ -62,7 +62,7 @@ function Specialprog(){
            ))}
         </ul>        
         </div>
-        <Link to="/contact" className='inline-flex items-center justify-center text-sm font-medium font-jakarta text-white bg-blueone px-7 py-3 rounded-3xl hover:bg-blueone/90 transition-all duration-300'>
+        <Link to="/apply-now" className='inline-flex items-center justify-center text-sm font-medium font-jakarta text-white bg-blueone px-7 py-3 rounded-3xl hover:bg-blueone/90 transition-all duration-300'>
         Apply For AIBMSP
         </Link>
      </div > 
@@ -161,7 +161,7 @@ function Specialprog(){
         </div>
         ))}
 
-        <a href="#" className='inline-flex items-center justify-center border border-gray-200 rounded-3xl text-sm font-medium p-3'>Book Counseling Session</a>
+        <Link to="/contact" className='inline-flex items-center justify-center border border-gray-200 rounded-3xl text-sm font-medium p-3'>Book Counseling Session</Link>
         </div>
         </Reveal>
     </div>

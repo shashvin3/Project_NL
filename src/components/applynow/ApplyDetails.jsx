@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import logo from "../../assets/logo/logo.png";
 import Radio from "../common/Radio";
 import Input from "../common/Input";
 import { supabase } from "../../supabaseClient";
 
 function ApplyDetails() {
+  const navigate = useNavigate();
+  const [isAgreed, setIsAgreed] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -98,10 +101,10 @@ function ApplyDetails() {
     }
   };
 
-  // for document upload
+  // for uploading document to supabase
   const uploadToSupabase = async (docFile) => {
     if (!docFile) return null;
-    const fileName = `${Date.now()}_${docFile.name}`; //create a unique name - timestamp_filename.ext
+    const fileName = `${Date.now()}_${docFile.name}`; //create a unique name - timestamp_filename
     const {data, error} = await supabase.storage
     .from('documents')
     .upload(`doc_proofs/${fileName}`,docFile);
@@ -117,32 +120,77 @@ function ApplyDetails() {
 
   //for submitting form
   const handleRegister = async (e) => {
-    e.preventDefault();
-    if(phoneStep !== "verified" || emailStep !== "verified"){
-      alert("Please verify your Mobile and Email first!");
-      return;
-    }
+  e.preventDefault();
+  
+  if (!isAgreed) {
+    alert("Please agree to the Terms and Conditions before registering.");
+    return;
+  }
 
-   try{
-      alert("Uploading files... please wait.");
-      const docUrl = await uploadToSupabase(docFile);
-      const {data, error} = await supabase
+  // Verification for Mobile and Email
+  if (phoneStep !== "verified" || emailStep !== "verified") {
+    alert("Please verify your Mobile and Email first!");
+    return;
+  }
+
+  // Verification for DOB
+  const birthDate = new Date(formData.dob);
+  const today = new Date();
+  
+  // Calculating the Age
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const m = today.getMonth() - birthDate.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+
+   // Future Date cannot be DOB
+  if (birthDate > today) {
+    alert("Date of Birth cannot be in the future.");
+    return;
+  }
+  if (age < 10) {
+    alert("Student must be at least 10 years old to register.");
+    return;
+  }
+
+  // Validation for File Check if user entered file
+  if (!docFile) {
+    alert("Please upload your ID Proof screenshot before registering.");
+    return;
+  }
+
+  
+  try {
+    alert("Uploading documents and registering... please do not close the window.");
+    
+    const docUrl = await uploadToSupabase(docFile);
+
+    // Inserting into applicants table in the supabase
+    const { data, error } = await supabase
       .from('applicants')
       .insert([
         {
-        ...formData,
-        id_proofs: docUrl,
-        payment_status:'pending'
+          ...formData,
+          id_proofs: docUrl,
+          payment_status: 'pending'
         }
-      ]);
-      if (error) throw error;
-      alert("Registration Successful")
-   }
-   catch(error){
-    console.error("Error adding documents : ", error.message);
-    alert("Submission failed: "+ error.message)
-   }
-  };
+      ])
+      .select(); //.select() is added so that we can get the returned ID for payment redirection
+
+    if (error) throw error;
+
+    alert("Registration Details Saved Successfully!");
+
+    //now it will Redirect to Payment Page
+    const newId = data[0].id; // Passed the unique ID so the payment page can know who it is paying
+    navigate(`/payment/${newId}`);
+
+  } catch (error) {
+    console.error("Error adding documents: ", error.message);
+    alert("Submission failed: " + error.message);
+  }
+};
 
 
 
@@ -241,7 +289,7 @@ function ApplyDetails() {
         <div className="grid md:grid-cols-2 gap-4">
           <Input label="First Name *" value={formData.firstName} onChange={(e) => setFormData({...formData, firstName: e.target.value})}/>
           <Input label="Last Name *" value={formData.lastName} onChange={(e) => setFormData({...formData, lastName: e.target.value})}/>
-          <Input label="Date of Birth *" type="date" value={formData.dob} onChange={(e) => setFormData({...formData, dob: e.target.value})}/>
+          <Input label="Date of Birth *" type="date" value={formData.dob} max={new Date().toISOString().split("T")[0]} onChange={(e) => setFormData({...formData, dob: e.target.value})}/>
           <div>
             <label className="block mb-1 text-sm font-medium">Gender</label>
             <div className="flex gap-4">
@@ -372,7 +420,7 @@ function ApplyDetails() {
       {/* Footer Part  */}
       <div className="mt-8 text-center space-y-4">
         <div className="flex items-start gap-2 justify-center text-sm">
-          <input type="checkbox" className="mt-2" />
+          <input type="checkbox" checked={isAgreed} onChange={(e) => setIsAgreed(e.target.checked)} className="mt-2" />
           <span className="text-lg font-semibold text-left">
             I hereby confirm that all the details provided are correct.I agree
             to the <span className="text-blueone">terms and conditions</span> of

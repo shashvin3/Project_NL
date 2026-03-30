@@ -1,5 +1,7 @@
 import prog2 from '../../assets/programimage/prog2.jfif'
 import furniture from '../../assets/programimage/furniture.jfif'
+import { Link } from 'react-router-dom';
+
 
 function PlacementCell(){
     return(
@@ -51,7 +53,7 @@ function PlacementCell(){
         <span>Internship & Job Assistance</span>
         </div>
         </div>
-        <a href="#" className='inline-flex items-center justify-center gap-2 whitespace-nowrap text-white rounded-full px-8 w-full sm:w-auto text-sm font-medium bg-blueone hover:bg-blueone/90 p-3'>Connect with Placement Team</a>
+        <Link to="/contact" className='inline-flex items-center justify-center gap-2 whitespace-nowrap text-white rounded-full px-8 w-full sm:w-auto text-sm font-medium bg-blueone hover:bg-blueone/90 p-3'>Connect with Placement Team</Link>
         </div>
 
      {/* Right Part image one */}

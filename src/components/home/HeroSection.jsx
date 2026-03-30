@@ -48,7 +48,7 @@ function HeroSection() {
       </Reveal>
      
       <div className="relative z-10 flex flex-wrap gap-6 justify-center items-center">
-       <Link to ="/contact">
+       <Link to ="/apply-now">
         <button className="bg-blueone hover:scale-105 text-white px-10 py-3 rounded-full font-bold inline-flex items-center justify-center gap-2 whitespace-nowrap transition-all shadow-xl shadow-blue-200">
          <img src={trophywh} alt="Trophy Icon" className="w-5 h-5 object-contain" />
           Apply for Scholarship <span className="text-xl">→</span>
