@@ -7,7 +7,7 @@ import prog1 from '../../assets/programimage/prog1.jfif';
 
 function HeroSection() {
   return (
-    <section className="relative pb-10  px-6 text-center overflow-hidden min-h-screen">
+    <section className="relative pb-16 px-6 text-center overflow-hidden xl:min-h-screen ">
        <span className="relative inline-flex items-center gap-2 px-3 py-2 text-blueone border border-blueone/20 rounded-full bg-blueone/10 mb-8 font-jakarta font-bold text-sm md:text-lg z-10 mt-2">
           <img 
             src={starblue}
@@ -23,7 +23,7 @@ function HeroSection() {
       <div className="absolute inset-0 bg-linear-to-b from-[#fffafc]/60 via-[#fffafc]/90 to-[#fffafc]"></div>
       
       <Reveal direction="up">
-      <h1 className="relative z-10 text-4xl md:text-6xl lg:text-8xl font-extrabold font-jakarta pb-12 ">
+      <h1 className="relative z-10 text-4xl md:text-6xl lg:text-8xl font-extrabold font-jakarta pb-6 lg:pb-12 ">
        <span className="bg-linear-to-r from-[#000305] via-blueone to-yellowone bg-clip-text text-transparent">
         Empowering India's 
         </span> 

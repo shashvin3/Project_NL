@@ -7,7 +7,7 @@ import PlacementCell from "../components/program/PlacementCell";
 
 function Program(){
     return(
-        <div className="min-h-screen bg-[#fffafc] ">
+        <div className="min-h-screen bg-[#fffafc]">
         <ProgHeroSection/>
         <Specialprog/>
         <SkillDev/>

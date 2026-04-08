@@ -37,7 +37,7 @@ function Reveal({children, direction, delay, className=""}){
 
     return(
     <div ref={domRef} className={`h-full ${className} ${Revealdirection()} ${isVisible? "reveal_show" : ""}`} style={{transitionDelay: `${delay}s`}}>
-            {children}
+    {children}
     </div>
     );
 };

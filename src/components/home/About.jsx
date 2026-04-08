@@ -1,4 +1,3 @@
-import medal from "../../assets/aboutus/medal.png";
 import Reveal from '../common/Reveal';
 
 

@@ -4,7 +4,7 @@ import Reveal from '../common/Reveal';
 function SkillDev() {
   return (
     <section className="text-center transparent">
-      <div className='container mx-auto px-4'>
+      <div className='container mx-auto px-8'>
          {/* Upper heading part */}
         <div className="inline-flex items-center justify-center gap-2 px-4 py-1.5 mb-6 bg-blue-100 rounded-2xl">
         <svg
@@ -39,7 +39,7 @@ function SkillDev() {
       {/* Below Cards Section */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
         {/* Card1 */}
-        <div className="bg-white group hover:scale-105 hover:border-blueone transition-all duration-200 border border-gray-100 rounded-2xl shadow-xl  p-5 flex flex-col h-full">
+        <div className="bg-white group hover:scale-105 hover:border-blueone transition-all duration-200 border border-gray-100 rounded-2xl shadow-xl overflow-hidden p-5 flex flex-col h-full">
           <div className="grow space-y-3">
             <div className="flex items-center gap-3">
             <div className="w-14 h-14 flex items-center justify-center rounded-2xl bg-linear-to-br from-[#E8F1FB] to-[#DCEBFA] transition-all duration-300 hover:scale-110 hover:rotate-6">
@@ -73,8 +73,8 @@ function SkillDev() {
               </li>
               </Reveal>
                <Reveal direction="left" delay={0.4}>
-              <li className="flex items-center space-x-2 text-sm font-jakarta text-grayone">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-yellowone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>               
+              <li className="flex items-start space-x-2 text-sm font-jakarta text-left text-grayone">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-yellowone mt-1 shrink-0"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>               
               <span>Production & Manufacturing Concepts</span>
               </li>
               </Reveal>
@@ -83,7 +83,7 @@ function SkillDev() {
         </div>
 
         {/* Card2 */}
-         <div className="bg-white group hover:scale-105 hover:border-blueone transition-all duration-200 border border-gray-100 rounded-2xl shadow-xl  p-5 flex flex-col h-full">
+         <div className="bg-white group hover:scale-105 hover:border-blueone transition-all duration-200 border border-gray-100 rounded-2xl shadow-xl overflow-hidden  p-5 flex flex-col h-full">
           <div className="grow space-y-3">
             <div className="flex items-center gap-3">
             <div className="w-14 h-14 flex items-center justify-center rounded-2xl bg-linear-to-br from-[#E8F1FB] to-[#DCEBFA] transition-all duration-300 hover:scale-110 hover:rotate-6">
@@ -124,7 +124,7 @@ function SkillDev() {
         </div>
 
         {/* Card3 */}
-          <div className="bg-white group hover:scale-105 hover:border-blueone transition-all duration-200 border border-gray-100 rounded-2xl shadow-xl  p-5 flex flex-col h-full">
+          <div className="bg-white group hover:scale-105 hover:border-blueone transition-all duration-200 border border-gray-100 rounded-2xl shadow-xl overflow-hidden  p-5 flex flex-col h-full">
           <div className="grow space-y-3">
             <div className="flex items-center gap-3">
             <div className="w-14 h-14 flex items-center justify-center rounded-2xl bg-linear-to-br from-[#E8F1FB] to-[#DCEBFA] transition-all duration-300 hover:scale-110 hover:rotate-6">
@@ -165,7 +165,7 @@ function SkillDev() {
         </div>
 
           {/* Card4 */}
-           <div className="bg-white group hover:scale-105 hover:border-blueone transition-all duration-200 border border-gray-100 rounded-2xl shadow-xl  p-5 flex flex-col h-full">
+           <div className="bg-white group hover:scale-105 hover:border-blueone transition-all duration-200 border border-gray-100 rounded-2xl shadow-xl overflow-hidden  p-5 flex flex-col h-full">
           <div className="grow space-y-3">
             <div className="flex items-center gap-3">
             <div className="w-14 h-14 flex items-center justify-center rounded-2xl bg-linear-to-br from-[#E8F1FB] to-[#DCEBFA] transition-all duration-300 hover:scale-110 hover:rotate-6">
@@ -206,7 +206,7 @@ function SkillDev() {
         </div>
           
           {/* Card5 */}
-          <div className="bg-white group hover:scale-105 hover:border-blueone transition-all duration-200 border border-gray-100 rounded-2xl shadow-xl  p-5 flex flex-col h-full">
+          <div className="bg-white group hover:scale-105 hover:border-blueone transition-all duration-200 border border-gray-100 rounded-2xl shadow-xl overflow-hidden  p-5 flex flex-col h-full">
           <div className="grow space-y-3">
             <div className="flex items-center gap-3">
             <div className="w-14 h-14 flex items-center justify-center rounded-2xl bg-linear-to-br from-[#E8F1FB] to-[#DCEBFA] transition-all duration-300 hover:scale-110 hover:rotate-6">
@@ -247,7 +247,7 @@ function SkillDev() {
         </div>
           
             {/* Card6 */}
-          <div className="bg-white group hover:scale-105 hover:border-blueone transition-all duration-200 border border-gray-100 rounded-2xl shadow-xl  p-5 flex flex-col h-full">
+          <div className="bg-white group hover:scale-105 hover:border-blueone transition-all duration-200 border border-gray-100 rounded-2xl shadow-xl overflow-hidden  p-5 flex flex-col h-full">
           <div className="grow space-y-3">
             <div className="flex items-center gap-3">
             <div className="w-14 h-14 flex items-center justify-center rounded-2xl bg-linear-to-br from-[#E8F1FB] to-[#DCEBFA] transition-all duration-300 hover:scale-110 hover:rotate-6">
@@ -288,7 +288,7 @@ function SkillDev() {
         </div>
              
              {/* Card7 */}
-          <div className="bg-white group hover:scale-105 hover:border-blueone transition-all duration-200 border border-gray-100 rounded-2xl shadow-xl  p-5 flex flex-col h-full">
+          <div className="bg-white group hover:scale-105 hover:border-blueone transition-all duration-200 border border-gray-100 rounded-2xl shadow-xl overflow-hidden  p-5 flex flex-col h-full">
           <div className="grow space-y-3">
             <div className="flex items-center gap-3">
             <div className="w-14 h-14 flex items-center justify-center rounded-2xl bg-linear-to-br from-[#E8F1FB] to-[#DCEBFA] transition-all duration-300 hover:scale-110 hover:rotate-6">

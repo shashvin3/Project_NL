@@ -5,7 +5,7 @@ import Reveal from '../common/Reveal';
 
 function Specialprog(){
     return(
-   <section className="flex flex-col gap-32 pb-24">
+   <section className="flex flex-col gap-32 pb-24 lg:px-12">
     <div className='container mx-auto px-4'>
      {/* Program 1 */}
     <div>
@@ -62,7 +62,7 @@ function Specialprog(){
            ))}
         </ul>        
         </div>
-        <Link to="/apply-now" className='inline-flex items-center justify-center text-sm font-medium font-jakarta text-white bg-blueone px-7 py-3 rounded-3xl hover:bg-blueone/90 transition-all duration-300'>
+        <Link to="/apply-now" className='inline-flex items-center justify-center text-sm font-medium font-jakarta text-white bg-blueone px-7 py-3 rounded-3xl hover:bg-blueone/80 transition-all duration-300'>
         Apply For AIBMSP
         </Link>
      </div > 
@@ -153,7 +153,7 @@ function Specialprog(){
       
       
         {['Detailed Psychometric & Aptitude Analysis','Skill Identification Report','Career Stream Evaluation','Personalized One-on-One Counseling Session','Structured Career Action Roadmap'].map((item) =>(
-        <div className='flex items-center gap-4 rounded-xl bg-white border border-[#e0e5eb] shadow-sm p-4'>
+        <div key={item} className='flex items-center gap-4 rounded-xl bg-white border border-[#e0e5eb] shadow-sm p-4'>
         <div className="w-6 h-6 rounded-full bg-blueone/20 flex items-center justify-center">    
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-blueone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg> 
         </div>      
@@ -161,7 +161,7 @@ function Specialprog(){
         </div>
         ))}
 
-        <Link to="/contact" className='inline-flex items-center justify-center border border-gray-200 rounded-3xl text-sm font-medium p-3'>Book Counseling Session</Link>
+        <Link to="/contact" className='inline-flex items-center justify-center rounded-full text-sm font-medium py-3 px-5 lg:px-4 bg-blueone text-white hover:bg-blueone/80 transition-all duration-300'>Book Counseling Session</Link>
         </div>
         </Reveal>
     </div>

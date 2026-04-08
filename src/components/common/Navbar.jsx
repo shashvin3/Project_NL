@@ -18,16 +18,16 @@ function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50">
-      <div className="relative w-full bg-white px-4 md:px-15 flex items-center justify-between shadow-lg">
+      <div className="relative w-full bg-white px-4 md:px-6 lg:px-15 flex items-center justify-between shadow-lg">
         <Link to="/">
           <img src={logo} alt="NavLakshya Logo" className="h-20 w-40 object-contain py-1"/>
         </Link>
          
          {/* Desktop buttons */}
-        <div className="hidden md:flex items-center gap-8">
-          <ul className="flex items-center gap-8 ">
+        <div className="hidden md:flex items-center gap-4 lg:gap-8">
+          <ul className="flex items-center gap-4 lg:gap-8 ">
            { navLinks.map((links) => (
-            <li key={links.path} className={`relative group text-grayone font-semibold text-lg font-jakarta py-7 transition-colors duration-200 hover:text-blueone ${isActive(links.path) ? 'text-blueone' : ''}`}>
+            <li key={links.path} className={`relative group text-grayone font-semibold  text-sm lg:text-lg  font-jakarta py-5 lg:py-7 transition-colors duration-200 hover:text-blueone ${isActive(links.path) ? 'text-blueone' : ''}`}>
               <Link to={links.path}>{links.title}</Link>
               <div className={`absolute bottom-0 w-full h-0.5 bg-blueone transition-all duration-200 ${isActive(links.path) ? 'block' : 'hidden'}`}></div>
             </li>
@@ -56,7 +56,7 @@ function Navbar() {
       </div>
 
           {/* Mobile Buttons*/}
-            <div className = {`md:hidden ${isOpen? "flex" : "hidden"} flex-col gap-4 p-8 bg-white`}>
+            <div className = {`md:hidden ${isOpen? "flex" : "hidden"} flex-col gap-4 p-8 bg-white absolute top-full left-0 w-full shadow-lg z-50`}>
             <ul className="flex flex-col gap-2">
                { navLinks.map((links) => (
               <Link key={links.path} to={links.path}  onClick={closeMenu}>

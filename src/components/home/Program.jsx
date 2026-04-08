@@ -263,16 +263,17 @@ function Program() {
       </div>
       
       {/* program full details link */}
-      <div className="relative flex items-center gap-4 justify-center mt-20">
-        <div className="relative group font-jakarta text-[14px] font-bold text-blueone pb-1">
-        <Link to="/programs">
-          View Full Program Details
-        </Link>
-        <span className="absolute bottom-0 left-0 w-full h-[0.5px] bg-blueone hidden group-hover:block"></span>
-         </div> 
+      <div className="flex justify-center mt-20">
+       <Link to="/programs" className="relative flex gap-2 font-jakarta text-[14px] font-bold text-blueone">
+        <span className="relative flex-col group pb-1">
+         View Full Program Details
+         <span className="absolute bottom-0 left-0 w-full h-[0.5px] bg-blueone hidden group-hover:block"></span>
+         </span> 
         <svg
-          xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none" stroke="currentColor"  strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-blue-600 " ><path d="M5 12h14" /><path d="M13 6l6 6-6 6" /></svg>
-      </div>
+          xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none" stroke="currentColor"  strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-blue-600 animate-chevron mt-0.5" ><path d="M5 12h14" /><path d="M13 6l6 6-6 6" />
+        </svg>
+        </Link>
+       </div>
     </section>
   );
 }

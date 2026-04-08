@@ -1,26 +1,53 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import Toast from "../components/common/Toast";
+import useToast from "../components/hooks/useToast";
 import { supabase } from "../supabaseClient";
 
 function PaymentPage() {
   const { id } = useParams(); // Gets the ID from the URL
+  const { toast, showToast, hideToast } = useToast();
   const [applicant, setApplicant] = useState(null);
+  
 
   useEffect(() => {
     // Fetch the applicant name so the user knows they are paying for the right account
     const fetchApplicant = async () => {
-      const { data } = await supabase
+      try{
+      const { data, error } = await supabase
         .from('applicants')
         .select('firstName, lastName')
-        .eq('id', id)
+        .eq('phone', id)
         .single();
+   if (error) {
+      console.error("Supabase Error:", error.message); // This will tell you if 'id' column is missing
+      return;
+    }
+    if (data) {
       setApplicant(data);
+    }}
+    catch (err) {
+    console.error("Fetch error:", err);
+  }
     };
     fetchApplicant();
+    const timer = setTimeout(() => showToast("Your details have been saved successfully!", "success"));
+    return () => clearTimeout(timer);
   }, [id]);
 
+  
+ 
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4">
+     
+     {toast && (
+      <Toast 
+        message={"Your details have been saved successfully!"}
+        type={toast.type}
+        onClose={hideToast}
+      />
+    )}
+
       <div className="bg-white p-8 rounded-2xl shadow-xl max-w-md w-full text-center">
         <h2 className="text-2xl font-bold text-blueone mb-4">Complete Your Payment</h2>
         {applicant ? (

@@ -1,6 +1,54 @@
 import Reveal from "../common/Reveal";
+import {useState} from 'react';
 
 function ContactInfo() {
+  const [formData, setFormData] = useState({name:"",
+    email:"",
+    subject:"",
+    message:"",
+  });
+  const [errors, setErrors] = useState({});
+  const [submitted, setSubmitted] = useState(false);  
+
+  const validate = () =>{
+    const newErrors = {};
+    if (!formData.name.trim()){
+      newErrors.name = "Full Name is required";
+    }
+    if(!formData.email.trim()){
+      newErrors.email = "Email address is required"
+    }else if(!/\S+@\S+\.\S+/.test(formData.email)){
+      newErrors.email = "Email address is invalid"
+    }
+    if(!formData.subject.trim()){
+      newErrors.subject = "Subject is required"
+    }
+    if(!formData.message.trim()){
+      newErrors.message = "Message cannot be empty"
+    }
+    return newErrors;
+  }
+
+  const handleChange = (e) => {
+  const {name, value} = e.target;
+  setFormData((prev) => ({...prev, [name]: value }))
+  if(errors[name]){
+    setErrors((prev) => ({...prev, [name]: "" }))
+  }};
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0){
+      setErrors(validationErrors);
+      return;
+    }
+    console.log("Form Submitted: ", formData);
+    setSubmitted(true);
+    setFormData({name:"", email:"", subject:"", message:""});
+    setErrors({});
+  };
+
   return (
     <section className="py-10">
       <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 ">
@@ -100,27 +148,47 @@ function ContactInfo() {
           </h3>
           <p className="text-sm text-grayone mt-2">
             Fill out the form below and our career experts will reach out to you
-            within 24–48 hours.
+            within 24-48 hours.
           </p>
         </div>
+
+        {submitted && (
+              <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-lg p-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-green-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M9 12l2 2 4-4" />
+                </svg>
+                <p className="text-sm text-green-700 font-medium">
+                  Your message has been sent! We'll get back to you within 24-48 hours.
+                </p>
+              </div>
+            )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="flex flex-col space-y-2">
             <label className="text-sm font-medium">Full Name</label>
             <input
               type="text"
+              name='name'
+              value={formData.name}
+              onChange={handleChange}
               placeholder="Enter your full name"
-              className="border border-gray-300 rounded-lg bg-blueone/3 px-4 py-2 h-10 focus:outline-none focus:ring-2 focus:ring-blueone"
+              className={`border rounded-lg bg-blueone/3 px-4 py-2 h-10 focus:outline-none focus:ring-2 focus:ring-blueone ${errors.name?"border-red-500 focus:ring-red-400": "border-gray-300 focus:ring-blueone"}`}
             />
+            {errors.name && <p className="text-sm text-red-500">{errors.name}</p>}
           </div>
 
            <div className="flex flex-col space-y-2">
             <label className="text-sm font-medium">Email Address</label>
             <input
               type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
               placeholder="name@example.com"
-              className="border border-gray-300 h-10 bg-blueone/3 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blueone"
+              className={`border h-10 bg-blueone/3 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blueone ${errors.email?"border-red-500 focus:ring-red-400": "border-gray-300 focus:ring-blueone"}`}
             />
+            {errors.email && <p className="text-sm text-red-500">{errors.email}</p>}
           </div>
         </div>
 
@@ -128,21 +196,31 @@ function ContactInfo() {
           <label className="text-sm font-medium">Subject</label>
           <input
             type="text"
+            name="subject"
+            value={formData.subject}
+            onChange={handleChange}
             placeholder="What is this regarding?"
-            className="border border-gray-300 h-10 bg-blueone/3 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blueone"
+            className={`border border-gray-300 h-10 bg-blueone/3 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blueone ${errors.subject?"border-red-500 focus:ring-red-400": "border-gray-300 focus:ring-blueone"}`}
           />
+        {errors.subject && <p className="text-xs text-red-500">{errors.subject}</p>}
         </div>
 
         <div className="flex flex-col space-y-2">
           <label className="text-sm font-medium">Your Message</label>
           <textarea
             rows="5"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
             placeholder="How can we help you today?"
-            className="border border-gray-300 rounded-lg bg-blueone/3 min-h-20 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blueone"
+            className={`border rounded-lg bg-blueone/3 min-h-20 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blueone ${errors.message?"border-red-500 focus:ring-red-400": "border-gray-300 focus:ring-blueone"}`}
           />
+          {errors.message && <p className="text-xs text-red-500">{errors.message}</p>}
         </div>
 
-        <button className="w-full bg-blueone hover:bg-blue-700 transition text-white py-3 rounded-lg flex items-center justify-center gap-2 font-medium">
+        <button 
+        onClick={handleSubmit}
+        className="w-full bg-blueone hover:bg-blueone/80 transition text-white py-3 rounded-lg flex items-center justify-center gap-2 font-medium">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="w-5 h-5"
@@ -169,7 +247,6 @@ function ContactInfo() {
             <circle cx="12" cy="12" r="10" />
             <path d="M9 12l2 2 4-4" />
           </svg>
-
           <p className="text-sm text-gray-600">
             By submitting this form, you agree to receive communications
             regarding our scholarship programs and career guidance services.

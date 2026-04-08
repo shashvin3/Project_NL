@@ -11,7 +11,7 @@ function Banner({title, des, firstBtnText, secondBtnText, bgColor, titleTextColo
           <h1 className={`text-3xl md:text-6xl font-extrabold ${titleTextColor} mb-6 font-jakarta text-center`}>
           {title}
           </h1>
-          <p className={`text-lg md:text-xl font-bold max-w-2xl mx-auto opacity-90 mb-10 ${desTextColor} text-center`}>
+          <p className={`text-lg md:text-xl font-semibold max-w-2xl mx-auto opacity-90 mb-10 ${desTextColor} text-center`}>
            {des}
           </p>
         </div>

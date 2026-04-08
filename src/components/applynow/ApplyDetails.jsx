@@ -1,13 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../../assets/logo/logo.png";
 import Radio from "../common/Radio";
 import Input from "../common/Input";
+import Toast from "../common/Toast";
+import useToast from "../hooks/useToast";
 import { supabase } from "../../supabaseClient";
 
 function ApplyDetails() {
   const navigate = useNavigate();
-  const [errors, setErrors] = useState({}); 
+  const { toast, showToast, hideToast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState({});
   const [isAgreed, setIsAgreed] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
@@ -22,9 +26,9 @@ function ApplyDetails() {
     phone: "",
     email: "",
     parentName: "",
-    id_proofs: "",
-  });
-  const [docFile, setDocFile] = useState(null)
+    });
+  const [docFile, setDocFile] = useState(null);
+  const [pinError, setPinError] = useState("");
 
   // function to fetch data using pincode
   const fetchLocation = async (pin) => {
@@ -46,7 +50,7 @@ function ApplyDetails() {
           city: "",
           state: "",
         }));
-        console.log("Pincode not found");
+        setPinError("Pincode not found. Please check and try again.");
       }
     } catch (error) {
       console.error("Error fetchinh data:", error);
@@ -62,30 +66,90 @@ function ApplyDetails() {
 
   const handlePinChange = (e) => {
     setFormData({ ...formData, pincode: e.target.value });
+    setPinError("");
+    if (errors.pincode) {
+      setErrors((prev) => ({ ...prev, pincode: "" }));
+    }
   };
 
   //validation for mandatory fields
   const validateForm = () => {
-   let newErrors = {};
-    if (!formData.firstName) newErrors.firstName = "First Name is mandatory";
-    if (!formData.lastName) newErrors.lastName = "Last Name is mandatory";
-    if (!formData.email) newErrors.email = "Email is mandatory";
-    if (!formData.phone) newErrors.phone = "Phone Number is mandatory"
-    if(!formData.dob) newErrors.dob = "Date of Birth is mandatory"
-    if(!formData.classGrade) newErrors.classGrade = "Class is mandatory"
-    if(!formData.schoolName) newErrors.schoolName = "School/College name is mandatory"
-    if(!formData.state) newErrors.state = "State is mandatory"
-    if(!formData.city) newErrors.city = "City is mandatory"
-    if(!formData.pincode) newErrors.pincode = "Pincode is mandatory"
-    
-    setErrors(newErrors);
+    let newErrors = {};
+    if (!formData.firstName.trim()) {
+      newErrors.firstName = "First Name is mandatory";
+    } else if (!/^[a-zA-Z\s]+$/.test(formData.firstName.trim())) {
+      newErrors.firstName = "First Name can only contain letters";
+    }
 
+    if (!formData.lastName.trim()) {
+      newErrors.lastName = "Last Name is mandatory";
+    } else if (!/^[a-zA-Z\s]+$/.test(formData.lastName.trim())) {
+      newErrors.lastName = "Last Name can only contain letters";
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is mandatory";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = "Enter a valid email address";
+    }
+
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Phone Number is mandatory";
+    } else if (!/^[6-9]\d{9}$/.test(formData.phone)) {
+      newErrors.phone = "Enter a valid 10-digit Indian mobile number";
+    }
+
+    if (!formData.dob) newErrors.dob = "Date of Birth is mandatory";
+
+    if (!formData.classGrade.trim()) {
+      newErrors.classGrade = "Class is mandatory";
+    } else if (
+      !/^([6-9]|1[0-2])(th|st|nd|rd)?$|^(UG|PG|Graduation|undergraduate)$/i.test(
+        formData.classGrade.trim(),
+      )
+    ) {
+      newErrors.classGrade =
+        "Enter a valid class (6th to 12th, or Graduation/UG)";
+    }
+
+    if (!formData.schoolName.trim()) {
+      newErrors.schoolName = "School/College name is mandatory";
+    } else if (!/^[a-zA-Z0-9\s\-\.,'&]+$/.test(formData.schoolName.trim())) {
+      newErrors.schoolName = "Enter a valid school/college name";
+    }
+
+    if (!formData.pincode.trim()) {
+      newErrors.pincode = "Pincode is mandatory";
+    } else if (!/^\d{6}$/.test(formData.pincode)) {
+      newErrors.pincode = "Enter a valid 6-digit pincode";
+    }
+
+    if (!formData.state.trim()) {
+      newErrors.state = "State is mandatory";
+    } else if (!/^[a-zA-Z\s]+$/.test(formData.state.trim())) {
+      newErrors.state = "State name can only contain letters";
+    }
+
+    if (!formData.city.trim()) {
+      newErrors.city = "City is mandatory";
+    } else if (!/^[a-zA-Z\s]+$/.test(formData.city.trim())) {
+      newErrors.city = "City name can only contain letters";
+    }
+
+    if (
+      formData.parentName.trim() &&
+      !/^[a-zA-Z\s]+$/.test(formData.parentName.trim())
+    ) {
+      newErrors.parentName = "Parent Name can only contain letters";
+    }
+
+    setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
   // Phone verification & Email Verification
   const [phoneStep, setPhoneStep] = useState("idle");
-  const [otpValue, setOtpValue] = useState(""); 
+  const [otpValue, setOtpValue] = useState("");
   const [emailStep, setEmailStep] = useState("idle");
   const [emailOtp, setEmailOtp] = useState("");
 
@@ -121,106 +185,124 @@ function ApplyDetails() {
     }
   };
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    if (errors[name]) {
+      setErrors((prev) => ({ ...prev, [name]: "" }));
+    }
+  };
+  const fileHandle = (e) => {
+    const file = e.target.files[0];
+    const allowed = ["image/jpeg", "image/png", "application/pdf"];
+    if (file && !allowed.includes(file.type)) {
+      showToast("Only JPG, PNG, or PDF files are allowed.", "warning");
+      e.target.value = "";
+      return;
+    }
+    const maxSize = 2 * 1024 * 1024; // 2MB in bytes
+    if (file.size > maxSize) {
+      showToast("File size must be under 2MB.", "warning");
+      e.target.value = "";
+      return;
+    }
+    setDocFile(file);
+  };
+
   // for uploading document to supabase
   const uploadToSupabase = async (docFile) => {
     if (!docFile) return null;
     const fileName = `${Date.now()}_${docFile.name}`; //create a unique name - timestamp_filename
-    const {data, error} = await supabase.storage
-    .from('documents')
-    .upload(`doc_proofs/${fileName}`,docFile);
-
-     if (error) throw error;
-
-     const { data: urlData } = supabase.storage
-    .from('documents')
-    .getPublicUrl(`doc_proofs/${fileName}`);
-
-     return urlData.publicUrl;
-  }
-
-  //for submitting form
-  const handleRegister = async (e) => {
-  e.preventDefault();
-
-  //Validation for mandatory fields
-  if(!validateForm()){
-    alert("Please fill all mandatory fields");
-    return; 
-  }
-  
-  //Validation for T&C
-  if (!isAgreed) {
-    alert("Please agree to the Terms and Conditions before registering.");
-    return;
-  }
-
-  // Validation for Mobile and Email
-  if (phoneStep !== "verified" || emailStep !== "verified") {
-    alert("Please verify your Mobile and Email first!");
-    return;
-  }
-
-  // Verification for DOB
-  const birthDate = new Date(formData.dob);
-  const today = new Date();
-  
-  // Calculating the Age
-  let age = today.getFullYear() - birthDate.getFullYear();
-  const m = today.getMonth() - birthDate.getMonth();
-  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-    age--;
-  }
-
-   // Future Date cannot be DOB
-  if (birthDate > today) {
-    alert("Date of Birth cannot be in the future.");
-    return;
-  }
-  if (age < 10) {
-    alert("Student must be at least 10 years old to register.");
-    return;
-  }
-
-  // Validation for File Check if user entered file
-  if (!docFile) {
-    alert("Please upload your ID Proof screenshot before registering.");
-    return;
-  }
-
-  
-  try {
-    alert("Uploading documents and registering... please do not close the window.");
-    
-    const docUrl = await uploadToSupabase(docFile);
-
-    // Inserting into applicants table in the supabase
-    const { data, error } = await supabase
-      .from('applicants')
-      .insert([
-        {
-          ...formData,
-          id_proofs: docUrl,
-          payment_status: 'pending'
-        }
-      ])
-      .select(); //.select() is added so that we can get the returned ID for payment redirection
+    const { data, error } = await supabase.storage
+      .from("documents")
+      .upload(`doc_proofs/${fileName}`, docFile);
 
     if (error) throw error;
 
-    alert("Registration Details Saved Successfully!");
+    const { data: urlData } = supabase.storage
+      .from("documents")
+      .getPublicUrl(`doc_proofs/${fileName}`);
 
-    //now it will Redirect to Payment Page
-    const newId = data[0].id; // Passed the unique ID so the payment page can know who it is paying
-    navigate(`/payment/${newId}`);
+    return urlData.publicUrl;
+  };
 
-  } catch (error) {
-    console.error("Error adding documents: ", error.message);
-    alert("Submission failed: " + error.message);
-  }
-};
+  //for submitting form
+  const handleRegister = async (e) => {
+    e.preventDefault();
+    //Validation for mandatory fields
+    if (!validateForm()) {
+      showToast("Please fill all mandatory fields.", "warning");
+      return;
+    }
+    //Validation for T&C
+    if (!isAgreed) {
+      showToast("Please agree to the Terms and Conditions.", "warning");
+      return;
+    }
+    // Validation for Mobile and Email
+    if (phoneStep !== "verified" || emailStep !== "verified") {
+      showToast("Please verify your Mobile and Email first!", "warning");
+      return;
+    }
+    // Verification for DOB
+    const birthDate = new Date(formData.dob);
+    const today = new Date();
+    // Calculating the Age
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+    }
+    // Future Date cannot be DOB
+    if (birthDate > today) {
+      showToast("Date of Birth cannot be in the future.", "error");
+      return;
+    }
+    if (age < 10) {
+      showToast("Student must be at least 10 years old to register.", "error");
+      return;
+    }
+
+    // Validation for File Check if user entered file
+    if (!docFile) {
+      showToast("Please upload your ID Proof document.", "warning");
+      return;
+    }
+
+    try {
+      setIsSubmitting(true); 
+      const docUrl = await uploadToSupabase(docFile);
+      // Inserting into applicants table in the supabase
+      const { data, error } = await supabase
+        .from("applicants")
+        .insert([
+          {
+            ...formData,
+            id_proofs: docUrl,
+            payment_status: "pending",
+          },
+        ])
+        .select(); //.select() is added so that we can get the returned ID for payment redirection
+
+      if (error) throw error;
+
+      //now it will Redirect to Payment Page
+      // const newId = data[0].id; // Passed the unique ID so the payment page can know who it is paying
+      navigate(`/payment/${formData.phone}`);
+    } catch (error) {
+      console.error("Error adding documents: ", error.message);
+      showToast("Submission failed: " + error.message, "error");
+    }
+    finally {
+     setIsSubmitting(false); 
+    }
+  };
 
   return (
     <section>
+      {toast && (
+        <Toast message={toast.message} type={toast.type} onClose={hideToast} />
+      )}
       {/* Header Part */}
       <div className="text-center mb-6 space-y-4">
         <img
@@ -312,27 +394,99 @@ function ApplyDetails() {
           <div className="bg-yellowone h-1 md:block hidden mt-5"></div>
         </div>
         <div className="grid md:grid-cols-2 gap-4">
-          <Input label="First Name *" value={formData.firstName} onChange={(e) => setFormData({...formData, firstName: e.target.value})} error={errors.firstName}/>
-          <Input label="Last Name *" value={formData.lastName} onChange={(e) => setFormData({...formData, lastName: e.target.value})} error={errors.lastName}/>
-          <Input label="Date of Birth *" type="date" value={formData.dob} max={new Date().toISOString().split("T")[0]} onChange={(e) => setFormData({...formData, dob: e.target.value})} error={errors.dob}/>
+          <Input
+            label="First Name *"
+            name="firstName"
+            value={formData.firstName}
+            onChange={handleChange}
+            error={errors.firstName}
+          />
+          <Input
+            label="Last Name *"
+            name="lastName"
+            value={formData.lastName}
+            onChange={handleChange}
+            error={errors.lastName}
+          />
+          <Input
+            label="Date of Birth *"
+            name="dob"
+            type="date"
+            value={formData.dob}
+            max={new Date().toISOString().split("T")[0]}
+            onChange={handleChange}
+            error={errors.dob}
+          />
           <div>
             <label className="block mb-1 text-sm font-medium">Gender</label>
             <div className="flex gap-4">
-              <Radio label="Male" name="gender" value="male" checked={formData.gender === "male"} onChange={(e) => setFormData({ ...formData, gender: e.target.value })} />
-              <Radio label="Female" name="gender" value="female" checked={formData.gender === "female"} onChange={(e) => setFormData({ ...formData, gender: e.target.value })}/>
-              <Radio label="Other" name="gender" value="other" checked={formData.gender === "other"} onChange={(e) => setFormData({ ...formData, gender: e.target.value })}/>
+              <Radio
+                label="Male"
+                name="gender"
+                value="male"
+                checked={formData.gender === "male"}
+                onChange={(e) =>
+                  setFormData({ ...formData, gender: e.target.value })
+                }
+              />
+              <Radio
+                label="Female"
+                name="gender"
+                value="female"
+                checked={formData.gender === "female"}
+                onChange={(e) =>
+                  setFormData({ ...formData, gender: e.target.value })
+                }
+              />
+              <Radio
+                label="Other"
+                name="gender"
+                value="other"
+                checked={formData.gender === "other"}
+                onChange={(e) =>
+                  setFormData({ ...formData, gender: e.target.value })
+                }
+              />
             </div>
           </div>
-          <Input label="Class / Grade *" value={formData.classGrade} onChange={(e) => setFormData({...formData, classGrade: e.target.value})} error={errors.classGrade}/>
-          <Input label="School / College Name *" value={formData.schoolName} onChange={(e) => setFormData({...formData, schoolName: e.target.value})} error={errors.schoolName}/>
-          <Input label="State *" value={formData.state} onChange={(e) => setFormData({...formData, state: e.target.value})} error={errors.state}/>
-          <Input label="City *" value={formData.city} onChange={(e) => setFormData({...formData, city: e.target.value})} error={errors.city}/>
           <Input
-            label="Pincode *"
-            value={formData.pincode}
-            onChange={handlePinChange}
-            error={errors.pincode}
+            label="Class / Grade *"
+            name="classGrade"
+            value={formData.classGrade}
+            onChange={handleChange}
+            error={errors.classGrade}
           />
+          <Input
+            label="School / College Name *"
+            name="schoolName"
+            value={formData.schoolName}
+            onChange={handleChange}
+            error={errors.schoolName}
+          />
+          <Input
+            label="State *"
+            value={formData.state}
+            name="state"
+            onChange={handleChange}
+            error={errors.state}
+          />
+          <Input
+            label="City *"
+            value={formData.city}
+            name="city"
+            onChange={handleChange}
+            error={errors.city}
+          />
+          <div>
+            <Input
+              label="Pincode *"
+              name="pincode"
+              value={formData.pincode}
+              onChange={handlePinChange}
+              error={errors.pincode}
+            />
+            {pinError && <p className="text-xs text-red-500">{pinError}</p>}
+          </div>
         </div>
 
         {/* Contact + Document Detail*/}
@@ -342,20 +496,31 @@ function ApplyDetails() {
             <h2 className="bg-blueone text-white text-lg font-bold font-jakarta px-4 py-2 rounded-t-xl rounded-bl-xl flex w-full mb-3">
               Contact Details
             </h2>
-            <Input label="Parent Name" value={formData.parentName} onChange={(e) => setFormData({...formData, parentName: e.target.value})}/>
+            <Input
+              label="Parent Name"
+              name="parentName"
+              value={formData.parentName}
+              onChange={handleChange}
+              error={errors.parentName}
+            />
             {/* Phone Verification Part */}
             <div className="relative">
               <Input
                 label="Mobile Number *"
+                name="phone"
                 placeholder="Enter mobile number"
                 value={formData.phone}
-                onChange={(e) =>
-                  setFormData({ ...formData, phone: e.target.value })
-                }
-                disabled={phoneStep === "verified"}
+                onChange={(e) => {
+                  const newPhone = e.target.value;
+                  setFormData({ ...formData, phone: newPhone });
+                  if (errors.phone)
+                    setErrors((prev) => ({ ...prev, phone: "" }));
+                  if (phoneStep === "verified") setPhoneStep("idle"); // ← only reset if was verified
+                }}
+                // disabled={phoneStep === "verified"}
                 error={errors.phone}
               />
-              {formData.phone?.length === 10 && phoneStep === "idle" && (
+              {/^[6-9]\d{9}$/.test(formData.phone) && phoneStep === "idle" && (
                 <button
                   type="button"
                   onClick={handlePhoneSendOtp}
@@ -368,7 +533,7 @@ function ApplyDetails() {
               {/* Verified will appear */}
               {phoneStep === "verified" && (
                 <span className="absolute right-4 top-10 text-green-600 font-bold text-xs">
-                   VERIFIED
+                  VERIFIED
                 </span>
               )}
 
@@ -390,40 +555,50 @@ function ApplyDetails() {
                 </div>
               )}
             </div>
-              {/* Email Verification Part */}
+            {/* Email Verification Part */}
             <div className="relative">
-             <Input label="Email ID *"
-             placeholder="Enter your email"
-             value = {formData.email}
-             onChange={(e)=>
-             setFormData({...formData , email:e.target.value})
-             } 
-             disabled={emailStep==="verified"}
-             error={errors.email}
-             />
-             {formData.email?.length > 10 && emailStep === 'idle' && (
-             <button type="button" onClick={handleEmailSendOtp} className="absolute right-4 top-10 font-bold text-sm text-red-500 hover:underline" >
-              Verify
-             </button>  
-             )}
-             {emailStep === "verified" && (
-              <span className="absolute right-4 top-10 text-xs text-green-600 font-bold">
-                VERIFIED
-              </span>
-             )}
-             {emailStep ==="typing" &&(
-              <div className="mt-2 flex gap-2">
-                <input 
-                className="flex-1 border border-blueone rounded-lg p-2 text-sm outline-none bg-blue-50"
-                placeholder="Enter Email OTP"
-                value={emailOtp}
-                onChange={(e) => setEmailOtp(e.target.value) }
-                />
-               <button onClick={handleEmailVerifyOtp} className="bg-blueone text-white px-4 py-2 rounded-lg text-xs font-bold"> 
-                Submit
-               </button>
-              </div>
-             )}
+              <Input
+                label="Email ID *"
+                name="email"
+                placeholder="Enter your email"
+                value={formData.email}
+                  onChange={(e) => {
+                    handleChange(e);
+                    if (emailStep === "verified") setEmailStep("idle");
+                  }}
+                // disabled={emailStep==="verified"}
+                error={errors.email}
+              />
+              {formData.email?.length > 10 && emailStep === "idle" && (
+                <button
+                  type="button"
+                  onClick={handleEmailSendOtp}
+                  className="absolute right-4 top-10 font-bold text-xs text-red-500 hover:underline"
+                >
+                  VERIFY
+                </button>
+              )}
+              {emailStep === "verified" && (
+                <span className="absolute right-4 top-10 text-xs text-green-600 font-bold">
+                  VERIFIED
+                </span>
+              )}
+              {emailStep === "typing" && (
+                <div className="mt-2 flex gap-2">
+                  <input
+                    className="flex-1 border border-blueone rounded-lg p-2 text-sm outline-none bg-blue-50"
+                    placeholder="Enter Email OTP"
+                    value={emailOtp}
+                    onChange={(e) => setEmailOtp(e.target.value)}
+                  />
+                  <button
+                    onClick={handleEmailVerifyOtp}
+                    className="bg-blueone text-white px-4 py-2 rounded-lg text-xs font-bold"
+                  >
+                    Submit
+                  </button>
+                </div>
+              )}
             </div>
           </div>
           {/* document */}
@@ -434,7 +609,7 @@ function ApplyDetails() {
             <Input
               label="Choose File *"
               type="file"
-              onChange={(e)=>setDocFile(e.target.files[0])}
+              onChange={fileHandle}
               className="w-full border rounded-lg px-3 py-2 file:bg-blue-600 file:text-white file:px-4 file:py-1 file:rounded-md file:border-0 file:mr-4"
             ></Input>
             <div className="bg-yellow-400 rounded-xl p-2 mt-4 text-center font-semibold">
@@ -448,7 +623,12 @@ function ApplyDetails() {
       {/* Footer Part  */}
       <div className="mt-8 text-center space-y-4">
         <div className="flex items-start gap-2 justify-center text-sm">
-          <input type="checkbox" checked={isAgreed} onChange={(e) => setIsAgreed(e.target.checked)} className="mt-2" />
+          <input
+            type="checkbox"
+            checked={isAgreed}
+            onChange={(e) => setIsAgreed(e.target.checked)}
+            className="mt-2"
+          />
           <span className="text-lg font-semibold text-left">
             I hereby confirm that all the details provided are correct.I agree
             to the <span className="text-blueone">terms and conditions</span> of
@@ -458,9 +638,15 @@ function ApplyDetails() {
           </span>
         </div>
 
-        <button type="button" onClick={handleRegister} className="bg-yellow-400 hover:bg-yellow-500 px-6 py-3 rounded-xl text-md md:text-2xl text-blue-800 font-bold max-w-xl">
-          <span className="font-extrabold">Register Now</span> & Unlock Your
-          Scholarship Opportunity🚀
+        <button
+          type="button"
+          onClick={handleRegister}
+          disabled={isSubmitting}
+          className="bg-yellow-400 hover:bg-yellow-500 px-6 py-3 rounded-xl text-md md:text-2xl text-blue-800 font-bold max-w-xl"
+        >
+        {isSubmitting ? "Submitting..." : (
+         <><span className="font-extrabold">Register Now</span> & Unlock Your
+          Scholarship Opportunity🚀</> )}
         </button>
 
         <p className="text-red-500 text-sm">
