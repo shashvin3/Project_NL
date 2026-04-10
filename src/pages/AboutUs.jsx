@@ -10,15 +10,12 @@ function AboutUs() {
   return (
   <div className="bg-[#fffafc]">
     <section className="relative overflow-hidden">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-8">
         <div className="absolute inset-0">
           <img src={bgimage} alt="about hero image" className="w-full h-full object-cover opacity-30" />
         </div>
         <div className="absolute inset-0 bg-linear-to-b from-[#fffafc] via-transparent to-[#fffafc]"></div>
-        <div className="absolute inset-0">
-          <img src={bgimage} alt="about hero image" className="w-full h-full object-cover opacity-10" />
-        </div>
-       <div className="absolute inset-0 bg-linear-to-b from-[#fffafc] via-transparent to-[#fffafc]"></div> 
+        
         <Reveal direction="up">
         <div className="max-w-3xl mb-5 py-24 relative z-10">
         <span className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wider font-jakarta text-blueone bg-blue-100 rounded-full">OUR IDENTITY</span>
