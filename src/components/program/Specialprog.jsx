@@ -161,7 +161,7 @@ function Specialprog(){
         </div>
         ))}
 
-        <Link to="/contact" className='inline-flex items-center justify-center rounded-full text-sm font-medium py-3 px-5 lg:px-4 bg-blueone text-white hover:bg-blueone/80 transition-all duration-300'>Book Counseling Session</Link>
+        <Link to="/book-counselling" className='inline-flex items-center justify-center rounded-full text-sm font-medium py-3 px-5 lg:px-4 bg-blueone text-white hover:bg-blueone/80 transition-all duration-300'>Book Counseling Session</Link>
         </div>
         </Reveal>
     </div>

@@ -14,6 +14,7 @@ import Disclaimer from './pages/Disclaimer';
 import ScrollToTop from './components/common/ScrollToTop';
 import BackToTop from './components/common/BackToTop';
 import ApplyNow from './pages/ApplyNow';
+import BookCounselling from './pages/BookCounselling';
 import AIBMSP from './pages/AIBMSP';
 import ComingSoon from './pages/ComingSoon';
 import PaymentPage from './pages/PaymentPage';
@@ -38,6 +39,7 @@ function App() {
         <Route path="/child-protection-policy" element={<ChildProtectPolicy/>} />
         <Route path="/disclaimer" element={<Disclaimer/>} />
         <Route path="/apply-now" element={<ApplyNow/>} />
+        <Route path="/book-counselling" element={<BookCounselling/>} />
         <Route path="/AIBMSP" element={<AIBMSP/>} />
         <Route path="/coming-soon" element={<ComingSoon/>} />
         <Route path="/payment/:id" element={<PaymentPage/>} />

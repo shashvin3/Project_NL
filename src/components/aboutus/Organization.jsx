@@ -1,4 +1,4 @@
-import group from '../../assets/aboutus/groupphoto.jpg'; 
+import group from '../../assets/aboutus/groupphoto.png'; 
 import organiz from '../../assets/aboutus/organiz.png';
 function Organization(){
     return(
@@ -25,7 +25,7 @@ function Organization(){
      </div>
     {/* right part */}
      <div className='rounded-3xl shadow-2xl overflow-hidden aspect-video lg:aspect-square'>
-     <img src={group} alt="" className='w-full h-full object-cover'/>
+     <img src={group} className='w-full h-full object-cover opacity-85'/>
      </div>
   </div>
 </section>

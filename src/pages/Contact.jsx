@@ -71,7 +71,7 @@ function Contact() {
         firBtnBg="bg-blueone"
         secBtnBg="bg-[yellowone]"
         firstBtnLink="/programs"
-        secondBtnLink="/apply-now"
+        secondBtnLink="/book-counselling"
         secBtnBorder="border-[#2d1f01]"
       />
     </div>

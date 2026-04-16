@@ -5,12 +5,12 @@ function ScholarshipPolicy() {
   return (
     <section className="bg-[#fffafc]">
       <img src={scholarbanner} alt="Privacy Policy" />
-      <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8">
         <h1 className="text-2xl md:text-3xl font-jakarta font-bold mb-7">
         Scholarship Policy
         </h1>
-       <div className="flex gap-10 items-start">
-       <div className="flex-1 space-y-10">
+        <div className="flex gap-10 items-start">
+        <div className="flex-1 space-y-10">
         {/*  Purpose */}
         <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
           <h2 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-3">
@@ -127,7 +127,7 @@ function ScholarshipPolicy() {
           <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-1">Policy Modification</h3>
           <p className=" text-grayone lg:text-lg leading-relaxed mb-3">NavLakshya reserves the right to modify scholarship structure, eligibility, or benefits without prior notice.</p>
         </div>
-       </div>
+        </div> 
 
        <div className="hidden lg:block w-64 shrink-0">
             <div className="sticky top-24 bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
@@ -137,18 +137,17 @@ function ScholarshipPolicy() {
               <ul className="space-y-2">
                 {["Purpose","Eligibility Criteria"," Selection Process" ," Scholarship Benefits" ,"Disqualification Policy",
                 "Policy Modification"].map((items) => (
-                  <li key={items}                    
-                      href={`#${items}`}
-                      className="text-sm text-grayone hover:text-blueone transition-colors duration-200 flex items-center gap-2 group"
-                    >
-                      <span className="w-1 h-1 rounded-full bg-grayone/40 group-hover:bg-blueone transition-colors shrink-0"></span>
-                      {items}
+                  <li key={items} className="text-sm text-grayone hover:text-blueone transition-colors duration-200 flex items-center gap-2 group">
+                  <span className="w-1 h-1 rounded-full bg-grayone/40 group-hover:bg-blueone transition-colors shrink-0"></span>
+                  {items}
                   </li>
                 ))}
               </ul>
             </div>
-      </div>
-      </div>
+       </div>
+
+
+       </div>
     </div>
     </section>
   );

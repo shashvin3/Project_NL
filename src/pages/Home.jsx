@@ -16,7 +16,7 @@ function Home(){
     <Program />
     <Stats />
     <Testimonial />
-    <Banner title="Ready to Build Your Career?" titleTextColor="text-yellow-500" des=" Don't wait for opportunities. Create them with NavLakshya's structured scholarship and career development programs." desTextColor="text-white" firstBtnText="Explore Programs" secondBtnText="Book Counseling" firstBtnLink="/programs" secondBtnLink="/contact" bgColor="bg-blueone" firBtnTextColor="text-[#182230]" secBtnTextColor="text-white" firBtnBg ="bg-yellow-500" secBtnBg = "bg-blueone " secBtnBorder="border-blue-400" firstIcon={trophybl}
+    <Banner title="Ready to Build Your Career?" titleTextColor="text-yellow-500" des=" Don't wait for opportunities. Create them with NavLakshya's structured scholarship and career development programs." desTextColor="text-white" firstBtnText="Explore Programs" secondBtnText="Book Counseling" firstBtnLink="/programs" secondBtnLink="/book-counselling" bgColor="bg-blueone" firBtnTextColor="text-[#182230]" secBtnTextColor="text-white" firBtnBg ="bg-yellow-500" secBtnBg = "bg-blueone " secBtnBorder="border-blue-400" firstIcon={trophybl}
      secondIcon={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className={`w-5 h-5 transition-colors duration-300 group-hover:text-black`}
               ><circle cx="12" cy="12" r="10" /> <circle cx="12" cy="12" r="6" /> <circle cx="12" cy="12" r="2" /></svg>}/>
     </div>

@@ -287,8 +287,7 @@ function ApplyDetails() {
       if (error) throw error;
 
       //now it will Redirect to Payment Page
-      // const newId = data[0].id; // Passed the unique ID so the payment page can know who it is paying
-      navigate(`/payment/${formData.phone}`);
+      navigate(`/payment/${formData.phone}?source=applicant`); // passing phone as ID to identify the user in payment page
     } catch (error) {
       console.error("Error adding documents: ", error.message);
       showToast("Submission failed: " + error.message, "error");
@@ -316,32 +315,7 @@ function ApplyDetails() {
       </div>
 
       {/* Highlight Part */}
-      <div className="grid md:grid-cols-2 justify-center gap-6 mb-8">
-        <div className="flex items-center gap-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth={2}
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="w-7 h-7 text-yellow-500"
-          >
-            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
-            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
-            <path d="M4 22h16" />
-            <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
-            <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
-            <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
-          </svg>
-          <span className="text-blue-900 font-bold">
-            Scholarship Pool :{" "}
-            <span className="text-blue-900 font-normal">Up to </span>
-            <span className="text-red-800 font-bold">₹5,00,000</span>
-          </span>
-        </div>
-
+      <div className="flex item-center justify-center mb-8">
         <div className="flex items-center gap-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -360,28 +334,6 @@ function ApplyDetails() {
           </svg>
           <span className="text-blue-900 font-bold">Certificate</span>
           <span className="text-blue-900">for All Participants</span>
-        </div>
-
-        <div className="flex items-center gap-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth={2}
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="text-blue-800 w-8 h-8 "
-          >
-            <rect x="4" y="3" width="14" height="18" rx="2" />
-            <line x1="7" y1="7" x2="15" y2="7" />
-            <line x1="7" y1="11" x2="13" y2="11" />
-            <path d="M8 15l2 2 3-3" />
-            <circle cx="18" cy="17" r="3" />
-            <path d="M18 15v2l1 1" />
-          </svg>
-          <span className="text-blue-900 font-bold">Top Prizes:</span>
-          <span className="text-yellow-500">₹1,00,000</span>
         </div>
       </div>
 

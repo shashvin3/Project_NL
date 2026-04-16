@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Toast from "../components/common/Toast";
 import useToast from "../components/hooks/useToast";
@@ -6,35 +6,50 @@ import { supabase } from "../supabaseClient";
 
 function PaymentPage() {
   const { id } = useParams(); // Gets the ID from the URL
+  const [searchParams] = useSearchParams(); 
+  const source = searchParams.get("source");
   const { toast, showToast, hideToast } = useToast();
   const [applicant, setApplicant] = useState(null);
   
 
   useEffect(() => {
-    // Fetch the applicant name so the user knows they are paying for the right account
-    const fetchApplicant = async () => {
+    const fetchDetails = async () => {
       try{
-      const { data, error } = await supabase
-        .from('applicants')
-        .select('firstName, lastName')
-        .eq('phone', id)
-        .single();
-   if (error) {
-      console.error("Supabase Error:", error.message); // This will tell you if 'id' column is missing
-      return;
-    }
-    if (data) {
-      setApplicant(data);
-    }}
-    catch (err) {
-    console.error("Fetch error:", err);
-  }
+        let data, error;
+      
+      if (source === "counseling") {  //fetching from counseling_bookings table
+      ({ data, error } = await supabase
+        .from('counseling_bookings')
+        .select('fullName')
+        .eq('id', id)
+        .single());
+
+        if (error) {console.error("Supabase Error:", error.message); return;}
+        if (data) setApplicant({firstName: data.fullName});
+      }else{
+        ({ data,error } = await supabase
+          .from('applicants')
+          .select("firstName,lastName")
+          .eq('phone', id)
+          .single());
+
+       if(error) {console.error("Supabase Error:", error.message); return;}
+       if (data) setApplicant(data);
+        }   
+      }catch (err) {
+       console.error("Fetch error:", err);
+     }
     };
-    fetchApplicant();
+
+    fetchDetails();
+
     const timer = setTimeout(() => showToast("Your details have been saved successfully!", "success"));
     return () => clearTimeout(timer);
-  }, [id]);
+  }, [id, source]);
 
+  const paymentMessage = source === "counseling"
+    ? "Please pay the counseling session fee to confirm your booking."
+    : "Please pay the registration fee to finalize your scholarship application.";
   
  
   return (
@@ -51,7 +66,7 @@ function PaymentPage() {
       <div className="bg-white p-8 rounded-2xl shadow-xl max-w-md w-full text-center">
         <h2 className="text-2xl font-bold text-blueone mb-4">Complete Your Payment</h2>
         {applicant ? (
-          <p className="mb-6">Hello, <span className="font-bold">{applicant.firstName}</span>! Please pay the registration fee to finalize your scholarship application.</p>
+          <p className="mb-6">Hello, <span className="font-bold">{applicant.firstName}</span>!{" "}{paymentMessage} </p>
         ) : <p>Loading details...</p>}
         
         <div className="bg-blue-50 p-4 rounded-lg mb-6">

@@ -284,10 +284,8 @@ function ChildProtectPolicy() {
                 "Behaviour Protocols for Volunteers & Visitors","Digital Safety & Online Protection","Parental Consent", " Reporting & Accountability ",
                 "Non-Compliance & Disciplinary Action", " Policy Review ", " Commitment Statement"
                   ].map((items) => (
-                  <li key={items}                    
-                      href={`#${items}`}
-                      className="text-sm text-grayone hover:text-blueone transition-colors duration-200 flex items-start gap-2 group"
-                    >
+                  <li key={items} 
+                   className="text-sm text-grayone hover:text-blueone transition-colors duration-200 flex items-start gap-2 group">
                       <span className="w-1 h-1 rounded-full bg-grayone/40 group-hover:bg-blueone transition-colors shrink-0 mt-2"></span>
                       {items}
                   </li>

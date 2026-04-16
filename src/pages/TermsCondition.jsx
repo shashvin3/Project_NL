@@ -4,9 +4,13 @@ function TermsCondition() {
   return (
     <section className="bg-[#fffafc]">
       <div className="container mx-auto px-4 py-8">
-        <h1 className="text-2xl md:text-3xl font-jakarta font-bold mb-3">
+        <h1 className="text-2xl md:text-3xl font-jakarta font-bold mb-8">
           Terms & Conditions
         </h1>
+
+        <div className="flex gap-10 items-start">
+        <div className="flex-1 space-y-10">
+        <div className="bg-blueone/5 border border-blueone/20 rounded-2xl p-6">
         <p className="font-medium text-sm font-jakarta text-grayone leading-relaxed mb-4">
           Welcome to NavLakshya. These Terms & Conditions govern your access to
           and use of our website, scholarship programs, career counseling
@@ -14,55 +18,56 @@ function TermsCondition() {
           services. By accessing or using our services, you agree to comply with
           and be bound by these Terms.
         </p>
-
-      <div>
+        </div>
+       {/*  About NavLakshya */}
+      <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
           <h2 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-1">
              About NavLakshya
           </h2>
-          <p className=" text-grayone leading-relaxed mb-3">
+          <p className="text-grayone lg:text-lg leading-relaxed mb-3">
            NavLakshya is an education and career empowerment initiative operated under Streamcore Web Pvt Ltd. Our services include:
           </p>
            <ul className="mb-4">
             <li className="flex items-start gap-2">
               <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
-              <span className="text-sm">All India Bright Minds Scholarship Program (AIBMSP)</span>
+              <span>All India Bright Minds Scholarship Program (AIBMSP)</span>
             </li>
             <li className="flex items-center gap-2">
               <img src={bluedot} alt="" className="w-2 h-2" />
-              <span className="text-sm">Career Counseling Services</span>
+              <span>Career Counseling Services</span>
             </li>
             <li className="flex items-center gap-2">
               <img src={bluedot} alt="" className="w-2 h-2" />
-              <span className="text-sm">Skill Development Programs</span>
+              <span>Skill Development Programs</span>
             </li>
             <li className="flex items-center gap-2">
               <img src={bluedot} alt="" className="w-2 h-2" />
-              <span className="text-sm">Internship & Placement Assistance</span>
+              <span>Internship & Placement Assistance</span>
             </li>
         </ul>
       </div>
 
        {/*  Eligibility */}
-        <div>
+        <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
           <h2 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-1">
             Eligibility
           </h2>
          <ul className="mb-3">
             <li className="flex items-start gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
-              <span className="text-sm">
+              <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
+              <span>
                 Students applying for scholarship programs must provide accurate academic details.
               </span>
             </li>
             <li className="flex items-start gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
-              <span className="text-sm">
+              <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
+              <span>
                 For candidates below 18 years of age, parental/guardian consent may be required.
               </span>
             </li>
             <li className="flex items-start gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
-              <span className="text-sm">
+              <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
+              <span>
                 NavLakshya reserves the right to verify documents and eligibility criteria.
               </span>
             </li>
@@ -70,89 +75,89 @@ function TermsCondition() {
      </div>
 
         {/* Registration & Account Responsibility */}
-        <div>
+        <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
           <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-1">
             Registration & Account Responsibility
           </h3>
-          <p className=" text-grayone leading-relaxed mb-3">
+          <p className=" text-grayone lg:text-lg  leading-relaxed mb-3">
             When registering on our website:
           </p>
           <ul className="mb-3">
             <li className="flex items-start gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
-              <span className="text-sm">
+              <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
+              <span>
                 You must provide true, accurate, and complete information.
               </span>
             </li>
             <li className="flex items-start gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
-              <span className="text-sm">
+              <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
+              <span>
                 You are responsible for maintaining the confidentiality of your login credentials.
               </span>
             </li>
             <li className="flex items-start gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
-              <span className="text-sm">
+              <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
+              <span>
                 Any misuse of account information is solely your responsibility.
               </span>
             </li>
         </ul>
-          <p className=" text-grayone leading-relaxed mb-3">
+          <p className=" text-grayone lg:text-lg leading-relaxed mb-3">
            We reserve the right to suspend or terminate accounts found to contain false or misleading information.
           </p>
         </div>
 
         {/*  Scholarship Program Terms */}
-        <div>
+        <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
           <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-1">
             Scholarship Program Terms
           </h3>
          <ul className="mb-3">
             <li className="flex items-start gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
-              <span className="text-sm">Scholarship awards are based on merit, eligibility criteria, and evaluation standards.</span>
+              <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
+              <span>Scholarship awards are based on merit, eligibility criteria, and evaluation standards.</span>
             </li>
             <li className="flex items-start gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
-              <span className="text-sm">Examination results and merit lists declared by NavLakshya shall be final.</span>
+              <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
+              <span>Examination results and merit lists declared by NavLakshya shall be final.</span>
             </li>
             <li className="flex items-start gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
-              <span className="text-sm">Scholarship benefits may include financial assistance, fee waivers, recognition certificates, or career support services.</span>
+              <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
+              <span>Scholarship benefits may include financial assistance, fee waivers, recognition certificates, or career support services.</span>
             </li>
             <li className="flex items-start gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
-              <span className="text-sm">Scholarship amounts, benefits, and selection criteria may vary by program.</span>
+              <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
+              <span>Scholarship amounts, benefits, and selection criteria may vary by program.</span>
             </li>
           </ul>
-          <p className=" text-grayone leading-relaxed mb-3">
+          <p className=" text-grayone lg:text-lg  leading-relaxed mb-3">
            NavLakshya reserves the right to modify program structure without prior notice.
           </p>
         </div>
 
         {/*  Payments & Fees */}
-        <div>
+        <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
           <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-3">
              Payments & Fees
           </h3>
         <ul className="mb-3">
             <li className="flex items-start gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
-              <span className="text-sm">Registration fees, examination fees, or program fees (if applicable) must be paid through authorized payment gateways.</span>
+              <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
+              <span>Registration fees, examination fees, or program fees (if applicable) must be paid through authorized payment gateways.</span>
             </li>
             <li className="flex items-start gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
-              <span className="text-sm">Fees once paid are generally non-refundable unless specified under the Refund Policy.</span>
+              <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
+              <span>Fees once paid are generally non-refundable unless specified under the Refund Policy.</span>
             </li>
             <li className="flex items-start gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
-              <span className="text-sm">Any payment disputes must be raised within 7 working days.</span>
+              <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
+              <span>Any payment disputes must be raised within 7 working days.</span>
             </li>
           </ul>
         </div>
 
        {/* Career Counseling & Placement Services */}
-        <div>
+        <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
           <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-3">
             Career Counseling & Placement Services
           </h3>
@@ -177,189 +182,189 @@ function TermsCondition() {
         </div>
 
          {/*Intellectual Property */}
-        <div>
+        <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
           <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-1">
             Intellectual Property
           </h3>
-          <p className=" text-grayone leading-relaxed mb-1">
+          <p className=" text-grayone lg:text-lg  leading-relaxed mb-1">
             All website content including:
           </p>
           <ul className="mb-1">
             <li className="flex items-center gap-2">
               <img src={bluedot} alt="" className="w-2 h-2" />
-              <span className="text-sm">Logos</span>
+              <span>Logos</span>
             </li>
             <li className="flex items-center gap-2">
               <img src={bluedot} alt="" className="w-2 h-2" />
-              <span className="text-sm">
+              <span>
                Text
               </span>
             </li>
             <li className="flex items-center gap-2">
               <img src={bluedot} alt="" className="w-2 h-2" />
-              <span className="text-sm">
+              <span>
               Graphics
               </span>
             </li>
             <li className="flex items-center gap-2">
               <img src={bluedot} alt="" className="w-2 h-2" />
-              <span className="text-sm">
+              <span>
                 Course materials
               </span>
             </li>
             <li className="flex items-center gap-2">
               <img src={bluedot} alt="" className="w-2 h-2" />
-              <span className="text-sm">
+              <span>
                 Scholarship content
               </span>
             </li>
           </ul>
-          <p className=" text-grayone leading-relaxed mb-3">
+          <p className=" text-grayone lg:text-lg  leading-relaxed mb-3">
            are the intellectual property of NavLakshya or its parent company.
           </p>
-           <p className=" text-grayone leading-relaxed mb-3">
+           <p className=" text-grayone lg:text-lg  leading-relaxed mb-3">
            Unauthorized reproduction, distribution, or copying is strictly prohibited.
           </p>
         </div>
 
          {/* Code of Conduct */}
-        <div>
+        <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
           <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-3">
             Code of Conduct
           </h3>
-          <p className=" text-grayone leading-relaxed mb-1">
+          <p className=" text-grayone lg:text-lg  leading-relaxed mb-1">
            Users agree:
           </p>
           <ul className="mb-1">
             <li className="flex items-start gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
-              <span className="text-sm">Not to misuse the examination platform</span>
+              <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
+              <span>Not to misuse the examination platform</span>
             </li>
             <li className="flex items-start gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
-              <span className="text-sm">
+              <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
+              <span>
                Not to engage in cheating, impersonation, or fraudulent activities
               </span>
             </li>
             <li className="flex items-start gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
-              <span className="text-sm">
+              <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
+              <span>
               Not to upload harmful or illegal content
               </span>
             </li>
            </ul>
-           <p className=" text-grayone leading-relaxed mb-3">
+           <p className=" text-grayone lg:text-lg  leading-relaxed mb-3">
            Violation may result in disqualification or permanent suspension.
           </p>
         </div>
 
          {/* Limitation of Liability */}
-        <div>
+        <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
           <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-3">
             Limitation of Liability
           </h3>
-           <p className=" text-grayone leading-relaxed mb-1">
+           <p className=" text-grayone lg:text-lg  leading-relaxed mb-1">
           NavLakshya shall not be liable for:
           </p>
           <ul className="mb-1">
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
-              <span className="text-sm">Technical errors during online examinations</span>
+            <li className="flex items-start gap-2">
+              <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
+              <span>Technical errors during online examinations</span>
             </li>
             <li className="flex items-center gap-2">
               <img src={bluedot} alt="" className="w-2 h-2" />
-              <span className="text-sm">
+              <span>
                Website downtime
               </span>
             </li>
             <li className="flex items-start gap-2">
               <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
-              <span className="text-sm">
+              <span>
              Indirect or consequential damages
               </span>
            </li>
             <li className="flex items-start gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
-              <span className="text-sm">
+              <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
+              <span>
              Loss of data due to circumstances beyond our control
               </span>
             </li>
            </ul>
-           <p className=" text-grayone leading-relaxed mb-3">
+           <p className=" text-grayone lg:text-lg  leading-relaxed mb-3">
              We provide services on a best-effort basis.
           </p>  
         </div>
 
         {/* Privacy */}
-        <div>
+        <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
           <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-3">
             Privacy
           </h3>
-           <p className=" text-grayone leading-relaxed mb-3">
+           <p className=" text-grayone lg:text-lg  leading-relaxed mb-3">
          Your use of our services is also governed by our Privacy Policy. We are committed to protecting user data.
           </p>
         </div>
 
         {/* Termination of Services*/}
-        <div>
+        <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
           <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-3">
            Termination of Services
           </h3>
-           <p className=" text-grayone leading-relaxed mb-1">
+           <p className=" text-grayone lg:text-lg  leading-relaxed mb-1">
           We reserve the right to:
           </p>
           <ul className="mb-1">
             <li className="flex items-center gap-2">
               <img src={bluedot} alt="" className="w-2 h-2" />
-              <span className="text-sm">Cancel registrations</span>
+              <span>Cancel registrations</span>
             </li>
             <li className="flex items-center gap-2">
               <img src={bluedot} alt="" className="w-2 h-2" />
-              <span className="text-sm">
+              <span>
                Disqualify candidates
               </span>
             </li>
             <li className="flex items-center gap-2">
               <img src={bluedot} alt="" className="w-2 h-2" />
-              <span className="text-sm">
+              <span>
              Terminate services
               </span>
            </li>
         </ul>
-           <p className=" text-grayone leading-relaxed mb-3">
+           <p className=" text-grayone lg:text-lg  leading-relaxed mb-3">
              if any violation of these Terms is detected.
           </p>  
         </div>
 
         {/*  Changes to Terms */}
-        <div>
+        <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
           <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-3">
             Changes to Terms
           </h3>
-           <p className=" text-grayone leading-relaxed mb-3">
+           <p className=" text-grayone lg:text-lg  leading-relaxed mb-3">
              NavLakshya may update these Terms & Conditions at any time. Continued use of our website constitutes acceptance of updated terms.
           </p>
         </div>
 
          {/* Governing Law */}
-        <div>
+        <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
           <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-3">
             Governing Law
           </h3>
-           <p className=" text-grayone leading-relaxed mb-3">
+           <p className=" text-grayone lg:text-lg  leading-relaxed mb-3">
             These Terms shall be governed by and interpreted in accordance with the laws of India. Any disputes shall be subject to the jurisdiction of Indian courts.
           </p>
         </div>
 
         {/* Contact Us */}
-        <div>
+        <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
           <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-3">
             Contact Us
           </h3>
-          <p className=" text-grayone leading-relaxed mb-2">
+          <p className=" text-grayone lg:text-lg  leading-relaxed mb-2">
            For any queries regarding these Terms & Conditions:
           </p>
-          <p className=" text-grayone leading-relaxed mb-3">
+          <p className=" text-grayone lg:text-lg  leading-relaxed mb-3">
             NavLakshya <br />
             An initiative of Streamcore Web Pvt Ltd
           </p>
@@ -384,6 +389,24 @@ function TermsCondition() {
               </li>
             </ul>
         </div>
+
+       </div>
+
+         <div className="hidden lg:block w-64 shrink-0">
+         <div className="sticky top-24 bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+          <h3 className="text-sm font-bold font-jakarta uppercase tracking-widest text-grayone mb-4">
+          On This Page</h3>
+          <ul className="space-y-2">
+          {["Aboout","Eligibility","Registration","Scholarship","Payments & Fees","Career Counseling & Placement Services","Intellectual Property","Code of Conduct","Limitation of Liability", "Privacy","Termination of Services","Changes to Terms","Governing Law","Contact Us"].map((items) =>(
+          <li key={items} className="text-sm text-grayone hover:text-blueone transition-colors duration-200 flex items-start gap-2 group">
+          <span className="w-1 h-1 mt-2 rounded-full bg-grayone/40 group-hover:bg-blueone transition-colors shrink-0"></span>
+          {items}
+          </li>
+          ))}
+          </ul>
+         </div>
+        </div>
+      </div>
       </div>
     </section>
   );
