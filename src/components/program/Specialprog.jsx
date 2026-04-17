@@ -1,5 +1,5 @@
 import prog1 from '../../assets/programimage/prog1.jfif'
-import prog2 from '../../assets/programimage/prog2.jfif'
+import prog2 from '../../assets/programimage/prog2.png'
 import { Link } from 'react-router-dom';
 import Reveal from '../common/Reveal';
 

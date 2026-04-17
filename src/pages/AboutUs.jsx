@@ -1,7 +1,7 @@
 import Banner from "../components/common/Banner";
 import Organization from "../components/aboutus/Organization";
 import Vision from "../components/aboutus/Vision";
-import bgimage from "../assets/aboutus/bgimage.jfif";
+import bgimage from "../assets/aboutus/bgimage.png";
 import Corevalues from "../components/aboutus/Corevalues";
 import Reveal from "../components/common/Reveal";
 
