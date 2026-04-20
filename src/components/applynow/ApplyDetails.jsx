@@ -307,7 +307,7 @@ function ApplyDetails() {
         <img
           src={logo}
           alt="NavLakshya Logo"
-          className="w-38 md:w-48 mx-auto"
+          className="w-48 md:w-58 mx-auto"
         />
         <div className="text-blue-900 font-bold bg-yellowone rounded-full py-2 px-6 inline-block leading-wider">
           All India Bright Minds Scholarship Program 2026

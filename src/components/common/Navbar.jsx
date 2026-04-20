@@ -20,7 +20,7 @@ function Navbar() {
     <nav className="sticky top-0 z-50">
       <div className="relative w-full bg-white px-4 md:px-6 lg:px-15 flex items-center justify-between shadow-lg">
         <Link to="/">
-          <img src={logo} alt="NavLakshya Logo" className="h-20 w-40 object-contain py-1"/>
+          <img src={logo} alt="NavLakshya Logo" className="h-18 w-auto object-contain py-1"/>
         </Link>
          
          {/* Desktop buttons */}
