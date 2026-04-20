@@ -197,7 +197,7 @@ function BookCounselling() {
             setErrors((prev) => ({ ...prev, counselingMode: "" }))
            }
            }}
-           className={`flex-1 py-2.5 text-sm md:text:base font-semibold rounded-lg shadow-sm border font-jakarta transition-all duration-200 ${formData.counselingMode === "online"
+           className={`flex-1 py-2 text-sm md:text-base font-semibold rounded-lg shadow-sm border font-jakarta transition-all duration-200 ${formData.counselingMode === "online"
             ? "bg-yellowone text-white border-yellowone" : errors.counselingMode        
             ? "bg-white text-gray-600 border-red-400" : "bg-white text-gray-600 border-gray-300 hover:border-yellowone"
           }`}>Online</button>
@@ -208,7 +208,7 @@ function BookCounselling() {
             setErrors((prev) => ({ ...prev, counselingMode: "" }))
            }
           }}
-          className={`flex-1 py-2.5 text-sm md:text-base font-semibold shadow-sm rounded-lg border font-jakarta transition-all duration-200 ${formData.counselingMode === "offline"
+          className={`flex-1 py-2 text-sm md:text-base font-semibold shadow-sm rounded-lg border font-jakarta transition-all duration-200 ${formData.counselingMode === "offline"
             ? "bg-yellowone text-white border-yellowone" : errors.counselingMode        
             ? "bg-white text-gray-600 border-red-400" : "bg-white text-gray-600 border-gray-300 hover:border-yellowone"
           }`}>Offline</button>
