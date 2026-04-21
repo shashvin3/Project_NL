@@ -33,9 +33,9 @@ function Footer() {
           <h3 className="font-bold text-sm tracking-widest uppercase">Our Programs</h3>
           <ul className="space-y-3">
             <li className="text-sm text-grayone font-jakarta hover:text-blue-400"><Link to="/AIBMSP">Scholarship Program (AIBMSP)</Link></li>
-            <li className="text-sm text-grayone font-jakarta hover:text-blue-400"><Link to="/programs">Career Counseling</Link></li>
-            <li className="text-sm text-grayone font-jakarta hover:text-blue-400"><Link to="/programs">Skill Development</Link></li>
-            <li className="text-sm text-grayone font-jakarta hover:text-blue-400"><Link to="/programs">Placement Assistance</Link></li>
+            <li className="text-sm text-grayone font-jakarta hover:text-blue-400">Career Counseling</li>
+            <li className="text-sm text-grayone font-jakarta hover:text-blue-400">Skill Development</li>
+            <li className="text-sm text-grayone font-jakarta hover:text-blue-400">Placement Assistance</li>
             <li className="text-sm text-grayone font-jakarta hover:text-blue-400"><Link to="/scholarship-policy">Scholarship Policy</Link></li>
             <li className="text-sm text-grayone font-jakarta hover:text-blue-400"><Link to="/child-protection-policy">Child Protection Policy</Link></li>
           </ul>
@@ -45,8 +45,8 @@ function Footer() {
           <h3 className="font-bold text-sm tracking-widest uppercase">Quick Links</h3>
           <ul className="space-y-3">
             <li className="text-sm text-grayone font-jakarta hover:text-blue-400"><Link to="/">Home</Link> </li>
-            <li className="text-sm text-grayone font-jakarta hover:text-blue-400"><Link to="/about">About NavLakshya</Link></li>
-            <li className="text-sm text-grayone font-jakarta hover:text-blue-400"><Link to="/contact">Contact Us</Link></li>
+            <li className="text-sm text-grayone font-jakarta hover:text-blue-400">About NavLakshya</li>
+            <li className="text-sm text-grayone font-jakarta hover:text-blue-400">Contact Us</li>
             <li className="text-sm text-grayone font-jakarta hover:text-blue-400"><Link to="/privacy-policy">Privacy Policy</Link></li>
             <li className="text-sm text-grayone font-jakarta hover:text-blue-400"><Link to="/terms-condition">Terms & Conditions</Link></li>
             <li className="text-sm text-grayone font-jakarta hover:text-blue-400"><Link to="/refund-policy">Refund Policy</Link></li>
