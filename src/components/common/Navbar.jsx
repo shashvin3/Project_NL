@@ -6,9 +6,9 @@ import star from "../../assets/star.png";
 function Navbar() {
   const navLinks =[
     {title:"Home", path:'/'},
-    {title:"Programs", path:null},
-    {title:"About Us", path:null},
-    {title:"Contact", path:null}
+    {title:"Programs", path:'/programs'},
+    {title:"About Us", path:"/about"},
+    {title:"Contact", path:"/contact"}
   ]
   const [isOpen, setIsOpen] = useState(false);  
   const location = useLocation();
@@ -27,12 +27,8 @@ function Navbar() {
         <div className="hidden md:flex items-center gap-4 lg:gap-8">
           <ul className="flex items-center gap-4 lg:gap-8 ">
            { navLinks.map((links) => (
-            <li key={links.title} className={`relative group text-grayone font-semibold  text-sm lg:text-lg  font-jakarta py-5 lg:py-7 transition-colors duration-200 hover:text-blueone ${isActive(links.path) ? 'text-blueone' : ''}`}>
-             {links.path ? (
-            <Link to={links.path}>{links.title}</Link>
-             ) : (
-          <span className="text-gray-400">{links.title}</span> 
-          )}
+            <li key={links.path} className={`relative group text-grayone font-semibold  text-sm lg:text-lg  font-jakarta py-5 lg:py-7 transition-colors duration-200 hover:text-blueone ${isActive(links.path) ? 'text-blueone' : ''}`}>
+              <Link to={links.path}>{links.title}</Link>
               <div className={`absolute bottom-0 w-full h-0.5 bg-blueone transition-all duration-200 ${isActive(links.path) ? 'block' : 'hidden'}`}></div>
             </li>
             ))}
