@@ -15,10 +15,10 @@ function Philosophy() {
   ];
 
   return (
-    <section className="py-12 md:py-20 bg-white">
+    <section className="py-10 md:py-20 bg-white">
       <div className="container mx-auto px-5 md:px-8 lg:px-12 max-w-6xl">
 
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-jakarta text-blueone mb-8 md:mb-12 max-w-3xl leading-snug">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-jakarta text-blueone mb-8 md:mb-12 max-w-6xl leading-snug">
           Most guidance tells you where to go. We start by understanding where you are.
         </h2>
 
@@ -48,7 +48,7 @@ function Philosophy() {
             </div>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-4 py-10">
             {beliefs.map((item, index) => (
               <div
                 key={index}
@@ -60,10 +60,6 @@ function Philosophy() {
                 <p className="italic text-sm sm:text-base leading-relaxed">{item.text}</p>
               </div>
             ))}
-
-            <div className="pt-2 text-xs text-gray-400 font-jakarta text-right pr-1">
-              These are not slogans. They are the operating principles behind every NavLakshya program.
-            </div>
           </div>
 
         </div>

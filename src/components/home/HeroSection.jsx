@@ -9,13 +9,13 @@ function HeroSection() {
   return (
     <section className="relative pb-16 px-6 text-center overflow-hidden min-h-screen">
        <div className="relative z-10 flex justify-center mt-10 mb-2">
-        <span className="inline-flex items-center gap-2 px-4 py-2 text-blueone border border-blueone/20 rounded-full bg-blueone/10 font-jakarta font-bold text-xs sm:text-sm lg:text-lg text-center leading-snug max-w-xs sm:max-w-lg lg:max-w-none">
+        <span className="inline-flex items-center gap-2 px-4 py-2 text-blueone border border-blueone/20 rounded-full bg-blueone/10 font-jakarta font-bold text-xs sm:text-sm lg:text-lg text-center leading-snug max-w-xs sm:max-w-sm lg:max-w-none">
           <img 
             src={starblue}
             alt="Star Icon"
             className="h-5 w-5 shrink-0 object-contain animate-spin [animation-duration:2s]"
           />
-          <span>Career Counseling, Scholarships &amp; Skill Development for Students Across India</span>
+          <span>Career Counseling, Scholarships & Skill Development for Students Across India</span>
         </span>
       </div>
       <div className="absolute top-16 right-4 sm:right-20 sm:top-20 animate-spin [animation-duration:10s] rounded-full h-20 w-20 sm:h-32 sm:w-32 bg-linear-to-br from-blueone to-yellowone opacity-60"></div>
@@ -37,7 +37,7 @@ function HeroSection() {
         <span className="relative inline-block">
         <span className="absolute inset-0 bg-linear-to-r from-blueone/30 to-yellowone/30 rounded-lg blur-xl"></span>
         <span className="text-blueone relative ">
-        Excellence.
+        Excellence
         </span>
         </span>
       </h1>

@@ -70,7 +70,7 @@ return (
 <div className="text-center max-w-4xl mx-auto ">
  <h1 className="text-2xl md:text-5xl font-jakarta font-bold mb-3">Career Counseling</h1>       
   <p className="font-bold text-md md:text-lg font-jakarta text-blueone leading-relaxed mb-4">
-   ₹999 per session
+   ₹999 per session 
   </p>
    <p className="font-bold text-md md:text-lg font-jakarta text-grayone leading-relaxed mb-4">
     Full assessment and one-on-one counseling report included

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function AIBMSP(){
 
-  const table = [
+  const table = [ 
     {
       rank: "Ranks 1 to 10",
       prize: "₹25,000",
@@ -66,23 +66,23 @@ function AIBMSP(){
 
 return(
   <section className="bg-[#fffafc]">
-    <img src={Aibmspbanner} alt="AIBMSP banner" />
-    <div className="container mx-auto px-4 py-16 space-y-12">
+    <img src={Aibmspbanner} alt="AIBMSP banner" className="w-full object-cover" />
+    <div className="container mx-auto px-4 sm:px-6 py-12 space-y-12 max-w-5xl">
 
-   <div className="text-center max-w-4xl mx-auto">
+   <div className="text-center max-w-3xl mx-auto space-y-3">
         <h1 className="text-2xl md:text-4xl font-jakarta font-bold mb-3">All India Bright Minds Scholarship Program (AIBMSP)</h1>
         <p className="font-bold text-md md:text-lg font-jakarta text-blue-900 leading-relaxed mb-4">
         National level recognition and merit based financial support for India's brightest students.
         </p>
         <p className="font-bold text-md md:text-lg font-jakarta text-blueone leading-relaxed mb-4">
-        ₹599
+        ₹599* 
         </p>
          <p className="font-bold text-md md:text-lg font-jakarta text-grayone leading-relaxed mb-4">
          One-time examination registration fee
         </p>
    </div>
 
-   <div  className="bg-blueone/5 border border-blueone/20 rounded-2xl p-6 space-y-4">
+   <div  className="bg-blueone/5 border border-blueone/20 rounded-2xl p-5 sm:p-6 space-y-3">
   <p className="font-medium text-sm font-jakarta text-grayone leading-relaxed">
   There is a difference between doing well in school and understanding where you stand relative to students across the country.  </p>
   <p className="font-medium text-sm font-jakarta text-grayone leading-relaxed">
@@ -94,10 +94,11 @@ return(
    </div>
 
   <div className="text-left">
-    <h1 className="text-2xl text-blue-600 font-bold">Scholarship Prize Brackets</h1>
-    <p className="text-lg text-gray-600 mt-2">Prizes are awarded by national merit rank. Every qualifying student receives a National Recognition Certificate alongside their prize.</p>
+    <h2 className="text-xl sm:text-2xl text-blue-600 font-bold font-jakarta">Scholarship Prize Brackets</h2>
+    <p className="text-sm sm:text-base text-gray-600 mt-2 mb-5">Prizes are awarded by national merit rank. Every qualifying student receives a National Recognition Certificate alongside their prize.</p>
   
-  <table className="w-full border-collapse overflow-hidden rounded-xl mt-5">
+  <div className="hidden sm:block overflow-hidden rounded-xl border border-yellow-200">
+  <table className="w-full border-collapse">
     <thead>
         <tr className="text-white text-sm font-jakarta">
           <th className="bg-yellow-300 p-4 text-center">
@@ -122,35 +123,56 @@ return(
       </tbody>
   </table>
   </div>
+  </div>
 
+   <div className="flex flex-col gap-3 sm:hidden">
+            {table.map((row, index) => (
+              <div key={index} className="rounded-2xl border border-yellow-200 bg-yellow-50 overflow-hidden">
+                <div className="bg-yellow-300 px-4 py-2 text-center font-bold font-jakarta text-gray-800 text-sm">
+                  {row.rank}
+                </div>
+                <div className="flex justify-between items-center px-4 py-3 gap-3">
+                  <div className="text-center flex-1">
+                    <p className="text-xs text-gray-500 font-jakarta mb-1">Cash Prize</p>
+                    <p className="font-bold text-blueone font-jakarta text-base">{row.prize}</p>
+                  </div>
+                  <div className="w-px h-10 bg-yellow-200" />
+                  <div className="text-center flex-1">
+                    <p className="text-xs text-gray-500 font-jakarta mb-1">Certificate</p>
+                    <p className="font-medium text-grayone font-jakarta text-xs leading-snug">{row.certificate}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
    
        
-  <div className="bg-blueone/5 border border-blueone/20 rounded-2xl p-8">
-  <h4 className='font-bold text-lg font-jakarta flex items-center gap-2 mb-3'>
+  <div className="bg-blueone/5 border border-blueone/20 rounded-2xl p-5 sm:p-8">
+  <h4 className='font-bold text-lg font-jakarta flex items-center gap-2 mb-4'>
             Additional Awards
   </h4>
          <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <li className="flex items-center gap-3 bg-white rounded-xl p-4 shadow-sm min-h-16">
-            <img src={bluetick} alt="" className="w-4 h-4" />
-              <span className="font-jakarta font-medium text-sm self-center">State Toppers Recognition — top performer per state receives special acknowledgement</span>
-            </li>
-            <li className="flex items-start gap-3 bg-white rounded-xl p-4 shadow-sm min-h-16">
+          <li className="flex items-start gap-3 bg-white rounded-xl p-4 shadow-sm">
             <img src={bluetick} alt="" className="w-4 h-4 mt-1 shrink-0" />
-              <span className="font-jakarta font-medium text-sm self-center">Best Performer Per Stream — Science, Commerce, and Arts category winners recognized separately</span>
+              <span className="font-jakarta font-medium text-sm leading-relaxed">State Toppers Recognition — top performer per state receives special acknowledgement</span>
+            </li>
+            <li className="flex items-start gap-3 bg-white rounded-xl p-4 shadow-sm ">
+            <img src={bluetick} alt="" className="w-4 h-4 mt-1 shrink-0" />
+              <span className="font-jakarta font-medium text-sm leading-relaxed">Best Performer Per Stream — Science, Commerce, and Arts category winners recognized separately</span>
             </li>
           </ul>
    </div>
 
        {/* Overview and Eligibility */}
-       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
           {/* Overview */}
-          <div className="bg-white border border-grayone/20 rounded-2xl p-8 shadow-sm">
-            <h3 className='font-bold text-lg font-jakarta flex items-center gap-2 mb-3'>
+          <div className="bg-white border border-grayone/20 rounded-2xl p-6 sm:p-8 shadow-sm">
+            <h3 className='font-bold text-lg font-jakarta flex items-center gap-2 mb-4'>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5"> <circle cx="12" cy="12" r="10" /> <circle cx="12" cy="12" r="6" /> <circle cx="12" cy="12" r="2" /></svg>
               Program Overview
             </h3>
-            <ul className="space-y-3 pl-5">
+            <ul className="space-y-3">
               {[
                 "Identify academically talented students from across India",
                 "Promote competitive excellence through national level benchmarking",
@@ -168,7 +190,7 @@ return(
           </div>
 
           {/* Eligibility */}
-          <div className="bg-white border border-grayone/20 rounded-2xl p-8 shadow-sm">
+          <div className="bg-white border border-grayone/20 rounded-2xl p-6 sm:p-8 shadow-sm">
             <h3 className='font-bold text-lg font-jakarta flex items-center gap-2 mb-3'>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" /><path d="M22 10v6" /><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" /></svg>
               Eligibility
@@ -191,8 +213,8 @@ return(
         </div>
          
          {/* Exam structure */}
-        <div className="bg-blueone rounded-2xl p-8 text-white">
-          <h3 className="text-2xl font-bold font-jakarta mb-6"> Exam Structure</h3>
+        <div className="bg-blueone rounded-2xl p-6 sm:p-8 text-white">
+          <h3 className="text-xl sm:text-2xl font-bold font-jakarta mb-5"> Exam Structure</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
               "Online and Computer Based Examination accessible from anywhere in India",
@@ -204,15 +226,15 @@ return(
                  <div className="w-6 h-6 rounded-full bg-yellowone/40 flex items-center justify-center shrink-0 mt-0.5">    
                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-yellowone"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>   
                   </div> 
-              <span className="font-jakarta font-medium text-gray-100">{item}</span>
+              <span className="font-jakarta font-medium text-sm leading-relaxed text-gray-100">{item}</span>
               </div>
             ))}
           </div>
         </div>
 
-         <section className="py-10 bg-blue-50 rounded-2xl">
-          <div className="max-w-4xl mx-auto px-6">
-            <h2 className="text-4xl font-bold font-jakarta text-blueone text-center mb-10">
+         <section className="py-8 sm:py-10 bg-blue-50 rounded-2xl">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6">
+            <h2 className="text-2xl sm:text-3xl font-bold font-jakarta text-blueone text-center mb-8">
               Frequently Asked Questions
             </h2>
             <div className="space-y-5">
