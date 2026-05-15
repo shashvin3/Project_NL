@@ -6,14 +6,13 @@ function Footer() {
   return (
     <section className="pb-8 bg-[#d3e0fd]/10 lg:px-8">
     <hr className="border-gray-300" />
-      <div className="container mx-auto px-4 pt-15">
-      <div className="grid gap-12 lg:grid-cols-4 mb-7">
+      <div className="container mx-auto px-4 pt-12">
+      <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mb-7">
         {/* NavLakshya Info */}
         <div className="space-y-6"> 
           <img src={logo} alt="" className="h-20 w-38 object-contain" />
           <p className="text-sm leading-relaxed text-grayone font-jakarta mb-3">
-            NavLakshya is a structured career development ecosystem designed to
-            guide students from academic excellence to professional success.
+             NavLakshya is a structured career transformation platform that focuses on building a scientific ecosystem for students across India
           </p>
           <div className="flex gap-7 pt-4">
             <a href="https://www.instagram.com/navlakshya.aim/" target="_blank" rel="noopener noreferrer" className="border rounded-xl p-2 border-gray-300 hover:opacity-80 transition-opacity">
@@ -33,9 +32,9 @@ function Footer() {
           <h3 className="font-bold text-sm tracking-widest uppercase">Our Programs</h3>
           <ul className="space-y-3">
             <li className="text-sm text-grayone font-jakarta hover:text-blue-400"><Link to="/AIBMSP">Scholarship Program (AIBMSP)</Link></li>
-            <li className="text-sm text-grayone font-jakarta hover:text-blue-400"><Link to="/programs">Career Counseling</Link></li>
-            <li className="text-sm text-grayone font-jakarta hover:text-blue-400"><Link to="/programs">Skill Development</Link></li>
-            <li className="text-sm text-grayone font-jakarta hover:text-blue-400"><Link to="/programs">Placement Assistance</Link></li>
+            <li className="text-sm text-grayone font-jakarta hover:text-blue-400"><Link to="/career-counselling">Career Counseling</Link></li>
+            <li className="text-sm text-grayone font-jakarta hover:text-blue-400"><Link to="/skill-program">Skill Development</Link></li>
+            <li className="text-sm text-grayone font-jakarta hover:text-blue-400"><Link to="/placement-cell">Placement Assistance</Link></li>
             <li className="text-sm text-grayone font-jakarta hover:text-blue-400"><Link to="/scholarship-policy">Scholarship Policy</Link></li>
             <li className="text-sm text-grayone font-jakarta hover:text-blue-400"><Link to="/child-protection-policy">Child Protection Policy</Link></li>
           </ul>
@@ -57,17 +56,17 @@ function Footer() {
         <div className="space-y-6">
           <h3 className="font-bold text-sm tracking-widest uppercase font-jakarta">Get in Touch</h3>
           <ul className="space-y-3">
-            <li className="flex gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 shrink-0 text-blueone"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>      
+            <li className="flex gap-2 items-start">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 shrink-0 text-blueone mt-0.5"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>      
             <span className="text-sm text-grayone font-jakarta">info@navlakshya.com</span>
             </li>
-            <li className="flex gap-2">
-             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 shrink-0 text-blueone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>          
+            <li className="flex gap-2 items-start">
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 shrink-0 text-blueone mt-0.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>          
              <span className="text-sm text-grayone font-jakarta">+91-9415337435</span>
             </li>
-            <li className="flex gap-2">
-             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 shrink-0 text-blueone"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" /></svg>
-             <span className="text-sm text-grayone font-jakarta">Streamcore Web Pvt Ltd Office,India</span>
+            <li className="flex gap-2 items-start">
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 shrink-0 text-blueone mt-0.5"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" /></svg>
+             <span className="text-sm text-grayone font-jakarta">Office No. 279, Panchsheel Greens 2, Greater Noida West, Uttar Pradesh — 201318, India</span>
             </li>
           </ul>
         </div>
@@ -75,15 +74,10 @@ function Footer() {
      <hr className="text-gray-300" />
 
       {/* Copyright */}
-      <div className="flex flex-col items-center justify-between gap-4 md:flex-row mt-7">
+      <div className="pt-4 pb-2">
         <span className="text-xs text-grayone font-jakarta">
-          © 2026 NavLakshya. Education & Career Empowerment Initiative of
-          Streamcore Web Pvt Ltd. All rights reserved.
+         © 2026 NavLakshya. Education and Career Empowerment Initiative. All rights reserved.
         </span>
-        <div className="text-grayone text-xs font-jakarta">
-          Made for students by
-        <span className="font-bold text-xs text-black pl-2">Streamcore Web</span>
-        </div>
         </div>
       </div>
     </section>

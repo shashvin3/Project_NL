@@ -2,52 +2,94 @@ import Reveal from "../common/Reveal";
 import {useState} from 'react';
 
 function ContactInfo() {
-  const [formData, setFormData] = useState({name:"",
-    email:"",
-    subject:"",
-    message:"",
-  });
-  const [errors, setErrors] = useState({});
-  const [submitted, setSubmitted] = useState(false);  
+ const [formData, setFormData] = useState({
+  name: "",
+  phone: "",
+  studyYear: "",
+  stream: "",
+  help: "",
+  source: "",
+});
 
-  const validate = () =>{
-    const newErrors = {};
-    if (!formData.name.trim()){
-      newErrors.name = "Full Name is required";
-    }
-    if(!formData.email.trim()){
-      newErrors.email = "Email address is required"
-    }else if(!/\S+@\S+\.\S+/.test(formData.email)){
-      newErrors.email = "Email address is invalid"
-    }
-    if(!formData.subject.trim()){
-      newErrors.subject = "Subject is required"
-    }
-    if(!formData.message.trim()){
-      newErrors.message = "Message cannot be empty"
-    }
-    return newErrors;
+const [errors, setErrors] = useState({});
+const [submitted, setSubmitted] = useState(false);
+
+
+const validate = () => {
+  const newErrors = {};
+
+  if (!formData.name.trim()) {
+    newErrors.name = "Full name is required";
   }
 
-  const handleChange = (e) => {
-  const {name, value} = e.target;
-  setFormData((prev) => ({...prev, [name]: value }))
-  if(errors[name]){
-    setErrors((prev) => ({...prev, [name]: "" }))
-  }};
+  if (!formData.phone.trim()) {
+    newErrors.phone = "Contact number is required";
+  } else if (!/^[0-9]{10}$/.test(formData.phone)) {
+    newErrors.phone = "Enter a valid 10-digit number";
+  }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const validationErrors = validate();
-    if (Object.keys(validationErrors).length > 0){
-      setErrors(validationErrors);
-      return;
-    }
-    console.log("Form Submitted: ", formData);
-    setSubmitted(true);
-    setFormData({name:"", email:"", subject:"", message:""});
-    setErrors({});
-  };
+  if (!formData.studyYear.trim()) {
+    newErrors.studyYear = "Class or year is required";
+  }
+
+  if (!formData.stream.trim()) {
+    newErrors.stream = "Please select your stream";
+  }
+
+  if (!formData.help.trim()) {
+    newErrors.help = "This field is required";
+  }
+
+  if (!formData.source.trim()) {
+    newErrors.source = "This field is required";
+  }
+
+  return newErrors;
+};
+
+
+const handleChange = (e) => {
+  const { name, value } = e.target;
+
+  setFormData((prev) => ({
+    ...prev,
+    [name]: value,
+  }));
+
+  if (errors[name]) {
+    setErrors((prev) => ({
+      ...prev,
+      [name]: "",
+    }));
+  }
+};
+
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  const validationErrors = validate();
+
+  if (Object.keys(validationErrors).length > 0) {
+    setErrors(validationErrors);
+    return;
+  }
+
+  console.log("Form Submitted:", formData);
+
+  setSubmitted(true);
+
+  setFormData({
+    name: "",
+    phone: "",
+    studyYear: "",
+    stream: "",
+    help: "",
+    source: "",
+  });
+
+  setErrors({});
+};
 
   return (
     <section className="py-10">
@@ -92,7 +134,7 @@ function ContactInfo() {
           <div>
             <h3 className="font-semibold mb-1 font-jakarta">Office Address</h3>
             <p className="font-jakarta text-grayone">
-              Streamcore Web Pvt Ltd Registered Office, India
+               Office No. 279, Panchsheel Greens 2, Greater Noida West, Uttar Pradesh — 201318, India
             </p>
           </div>
         </div>
@@ -164,95 +206,124 @@ function ContactInfo() {
               </div>
             )}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="flex flex-col space-y-2">
-            <label className="text-sm font-medium">Full Name</label>
-            <input
-              type="text"
-              name='name'
-              value={formData.name}
-              onChange={handleChange}
-              placeholder="Enter your full name"
-              className={`border rounded-lg bg-blueone/3 px-4 py-2 h-10 focus:outline-none focus:ring-2 focus:ring-blueone ${errors.name?"border-red-500 focus:ring-red-400": "border-gray-300 focus:ring-blueone"}`}
-            />
-            {errors.name && <p className="text-sm text-red-500">{errors.name}</p>}
-          </div>
+       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-           <div className="flex flex-col space-y-2">
-            <label className="text-sm font-medium">Email Address</label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="name@example.com"
-              className={`border h-10 bg-blueone/3 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blueone ${errors.email?"border-red-500 focus:ring-red-400": "border-gray-300 focus:ring-blueone"}`}
-            />
-            {errors.email && <p className="text-sm text-red-500">{errors.email}</p>}
-          </div>
-        </div>
+  <div className="flex flex-col space-y-2">
+    <label className="text-sm font-medium">Full Name</label>
 
-        <div className="flex flex-col space-y-2">
-          <label className="text-sm font-medium">Subject</label>
-          <input
-            type="text"
-            name="subject"
-            value={formData.subject}
-            onChange={handleChange}
-            placeholder="What is this regarding?"
-            className={`border border-gray-300 h-10 bg-blueone/3 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blueone ${errors.subject?"border-red-500 focus:ring-red-400": "border-gray-300 focus:ring-blueone"}`}
-          />
-        {errors.subject && <p className="text-xs text-red-500">{errors.subject}</p>}
-        </div>
+    <input
+      type="text"
+      name="name"
+      value={formData.name}
+      onChange={handleChange}
+      placeholder="Enter your full name"
+      className={`border rounded-lg bg-blueone/3 px-4 py-2 h-10 
+      ${errors.name ? "border-red-500" : "border-gray-300"}`}
+    />
 
-        <div className="flex flex-col space-y-2">
-          <label className="text-sm font-medium">Your Message</label>
-          <textarea
-            rows="5"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            placeholder="How can we help you today?"
-            className={`border rounded-lg bg-blueone/3 min-h-20 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blueone ${errors.message?"border-red-500 focus:ring-red-400": "border-gray-300 focus:ring-blueone"}`}
-          />
-          {errors.message && <p className="text-xs text-red-500">{errors.message}</p>}
-        </div>
+    {errors.name && (
+      <p className="text-sm text-red-500">{errors.name}</p>
+    )}
+  </div>
 
-        <button 
-        onClick={handleSubmit}
-        className="w-full bg-blueone hover:bg-blueone/80 transition text-white py-3 rounded-lg flex items-center justify-center gap-2 font-medium">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-5 h-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth="2"
-          >
-            <path d="M22 2L11 13" />
-            <path d="M22 2L15 22L11 13L2 9L22 2Z" />
-          </svg>
-          Send Message
-        </button>
 
-        <div className="flex items-start gap-3 bg-gray-50 border border-gray-200 rounded-lg p-4">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-5 h-5 text-blueone mt-1"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth="2"
-          >
-            <circle cx="12" cy="12" r="10" />
-            <path d="M9 12l2 2 4-4" />
-          </svg>
-          <p className="text-sm text-gray-600">
-            By submitting this form, you agree to receive communications
-            regarding our scholarship programs and career guidance services.
-          </p>
-        </div>
-      </div>
+  
+  <div className="flex flex-col space-y-2">
+    <label className="text-sm font-medium">
+      Contact Number
+    </label>
+
+    <input
+      type="text"
+      name="phone"
+      value={formData.phone}
+      onChange={handleChange}
+      placeholder="Enter your mobile number"
+      className={`border rounded-lg bg-blueone/3 px-4 py-2 h-10 
+      ${errors.phone ? "border-red-500" : "border-gray-300"}`}
+    />
+
+    {errors.phone && (
+      <p className="text-sm text-red-500">{errors.phone}</p>
+    )}
+  </div>
+
+</div>
+
+
+
+<div className="flex flex-col space-y-2">
+  <label className="text-sm font-medium">
+    Class or Year of Study
+  </label>
+
+  <input type="text" name="studyYear" value={formData.studyYear} onChange={handleChange}
+    className={`border rounded-lg bg-blueone/3 px-4 py-2 h-10
+    ${errors.studyYear ? "border-red-500" : "border-gray-300"}`}
+  />
+
+  {errors.studyYear && (
+    <p className="text-sm text-red-500">
+      {errors.studyYear}
+    </p>
+  )}
+
+</div>
+
+
+
+<div className="flex flex-col space-y-2">
+  <label className="text-sm font-medium">
+    Stream
+  </label>
+
+  <select name="stream" value={formData.stream} onChange={handleChange} className={`border rounded-lg bg-blueone/3 px-4 py-2 h-10
+    ${errors.stream ? "border-red-500" : "border-gray-300"}`}>
+    <option value="">Select stream</option>
+    <option value="Science">Science</option>
+    <option value="Commerce">Commerce</option>
+    <option value="Arts">Arts</option>
+    <option value="Other">Other</option>
+  </select>
+  {errors.stream && (
+    <p className="text-sm text-red-500">
+      {errors.stream}
+    </p>
+  )}
+</div>
+
+<div className="flex flex-col space-y-2">
+
+  <label className="text-sm font-medium">
+    What do you want us to help you with?
+  </label>
+  <textarea rows="4" name="help" value={formData.help} onChange={handleChange} className={`border rounded-lg bg-blueone/3 px-4 py-3
+    ${errors.help ? "border-red-500" : "border-gray-300"}`} />
+
+  {errors.help && (
+    <p className="text-sm text-red-500">
+      {errors.help}
+    </p>
+  )}
+
+</div>
+
+<div className="flex flex-col space-y-2">
+  <label className="text-sm font-medium">
+    How did you hear about NavLakshya?
+  </label>
+
+  <input type="text" name="source" value={formData.source}  onChange={handleChange}
+    className={`border rounded-lg bg-blueone/3 px-4 py-2 h-10 ${errors.source ? "border-red-500" : "border-gray-300"}`} />
+
+  {errors.source && (<p className="text-sm text-red-500">{errors.source}</p>
+  )}
+
+</div>
+
+<button onClick={handleSubmit} className="w-full bg-blueone hover:bg-blueone/80 transition text-white py-3 rounded-lg flex items-center justify-center gap-2 font-medium" > <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" > <path d="M22 2L11 13" /> <path d="M22 2L15 22L11 13L2 9L22 2Z" /> </svg>Contact Us Now </button> 
+
+<div className="flex items-start gap-3 bg-gray-50 border border-gray-200 rounded-lg p-4"> <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-blueone mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" > <circle cx="12" cy="12" r="10" /> <path d="M9 12l2 2 4-4" /> </svg> <p className="text-sm text-gray-600"> By submitting this form, you agree to receive communications regarding our scholarship programs and career guidance services. </p> </div></div>
       </Reveal>
       </div>
     </section>

@@ -16,10 +16,12 @@ import BackToTop from './components/common/BackToTop';
 import ApplyNow from './pages/ApplyNow';
 import BookCounselling from './pages/BookCounselling';
 import AIBMSP from './pages/AIBMSP';
-import ComingSoon from './pages/ComingSoon';
 import PaymentPage from './pages/PaymentPage';
 import SuccessPage from './pages/SuccessPage';
 import FailedPage from './pages/FailedPage';
+import SkillProgram from './pages/SkillProgram';
+import CareerCounselling from './pages/CareerCounselling';
+import PlacementCell from './pages/PlacementCell';
 
 function App() {
   return (
@@ -41,14 +43,15 @@ function App() {
         <Route path="/apply-now" element={<ApplyNow/>} />
         <Route path="/book-counselling" element={<BookCounselling/>} />
         <Route path="/AIBMSP" element={<AIBMSP/>} />
-        <Route path="/coming-soon" element={<ComingSoon/>} />
         <Route path="/payment/:id" element={<PaymentPage/>} />
         <Route path="/payment-success" element={<SuccessPage />} />
         <Route path="/payment-failed" element={<FailedPage />} />
+        <Route path="/skill-program" element={<SkillProgram />} />
+        <Route path="/career-counselling" element={<CareerCounselling />} />
+        <Route path="/placement-cell" element={<PlacementCell />} />
       </Routes>
       <Footer /> 
     </Router>
-
   );
 } 
 

@@ -30,8 +30,8 @@ function Specialprog(){
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 text-blueone"> <circle cx="12" cy="12" r="10" /> <circle cx="12" cy="12" r="6" /> <circle cx="12" cy="12" r="2" /></svg>
               Objective</h4>
             <ul className="space-y-2">
-           {["Identify academically talented students","Promote competitive excellence","Provide merit-based scholarships","Offer structured career direction",
-           "Build confidence through national-level benchmarking"].map((item) => (
+           {["Identify academically talented students across India","Promote competitive excellence through national benchmarking","Provide merit-based scholarships to qualifying students","Offer structured career direction alongside recognition",
+           "Build confidence through national-level performance data"].map((item) => (
           <li className="flex items-start gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-blueone shrink-0 mt-1"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>                <span>{item}</span>
                 </li>))}
@@ -43,8 +43,8 @@ function Specialprog(){
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 text-blueone"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" /><path d="M22 10v6" /><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" /></svg>
               Eligibility</h4>
             <ul  className="space-y-2">
-              {["Students from Class 6 to Graduation","Identify academically talented students","Open to all streams (Science, Commerce, Arts)",
-                "Students from schools, colleges, and institutions across India"].map((item) => 
+              {["Students from Class 6 to Graduation","Open to all streams — Science, Commerce, Arts","Students from schools, colleges, and institutions across India",
+                "Accurate academic details required at registration"].map((item) => 
               (<li className="flex items-start gap-2">
                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-blueone shrink-0 mt-1"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>               
                <span>{item}</span>

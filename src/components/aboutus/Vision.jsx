@@ -48,31 +48,10 @@ function Vision() {
             </svg>
           </span>
           <h2 className="text-2xl font-extrabold mb-3 font-jakarta">Our Mission</h2>
-          <p className="text-lg font-bold leading-relaxed mb-2">
-            To bridge the gap between education and employment by providing:
+          <p className="text-lg font-bold text-gray-400 leading-relaxed mb-2">
+            To bridge the gap between education and employment by providing merit-based recognition, industry-aligned skill development, structured career counseling, corporate placement access, and real-world exposure. We aim to empower students with direction, confidence, and measurable growth.
           </p>
-          <ul>
-            <li className="flex items-center space-x-2 text-sm font-jakarta text-grayone">
-              <img src={bluetick} alt="" className="w-4 h-4" />
-              <span>Merit-based recognition</span>
-            </li>
-            <li className="flex items-center space-x-2 text-sm font-jakarta text-grayone">
-              <img src={bluetick} alt="" className="w-4 h-4" />
-              <span>Industry-aligned skill development</span>
-            </li>
-            <li className="flex items-center space-x-2 text-sm font-jakarta text-grayone">
-              <img src={bluetick} alt="" className="w-4 h-4" />
-              <span>Structured career counseling</span>
-            </li>
-            <li className="flex items-center space-x-2 text-sm font-jakarta text-grayone">
-              <img src={bluetick} alt="" className="w-4 h-4" />
-              <span>Corporate placement access</span>
-            </li>
-            <li className="flex items-center space-x-2 text-sm font-jakarta text-grayone">
-              <img src={bluetick} alt="" className="w-4 h-4" />
-              <span>Internship and real-world exposure</span>
-            </li>
-          </ul>
+         
         </div>
       </div>
     </section>

@@ -33,8 +33,7 @@ function Corevalues() {
             Transparency
           </h4>
           <p className="text-sm font-jakarta text-white/90 leading-relaxed text-left">
-            We maintain complete clarity in our scholarship processes, career
-            counseling methodologies, and performance evaluation systems.
+          complete clarity in our scholarship processes, counseling methodologies, and performance evaluation systems
           </p>
         </div>
        </Reveal>
@@ -59,8 +58,7 @@ function Corevalues() {
           </div>
           <h4 className="text-xl font-bold font-jakarta mb-3 text-[#fffafc]">Merit-Based Recognition</h4>
           <p className="text-sm font-jakarta text-white/90 leading-relaxed text-left">
-            Talent is rewarded purely based on academic excellence, aptitude
-            performance, and skill capability without bias.
+             talent rewarded purely based on academic excellence and skill capability without bias
           </p>
          </div>
         </Reveal>
@@ -86,8 +84,7 @@ function Corevalues() {
           </div>
           <h4 className="text-xl font-bold font-jakarta mb-3 text-[#fffafc]"> Industry Alignment</h4>
           <p className="text-sm font-jakarta text-white/90 text-left leading-relaxed">
-            Our training programs are designed in collaboration with industry
-            professionals to ensure relevance and employability.
+            training programs designed in collaboration with industry professionals to ensure relevance and employability
           </p>
         </div>
        </Reveal>
@@ -113,8 +110,7 @@ function Corevalues() {
           </div>
           <h4 className="text-xl font-bold font-jakarta mb-3 text-[#fffafc]">Student-Centric Approach</h4>
           <p className="text-sm font-jakarta text-white/90 text-left leading-relaxed ">
-            Every initiative is crafted with one goal — long-term student career
-            success and professional stability.
+            every initiative crafted with one goal: long-term student career success and professional stability
           </p>
         </div>
        </Reveal>

@@ -9,11 +9,10 @@ function About() {
         {/* left part about */}
         <Reveal direction="left">
         <div>
-          <h2 className="text-3xl md:text-4xl font-jakarta font-bold mb-6">🌟About NavLakshya</h2>
+          <h2 className="text-3xl md:text-4xl font-jakarta font-bold mb-6">🌟The Gap Nobody Talks About</h2>
           <p className="text-lg font-jakarta text-grayone leading-relaxed mb-8">
-            NavLakshya is an initiative of Streamcore Web Pvt Ltd, dedicated to
-            building a scientific career ecosystem for students across India. We
-            bridge the gap between academic excellence and professional success.
+           NavLakshya is a student-focused career platform helping learners discover the right direction through scholarships, career counseling, skill development, and placement support across India.
+           We aim to bridge the gap between education and real career opportunities through structured guidance and industry-focused learning.
           </p>
           <div className="font-jakarta text-[16px] font-medium grid gap-4">
             <div className="flex items-center gap-3">
@@ -32,7 +31,7 @@ function About() {
             <div className="flex items-center justify-center shrink-0 w-6 h-6 rounded-full bg-blueone/20 ">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#005bb5" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-primary"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>   
             </div>
-            <span>Industry-Oriented Skill Development</span>
+            <span> Industry-Focused Skill Training</span>
             </div>
             <div className="flex items-center gap-3">
             <div className="flex items-center justify-center shrink-0 w-6 h-6 rounded-full bg-blueone/20 ">
@@ -68,8 +67,7 @@ function About() {
           <div className="p-6 pt-0 px-0">
            <h1 className="text-xl font-semibold tracking-tight mb-3 group-hover:text-blueone transition-all duration-400">Identify Talent</h1>
             <p className=" text-grayone text-base leading-relaxed">
-              Our National Scholarship Exams (AIBMSP) help discover academic
-              excellence early.
+              National scholarship programs designed to recognize academic potential and reward deserving students
             </p>
           </div>
             
@@ -83,8 +81,7 @@ function About() {
             <div className="p-6 pt-0 px-0">
             <h1 className="text-xl font-semibold tracking-tight mb-3 group-hover:text-blueone transition-all duration-400">Scientific Guidance</h1>
             <p className=" text-grayone leading-relaxed">
-              Professional psychometric assessments to find your true career
-              calling.
+             Career counseling and psychometric assessments to help students choose the right path with clarity.
             </p>
             </div>
           </div>
@@ -96,8 +93,7 @@ function About() {
             <div className="p-6 pt-0 px-0">
             <h1 className="text-xl font-semibold tracking-tight mb-3 group-hover:text-blueone transition-all duration-400">Build Skills</h1>
             <p className=" text-grayone leading-relaxed">
-              Industry-aligned training programs that bridge the gap between
-              degree and job.
+              Practical skill development programs aligned with modern industry and hiring requirements.
             </p>
             </div>
           </div>
@@ -108,8 +104,7 @@ function About() {
            <div className="p-6 pt-0 px-0">
             <h1 className="text-xl font-semibold tracking-tight mb-3 group-hover:text-blueone transition-all duration-400">Create Careers</h1>
             <p className=" text-grayone leading-relaxed">
-              Dedicated placement support connecting you with top white-collar
-              opportunities.
+              Placement assistance, internship support, and employer connections for career growth.
             </p>
             </div>
           </div>

@@ -1,5 +1,7 @@
 import bluedot from "../assets/policies/bluedot.png";
 import pp from "../assets/policies/pp.png";
+import { Link } from "react-router-dom";
+
 
 function PrivacyPolicy() {
   return (
@@ -12,13 +14,8 @@ function PrivacyPolicy() {
         <div className="flex-1 space-y-10">
 
         <div className="bg-blueone/5 border border-blueone/20 rounded-2xl p-6">
-        <p className="font-medium text-sm font-jakarta text-grayone leading-relaxed mb-4">
-          NavLakshya (“we,” “our,” or “us”) is committed to protecting your
-          privacy. This Privacy Policy explains how we collect, use, disclose,
-          and safeguard your information when you visit our website, apply for
-          scholarships, enroll in programs, or interact with our services.
-          NavLakshya operates under Streamcore Web Pvt Ltd and is dedicated to
-          maintaining transparency and data security.
+        <p className="font-medium text-sm font-jakarta text-grayone leading-relaxed">
+          NavLakshya is committed to protecting your privacy. This policy explains clearly how we collect, use, and safeguard your information when you interact with our website, programs, and services.
         </p>
         </div>
 
@@ -28,124 +25,37 @@ function PrivacyPolicy() {
             Information We Collect
           </h3>
           <p className=" text-grayone lg:text-lg leading-relaxed mb-3">
-            We may collect the following types of information:
+            To deliver our services, we may collect Personal Information (name, email, phone, date of birth, academic details, address, school or college), Academic and Assessment Information (examination results, career assessment reports, skill training data), and Technical Information (IP address, browser type, device information, and website usage data through cookies and analytics tools).
           </p>
-
-          <h3 className="lg:text-xl font-jakarta font-bold">
-            Personal Information
-          </h3>
-          <ul className="mb-4">
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
-              <span>Full Name</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
-              <span>Email Address</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
-              <span>Phone Number</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
-              <span>Date of Birth</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
-              <span>Academic Details</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
-              <span>Address</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
-              <span>School/College Information</span>
-            </li>
-          </ul>
-
-          <h3 className="lg:text-xl font-jakarta font-bold">
-            Academic & Assessment Information
-          </h3>
-          <ul className="mb-4">
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
-              <span>Examination results</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
-              <span>Scholarship test performance</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
-              <span>Career assessment reports</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
-              <span>Skill training performance data</span>
-            </li>
-          </ul>
-
-          <h3 className="lg:text-xl font-jakarta font-bold">
-            Technical Information
-          </h3>
-          <ul className="mb-4">
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
-              <span>IP Address</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
-              <span>Browser type</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
-              <span>Device information</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
-              <span>Website usage data (via cookies and analytics tools)</span>
-            </li>
-           </ul>
         </div>
 
         {/* How We Use Your Information */}
         <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
           <h2 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-1">How We Use Your Information</h2>
-          <p className=" text-grayone lg:text-lg leading-relaxed mb-3">We use the collected information for the following purposes:</p>
-          <ul className="mb-3"> 
+         <ul className="mb-3"> 
            <li className="flex items-start gap-2">
               <img src={bluedot} className="w-2 h-2 mt-2" />
-              <span>To process scholarship applications</span>
+              <span>To process scholarship applications and conduct online examinations</span>
             </li>
             <li className="flex items-start gap-2">
               <img src={bluedot} className="w-2 h-2 mt-2" />
-              <span>To conduct online examinations and assessments</span>
+              <span>To provide career counseling and skill development services</span>
             </li>
             <li className="flex items-start gap-2">
               <img src={bluedot} className="w-2 h-2 mt-2" />
-              <span>To provide career counseling services</span>
+              <span>To facilitate placement and internship opportunities</span>
             </li>
             <li className="flex items-start gap-2">
               <img src={bluedot} className="w-2 h-2 mt-2" />
-              <span>To offer skill development training</span>
+              <span>To communicate important updates, results, and program information</span>
             </li>
             <li className="flex items-start gap-2">
               <img src={bluedot} className="w-2 h-2 mt-2" />
-              <span>To facilitate placement and internshi opportunities</span>
+              <span>To improve our website, programs, and the overall user experience</span>
             </li>
             <li className="flex items-start gap-2">
               <img src={bluedot} className="w-2 h-2 mt-2" />
-              <span>To communicate important updates</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <img src={bluedot} className="w-2 h-2 mt-2" />
-              <span>To improve our website and services</span>
-            </li>
-             <li className="flex items-start gap-2">
-              <img src={bluedot} className="w-2 h-2 mt-2" />
-              <span>To comply with legal obligations</span>
+              <span>To comply with applicable legal obligations</span>
             </li>
           </ul>
           <p className="text-grayone lg:text-lg leading-relaxed mb-3">
@@ -157,28 +67,7 @@ function PrivacyPolicy() {
         {/* Data Sharing & Disclosure */}
         <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
           <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-1">Data Sharing & Disclosure</h3>
-          <p className=" text-grayone lg:text-lg leading-relaxed mb-3"> We may share your information with:</p>
-          <ul className="mb-3">
-            <li className="flex items-start gap-2">
-              <img src={bluedot} className="w-2 h-2 mt-2" />
-              <span>Internal team members and authorized staff</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <img src={bluedot} className="w-2 h-2 mt-2" />
-              <span>Examination and assessment partners</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <img src={bluedot} className="w-2 h-2 mt-2" />
-              <span>Corporate placement partners (only with consent)</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <img src={bluedot} className="w-2 h-2 mt-2" />
-              <span>Legal authorities when required by law</span>
-            </li>
-          </ul>
-          <p className= "text-grayone lg:text-lg leading-relaxed mb-3">
-            All data sharing is conducted securely and only for legitimate
-            business purposes.
+          <p className=" text-grayone lg:text-lg leading-relaxed mb-3">We share data only where necessary and always with appropriate safeguards in place — with internal staff, examination partners, corporate placement partners (with your consent only), and legal authorities when required by law.
           </p>
         </div>
 
@@ -186,71 +75,35 @@ function PrivacyPolicy() {
         <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
           <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-1">Data Security</h3>
           <p className=" text-grayone lg:text-lg leading-relaxed mb-3">
-            We implement appropriate technical and organizational security
-            measures to protect your personal information against:
+           We implement appropriate technical and organizational security measures against unauthorized access, data alteration, disclosure, and destruction. No digital platform can guarantee absolute security — we encourage users to take reasonable precautions when sharing information online.
           </p>
-          <ul className="mb-3">
-             <li className="flex items-center gap-2">
-              <img src={bluedot} className="w-2 h-2" />
-              <span>Unauthorized access</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} className="w-2 h-2" />
-              <span>Data alteration</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} className="w-2 h-2" />
-              <span>Disclosure</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} className="w-2 h-2" />
-              <span>Destruction</span>
-            </li>
-          </ul>
-          <p className=" text-grayone lg:text-lg leading-relaxed mb-3">However, no digital platform can guarantee 100% security.</p>
         </div>
 
         {/* Cookies & Tracking Technologies */}
         <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
           <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-1">Cookies & Tracking Technologies</h3>
-          <p className=" text-grayone leading-relaxed mb-3">Our website may use cookies and analytics tools to:</p>
-          <ul className="mb-3">
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
-              <span>Improve user experience</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
-              <span>Understand visitor behavior</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
-              <span>Optimize website performance</span>
-            </li>
-          </ul>
-          <p className=" text-grayone lg:text-lg leading-relaxed mb-3">You may disable cookies through your browser settings.</p>
+          <p className=" text-grayone leading-relaxed mb-3">Our website uses cookies and analytics tools to improve browsing experience and optimize performance. You may disable cookies through your browser settings at any time.</p>
         </div>
 
         {/* Your Rights */}
         <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
           <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-1">Your Rights</h3>
-          <p className=" text-grayone lg:text-lg leading-relaxed mb-3">You have the right to:</p>
           <ul className="mb-3">
             <li className="flex items-start gap-2">
               <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
-              <span>Access your personal data</span>
+              <span>Access the personal data we hold about you</span>
             </li>
              <li className="flex items-start gap-2">
               <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
-              <span>Request correction of inaccurate information</span>
+              <span>Request correction of any inaccurate information</span>
             </li>
              <li className="flex items-start gap-2">
               <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
-              <span>Request deletion of your data (subject to legal requirements)</span>
+              <span>Request deletion of your data subject to legal requirements</span>
             </li>
              <li className="flex items-start gap-2">
               <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
-              <span>Withdraw consent for marketing communications</span>
+              <span>Withdraw consent for marketing communications at any time</span>
             </li>
           </ul>
           <p className=" text-grayone lg:text-lg leading-relaxed mb-3">For such requests, please contact us at: info@navlakshya.com</p>
@@ -258,23 +111,23 @@ function PrivacyPolicy() {
 
         <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
           <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-3">Third-Party Links</h3>
-          <p className=" text-grayone lg:text-lg leading-relaxed mb-3">Our website may contain links to external websites. We are not responsible for the privacy practices of third-party websites.</p>
+          <p className=" text-grayone lg:text-lg leading-relaxed mb-3">Our website may contain links to external websites. NavLakshya is not responsible for the privacy practices, content, or security of any third-party website.</p>
         </div>
 
         <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
           <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-3">Children's Privacy</h3>
-          <p className=" text-grayone lg:text-lg leading-relaxed mb-3">NavLakshya provides services to students. If the student is below 18 years of age, parental or guardian consent may be required for participation in certain programs.</p>
+          <p className=" text-grayone lg:text-lg leading-relaxed mb-3">For students below 18, parental or guardian consent may be required for certain programs. We handle the data of minors responsibly and in full compliance with applicable laws.</p>
         </div>
 
         <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
           <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-3"> Policy Updates</h3>
-          <p className=" text-grayone lg:text-lg leading-relaxed mb-3">We may update this Privacy Policy periodically. Any changes will be posted on this page with a revised “Last Updated” date.</p>
+          <p className=" text-grayone lg:text-lg leading-relaxed mb-3">We may update this Privacy Policy periodically. Continued use of our services after any changes constitutes your acceptance of the updated terms.</p>
         </div>
 
         <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
           <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-3"> Contact Us</h3>
           <p className=" text-grayone lg:text-lg leading-relaxed mb-3">If you have any questions regarding this Privacy Policy, you may contact us:</p>
-          <p className=" text-grayone lg:text-lg leading-relaxed mb-3">NavLakshya <br />An initiative of Streamcore Web Pvt Ltd</p>
+          <p className=" text-grayone lg:text-lg leading-relaxed mb-3">NavLakshya</p>
 
           <ul className="space-y-3">
             <li className="flex gap-2">
@@ -287,10 +140,12 @@ function PrivacyPolicy() {
             </li>
             <li className="flex gap-2">
              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 shrink-0 text-blueone"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" /></svg>
-              <span className="text-sm text-grayone font-jakarta">Streamcore Web Pvt Ltd Office,India</span>
+              <span className="text-sm text-grayone font-jakarta"> Office No. 279, Panchsheel Greens 2, Greater Noida West, Uttar Pradesh — 201318, India</span>
             </li>
           </ul>
         </div>
+       
+        
 
         </div>
          <div className="hidden lg:block w-64 shrink-0">
@@ -308,6 +163,9 @@ function PrivacyPolicy() {
          </div>
         </div>
        </div> 
+       <div className="text-center mt-10">
+        <Link to="/contact" className='inline-flex items-center justify-center rounded-full text-sm font-medium py-3 px-5 lg:px-4 bg-blueone text-white hover:bg-blueone/80 transition-all duration-300'>Contact Us Now</Link>
+        </div>
       </div>
     </section>
   );

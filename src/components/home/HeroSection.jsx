@@ -7,46 +7,55 @@ import prog1 from '../../assets/programimage/prog1.jfif';
 
 function HeroSection() {
   return (
-    <section className="relative pb-16 px-6 text-center overflow-hidden xl:min-h-screen ">
-       <span className="relative inline-flex items-center gap-2 px-3 py-2 text-blueone border border-blueone/20 rounded-full bg-blueone/10 mb-2 font-jakarta font-bold text-xs md:text-sm lg:text-lg z-10 mt-10 whitespace-nowrap">
+    <section className="relative pb-16 px-6 text-center overflow-hidden min-h-screen">
+       <div className="relative z-10 flex justify-center mt-10 mb-2">
+        <span className="inline-flex items-center gap-2 px-4 py-2 text-blueone border border-blueone/20 rounded-full bg-blueone/10 font-jakarta font-bold text-xs sm:text-sm lg:text-lg text-center leading-snug max-w-xs sm:max-w-lg lg:max-w-none">
           <img 
             src={starblue}
             alt="Star Icon"
-            className="h-6 w-7 object-contain text-color-blueone animate-spin [animation-duration:2s]"
+            className="h-5 w-5 shrink-0 object-contain animate-spin [animation-duration:2s]"
           />
-          Education & Career Empowerment Initiative
+          <span>Career Counseling, Scholarships &amp; Skill Development for Students Across India</span>
         </span>
-      <div className="absolute top-20 right-20 animate-spin [animation-duration:10s] rounded-full h-32 w-32 bg-linear-to-br from-blueone to-yellowone"></div>
+      </div>
+      <div className="absolute top-16 right-4 sm:right-20 sm:top-20 animate-spin [animation-duration:10s] rounded-full h-20 w-20 sm:h-32 sm:w-32 bg-linear-to-br from-blueone to-yellowone opacity-60"></div>
       <div className="absolute inset-0">
         <img src={prog1} alt="Navlakshya Home Page" className="w-full h-full object-cover opacity-30" />
       </div>
       <div className="absolute inset-0 bg-linear-to-b from-[#fffafc]/60 via-[#fffafc]/90 to-[#fffafc]"></div>
       
       <Reveal direction="up">
-      <h1 className="relative z-10 text-4xl md:text-6xl lg:text-8xl font-extrabold font-jakarta pb-6 lg:pb-12 ">
+      <h1 className="relative z-10 text-4xl md:text-6xl lg:text-8xl font-extrabold font-jakarta leading-tight lg:leading-[1.1] pb-6 lg:pb-8 ">
        <span className="bg-linear-to-r from-[#000305] via-blueone to-yellowone bg-clip-text text-transparent">
         Empowering India's 
         </span> 
         <br />
         <span className="bg-linear-to-r from-blueone to-yellowone bg-clip-text text-transparent">
-        Future
+        Future Through 
         </span>
         <br />
         <span className="relative inline-block">
         <span className="absolute inset-0 bg-linear-to-r from-blueone/30 to-yellowone/30 rounded-lg blur-xl"></span>
         <span className="text-blueone relative ">
-        Through Excellence
+        Excellence.
         </span>
         </span>
       </h1>
 
-      <p className="relative z-10 text-grayone text-lg md:text-xl max-w-4xl mx-auto mb-12 leading-relaxed">
-        NavLakshya is a structured education and career transformation platform
-        focused on scholarships, career counseling, skill development, and
-        placement support.
+      <p className="relative z-10 text-grayone text-lg md:text-xl max-w-4xl mx-auto mb-10 leading-relaxed">
+        NavLakshya is a student-focused career transformation platform helping learners discover the right career path through counseling, scholarships, industry skills, and placement support.
       </p>
       </Reveal>
      
+     
+      <ul className="relative flex flex-wrap justify-center gap-4 mb-8 max-w-4xl mx-auto text-grayone text-sm md:text-base lg:text-lg font-medium font-jakarta z-10">
+      <li className="px-4 py-2 bg-white/70 rounded-full shadow-lg">Career Guidance</li>
+      <li className="px-4 py-2 bg-white/70 rounded-full shadow-lg">Scholarships</li>
+      <li className="px-4 py-2 bg-white/70 rounded-full shadow-lg">Skill Development</li>
+      <li className="px-4 py-2 bg-white/70 rounded-full shadow-lg">Placement Assistance</li>
+      <li className="px-4 py-2 bg-white/70 rounded-full shadow-lg">One platform. One roadmap for your future.</li>
+      </ul>
+
       <div className="relative z-10 flex flex-wrap gap-6 justify-center items-center">
        <Link to ="/apply-now">
         <button className="bg-blueone hover:scale-105 text-white px-10 py-3 rounded-full font-bold inline-flex items-center justify-center gap-2 whitespace-nowrap transition-all shadow-xl shadow-blue-200">

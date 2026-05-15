@@ -1,4 +1,6 @@
 import bluedot from "../assets/policies/bluedot.png";
+import { Link } from "react-router-dom";
+
 
 function TermsCondition() {
   return (
@@ -12,11 +14,7 @@ function TermsCondition() {
         <div className="flex-1 space-y-10">
         <div className="bg-blueone/5 border border-blueone/20 rounded-2xl p-6">
         <p className="font-medium text-sm font-jakarta text-grayone leading-relaxed mb-4">
-          Welcome to NavLakshya. These Terms & Conditions govern your access to
-          and use of our website, scholarship programs, career counseling
-          services, skill development courses, and placement assistance
-          services. By accessing or using our services, you agree to comply with
-          and be bound by these Terms.
+         Welcome to NavLakshya. These Terms and Conditions govern your access to and use of our website, scholarship programs, career counseling services, skill development courses, and placement assistance. By accessing or using our services, you agree to comply with and be bound by these Terms.
         </p>
         </div>
        {/*  About NavLakshya */}
@@ -25,26 +23,7 @@ function TermsCondition() {
              About NavLakshya
           </h2>
           <p className="text-grayone lg:text-lg leading-relaxed mb-3">
-           NavLakshya is an education and career empowerment initiative operated under Streamcore Web Pvt Ltd. Our services include:
-          </p>
-           <ul className="mb-4">
-            <li className="flex items-start gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
-              <span>All India Bright Minds Scholarship Program (AIBMSP)</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
-              <span>Career Counseling Services</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
-              <span>Skill Development Programs</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
-              <span>Internship & Placement Assistance</span>
-            </li>
-        </ul>
+          NavLakshya is an education and career empowerment initiative dedicated to supporting students through the All India Bright Minds Scholarship Program, Career Counseling Services, Skill Development Programs, and Internship and Placement Assistance.</p>
       </div>
 
        {/*  Eligibility */}
@@ -56,19 +35,19 @@ function TermsCondition() {
             <li className="flex items-start gap-2">
               <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
               <span>
-                Students applying for scholarship programs must provide accurate academic details.
+              Students must provide accurate and verifiable academic details
               </span>
             </li>
             <li className="flex items-start gap-2">
               <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
               <span>
-                For candidates below 18 years of age, parental/guardian consent may be required.
+               For candidates below 18, parental or guardian consent may be required
               </span>
             </li>
             <li className="flex items-start gap-2">
               <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
               <span>
-                NavLakshya reserves the right to verify documents and eligibility criteria.
+                NavLakshya reserves the right to verify all submitted documents before confirming participation
               </span>
             </li>
         </ul>
@@ -79,31 +58,34 @@ function TermsCondition() {
           <h3 className="font-jakarta font-bold text-xl md:text-2xl text-[#0c121a] mb-1">
             Registration & Account Responsibility
           </h3>
-          <p className=" text-grayone lg:text-lg  leading-relaxed mb-3">
-            When registering on our website:
-          </p>
           <ul className="mb-3">
             <li className="flex items-start gap-2">
               <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
               <span>
-                You must provide true, accurate, and complete information.
+                You must provide true, accurate, and complete information during registration
               </span>
             </li>
             <li className="flex items-start gap-2">
               <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
               <span>
-                You are responsible for maintaining the confidentiality of your login credentials.
+                You are responsible for maintaining the confidentiality of your login credentials
               </span>
             </li>
             <li className="flex items-start gap-2">
               <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
               <span>
-                Any misuse of account information is solely your responsibility.
+                Any activity under your account is your sole responsibility
+              </span>
+            </li>
+            <li className="flex items-start gap-2">
+              <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
+              <span>
+                Notify us immediately if you suspect unauthorized use of your account
               </span>
             </li>
         </ul>
           <p className=" text-grayone lg:text-lg leading-relaxed mb-3">
-           We reserve the right to suspend or terminate accounts found to contain false or misleading information.
+           NavLakshya reserves the right to suspend or permanently terminate accounts found to contain false, misleading, or fraudulent information.
           </p>
         </div>
 
@@ -115,24 +97,21 @@ function TermsCondition() {
          <ul className="mb-3">
             <li className="flex items-start gap-2">
               <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
-              <span>Scholarship awards are based on merit, eligibility criteria, and evaluation standards.</span>
+              <span>Scholarship awards are determined based on merit, eligibility criteria, and evaluation standards</span>
             </li>
             <li className="flex items-start gap-2">
               <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
-              <span>Examination results and merit lists declared by NavLakshya shall be final.</span>
+              <span>Examination results and merit lists declared by NavLakshya are final and binding</span>
             </li>
             <li className="flex items-start gap-2">
               <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
-              <span>Scholarship benefits may include financial assistance, fee waivers, recognition certificates, or career support services.</span>
+              <span>Scholarship benefits may include financial assistance, fee waivers, recognition certificates, or career support services</span>
             </li>
             <li className="flex items-start gap-2">
               <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
-              <span>Scholarship amounts, benefits, and selection criteria may vary by program.</span>
+              <span>NavLakshya reserves the right to modify the program structure, schedule, or benefits at any time</span>
             </li>
           </ul>
-          <p className=" text-grayone lg:text-lg  leading-relaxed mb-3">
-           NavLakshya reserves the right to modify program structure without prior notice.
-          </p>
         </div>
 
         {/*  Payments & Fees */}
@@ -143,15 +122,15 @@ function TermsCondition() {
         <ul className="mb-3">
             <li className="flex items-start gap-2">
               <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
-              <span>Registration fees, examination fees, or program fees (if applicable) must be paid through authorized payment gateways.</span>
+              <span>All payments must be made through authorized payment gateways</span>
             </li>
             <li className="flex items-start gap-2">
               <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
-              <span>Fees once paid are generally non-refundable unless specified under the Refund Policy.</span>
+              <span>Fees once paid are generally non-refundable unless explicitly stated in the Refund Policy</span>
             </li>
             <li className="flex items-start gap-2">
               <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
-              <span>Any payment disputes must be raised within 7 working days.</span>
+              <span>Any payment disputes must be raised in writing within 7 working days of the transaction</span>
             </li>
           </ul>
         </div>
@@ -164,20 +143,22 @@ function TermsCondition() {
           <ul className="mb-3">
             <li className="flex items-start gap-2">
               <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
-              <span className="text-sm">NavLakshya provides guidance and assistance but does not guarantee job placement.</span>
+              <span className="text-sm">NavLakshya provides guidance and placement support but does not guarantee job placement or any specific employment outcome</span>
             </li>
             <li className="flex items-start gap-2">
               <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
               <span className="text-sm">
-                Placement opportunities depend on candidate performance, eligibility, and employer requirements.
+                Placement opportunities depend on individual candidate performance, eligibility, and employer requirements
               </span>
             </li>
             <li className="flex items-start gap-2">
               <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
               <span className="text-sm">
-               We are not responsible for employment decisions made by third-party recruiters or companies.
+              NavLakshya is not responsible for employment decisions made by third-party recruiters or companies
               </span>
             </li>
+            <p className=" text-grayone lg:text-lg leading-relaxed my-1">
+            Our role is to open the right doors for you. Walking through them requires your effort, preparation, and commitment          </p>
         </ul>
         </div>
 
@@ -187,43 +168,7 @@ function TermsCondition() {
             Intellectual Property
           </h3>
           <p className=" text-grayone lg:text-lg  leading-relaxed mb-1">
-            All website content including:
-          </p>
-          <ul className="mb-1">
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
-              <span>Logos</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
-              <span>
-               Text
-              </span>
-            </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
-              <span>
-              Graphics
-              </span>
-            </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
-              <span>
-                Course materials
-              </span>
-            </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
-              <span>
-                Scholarship content
-              </span>
-            </li>
-          </ul>
-          <p className=" text-grayone lg:text-lg  leading-relaxed mb-3">
-           are the intellectual property of NavLakshya or its parent company.
-          </p>
-           <p className=" text-grayone lg:text-lg  leading-relaxed mb-3">
-           Unauthorized reproduction, distribution, or copying is strictly prohibited.
+          All content available through NavLakshya — logos, text, graphics, course materials, assessment tools, and scholarship content — is the intellectual property of NavLakshya. Unauthorized reproduction, distribution, copying, or modification is strictly prohibited.
           </p>
         </div>
 
@@ -238,23 +183,29 @@ function TermsCondition() {
           <ul className="mb-1">
             <li className="flex items-start gap-2">
               <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
-              <span>Not to misuse the examination platform</span>
+              <span>You will not misuse the examination or assessment platform</span>
             </li>
             <li className="flex items-start gap-2">
               <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
               <span>
-               Not to engage in cheating, impersonation, or fraudulent activities
+               You will not engage in cheating, impersonation, or fraudulent activity
               </span>
             </li>
             <li className="flex items-start gap-2">
               <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
               <span>
-              Not to upload harmful or illegal content
+              You will not upload, share, or transmit harmful, offensive, or illegal content
+              </span>
+            </li>
+            <li className="flex items-start gap-2">
+              <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
+              <span>
+              You will not attempt to disrupt or interfere with our platform or any examination process
               </span>
             </li>
            </ul>
            <p className=" text-grayone lg:text-lg  leading-relaxed mb-3">
-           Violation may result in disqualification or permanent suspension.
+           Violation of the code of conduct may result in immediate disqualification, account suspension, or permanent termination of access to all NavLakshya services
           </p>
         </div>
 
@@ -264,34 +215,7 @@ function TermsCondition() {
             Limitation of Liability
           </h3>
            <p className=" text-grayone lg:text-lg  leading-relaxed mb-1">
-          NavLakshya shall not be liable for:
-          </p>
-          <ul className="mb-1">
-            <li className="flex items-start gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
-              <span>Technical errors during online examinations</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
-              <span>
-               Website downtime
-              </span>
-            </li>
-            <li className="flex items-start gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2 mt-1.5" />
-              <span>
-             Indirect or consequential damages
-              </span>
-           </li>
-            <li className="flex items-start gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2 mt-2" />
-              <span>
-             Loss of data due to circumstances beyond our control
-              </span>
-            </li>
-           </ul>
-           <p className=" text-grayone lg:text-lg  leading-relaxed mb-3">
-             We provide services on a best-effort basis.
+        NavLakshya shall not be liable for technical errors during examinations, website downtime, indirect or consequential damages, or loss of data due to circumstances beyond our control. Our services are provided on a best-effort basis.
           </p>  
         </div>
 
@@ -301,8 +225,7 @@ function TermsCondition() {
             Privacy
           </h3>
            <p className=" text-grayone lg:text-lg  leading-relaxed mb-3">
-         Your use of our services is also governed by our Privacy Policy. We are committed to protecting user data.
-          </p>
+          Your use of NavLakshya services is also governed by our Privacy Policy. We are committed to protecting your personal data with full care and transparency          </p>
         </div>
 
         {/* Termination of Services*/}
@@ -311,28 +234,7 @@ function TermsCondition() {
            Termination of Services
           </h3>
            <p className=" text-grayone lg:text-lg  leading-relaxed mb-1">
-          We reserve the right to:
-          </p>
-          <ul className="mb-1">
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
-              <span>Cancel registrations</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
-              <span>
-               Disqualify candidates
-              </span>
-            </li>
-            <li className="flex items-center gap-2">
-              <img src={bluedot} alt="" className="w-2 h-2" />
-              <span>
-             Terminate services
-              </span>
-           </li>
-        </ul>
-           <p className=" text-grayone lg:text-lg  leading-relaxed mb-3">
-             if any violation of these Terms is detected.
+          NavLakshya reserves the right to cancel registrations, disqualify candidates, and suspend or permanently terminate access to services if any violation of these Terms is detected or suspected.
           </p>  
         </div>
 
@@ -342,8 +244,8 @@ function TermsCondition() {
             Changes to Terms
           </h3>
            <p className=" text-grayone lg:text-lg  leading-relaxed mb-3">
-             NavLakshya may update these Terms & Conditions at any time. Continued use of our website constitutes acceptance of updated terms.
-          </p>
+           NavLakshya may update these Terms at any time. Continued use of our website after any such changes constitutes your acceptance of the revised Terms.   
+           </p>
         </div>
 
          {/* Governing Law */}
@@ -352,8 +254,7 @@ function TermsCondition() {
             Governing Law
           </h3>
            <p className=" text-grayone lg:text-lg  leading-relaxed mb-3">
-            These Terms shall be governed by and interpreted in accordance with the laws of India. Any disputes shall be subject to the jurisdiction of Indian courts.
-          </p>
+           These Terms shall be governed by the laws of India. Any disputes shall be subject to the exclusive jurisdiction of the competent courts of India.          </p>
         </div>
 
         {/* Contact Us */}
@@ -365,8 +266,7 @@ function TermsCondition() {
            For any queries regarding these Terms & Conditions:
           </p>
           <p className=" text-grayone lg:text-lg  leading-relaxed mb-3">
-            NavLakshya <br />
-            An initiative of Streamcore Web Pvt Ltd
+            NavLakshya 
           </p>
           <ul className="space-y-3">
               <li className="flex gap-2">
@@ -384,7 +284,7 @@ function TermsCondition() {
               <li className="flex gap-2">
              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 shrink-0 text-blueone"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" /></svg>
                 <span className="text-sm text-grayone font-jakarta">
-                  Streamcore Web Pvt Ltd Office,India
+                   Office No. 279, Panchsheel Greens 2, Greater Noida West, Uttar Pradesh — 201318, India
                 </span>
               </li>
             </ul>
@@ -397,7 +297,7 @@ function TermsCondition() {
           <h3 className="text-sm font-bold font-jakarta uppercase tracking-widest text-grayone mb-4">
           On This Page</h3>
           <ul className="space-y-2">
-          {["Aboout","Eligibility","Registration","Scholarship","Payments & Fees","Career Counseling & Placement Services","Intellectual Property","Code of Conduct","Limitation of Liability", "Privacy","Termination of Services","Changes to Terms","Governing Law","Contact Us"].map((items) =>(
+          {["About NavLakshya","Eligibility","Registration & Account Responsibility","Scholarship Program Terms","Payments & Fees","Career Counseling & Placement Services","Intellectual Property","Code of Conduct","Limitation of Liability", "Privacy","Termination of Services","Changes to Terms","Governing Law","Contact Us"].map((items) =>(
           <li key={items} className="text-sm text-grayone hover:text-blueone transition-colors duration-200 flex items-start gap-2 group">
           <span className="w-1 h-1 mt-2 rounded-full bg-grayone/40 group-hover:bg-blueone transition-colors shrink-0"></span>
           {items}
@@ -407,6 +307,9 @@ function TermsCondition() {
          </div>
         </div>
       </div>
+        <div className="text-center mt-10">
+        <Link to="/contact" className='inline-flex items-center justify-center rounded-full text-sm font-medium py-3 px-5 lg:px-4 bg-blueone text-white hover:bg-blueone/80 transition-all duration-300'>Contact Us Now</Link>
+        </div>
       </div>
     </section>
   );

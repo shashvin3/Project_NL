@@ -1,5 +1,6 @@
 import prog3 from '../../assets/programimage/prog3.jfif'
 import Reveal from '../common/Reveal';
+import { Link } from 'react-router-dom';
 
 function SkillDev() {
   return (
@@ -31,9 +32,7 @@ function SkillDev() {
         Skill Development
       </h1>
       <p className="max-w-2xl mx-auto text-lg font-jakarta text-grayone text-center mb-10">
-        Industry-aligned skill training programs designed to transform students
-        into job-ready professionals.We focus on practical exposure,
-        project-based learning, and corporate-oriented curriculum.
+       Industry-aligned skill training programs designed to transform students into job-ready professionals. We focus on practical exposure, project-based learning, and corporate-oriented curriculum that reflects what employers actually need.
       </p>
 
       {/* Below Cards Section */}
@@ -336,19 +335,19 @@ function SkillDev() {
      <div className=' flex flex-col items-start space-y-7'>
         <h3 className='text-2xl font-bold font-jakarta text-white'>What You Get with NavLakshya Skill Division</h3>
         <ul className='space-y-3'>
-          {['Industry Mentorship','Internship Recommendations','Placement Support','Real-World Project Experience','Skill Certification'].map((item) => (
+          {['Industry Mentorship from practitioners who work in your field','Internship Recommendations to verified partner organizations','Real World Project Experience for your professional profile','Placement Support through the NavLakshya placement network','Skill Certification that demonstrates specific capability to employers'].map((item) => (
           <li className='flex text-left items-start gap-3'>
            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fcd176" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 shrink-0 mt-1"><path d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z" /> <path d="M9 12l2 2 4-4" /></svg>
            <span className='text-white text-lg font-jakarta'>{item}</span>
           </li>
           ))}
         </ul>
-        <a href="#">
+        <Link to="/skill-program">
         <button className="bg-white px-5 py-2 rounded-full inline-flex items-center justify-center gap-2 transition-all">
           Explore Skill Programs
         <span className="text-xl">→</span>
         </button>
-        </a>
+        </Link>
      </div>
     {/* Right Part */}
     <div>

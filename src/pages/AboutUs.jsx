@@ -4,7 +4,8 @@ import Vision from "../components/aboutus/Vision";
 import bgimage from "../assets/aboutus/bgimage.png";
 import Corevalues from "../components/aboutus/Corevalues";
 import Reveal from "../components/common/Reveal";
-
+import Philosophy from "../components/aboutus/Philosophy";
+import Team from "../components/aboutus/Team";
 
 function AboutUs() {
   return (
@@ -30,10 +31,12 @@ function AboutUs() {
         </div>
         </Reveal>
       </div>
-    </section>
+     </section>
       <Organization/>
+      <Philosophy/>
       <Vision/>
       <Corevalues/>
+      <Team/>
       <Banner title="Ready to Start Your Success Story?"
         titleTextColor="text-yellow-500"
         des="Join thousands of students who are transforming their academic journey into structured professional success through NavLakshya."
